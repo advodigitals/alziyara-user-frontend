@@ -1,77 +1,23 @@
 
+import IMPNavbar from '../Components/Navbar/IMPNavbar'
 import Layouts from '../Layouts/Layouts'
+
 
 const Home = () => {
   return (
     <Layouts>
 
-        <div className="absolute top-[95px] left-0-[0]  bg-cover">
+        <div className="absolute top-0 left-0 max-w-[1400px] w-full px-4 h-screen bg-slate-600">  
+         <div className="absolute top-[95px] left-0 w-full h-[calc(100vh-95px)]">
+            <div id="IMPnavbar" className="flex justify-center">
 
-        <h1>welcome</h1>
-         <h1>welcome</h1>
-          <h1>welcome</h1>
-           <h1>welcome</h1>
-            <h1>welcome</h1>
-             <h1>welcome</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                   <h1>welcome</h1>
-         <h1>welcome</h1>
-          <h1>welcome</h1>
-           <h1>welcome</h1>
-            <h1>welcome</h1>
-             <h1>welcome</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                 <h1>welcome</h1>
-         <h1>welcome</h1>
-          <h1>welcome</h1>
-           <h1>welcome</h1>
-            <h1>welcome</h1>
-             <h1>welcome</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                   <h1>welcome</h1>
-                    <h1>welcome</h1>
-         <h1>welcome</h1>
-          <h1>welcome</h1>
-           <h1>welcome</h1>
-            <h1>welcome</h1>
-             <h1>welcome</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                <h1>hello</h1><h1>hello</h1>
-                   <h1>welcome</h1>
+            <IMPNavbar></IMPNavbar>
+            </div>
+         </div>
         </div>
     </Layouts>
   )
 }
 
 export default Home
+

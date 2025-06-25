@@ -8,11 +8,10 @@
 #root,
 #docs-root {
   --primary-color: #00b372;
-  --secondary-color: #FCD6A7;
-  --navbar-color:#18b5c9;
-  --buttondrop-color:#f00e0e;
-  --main-color:#000000;
+  --secondary-color: #FFFFFF;
+  --main-color:#AFAFAF;
   --button-hover : #62C680;
+  --black-color : #000000;
  
 }
 
@@ -24,6 +23,6 @@
 
 body{
       font-family: "Poppins", sans-serif;
-      background-color: #00b372;
+      background-color: #FFFFFF;
       
 }

@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react'
 import NavbarButtons from './NavbarButtons'
 import NavbarDropdown from './NavbarDropdown'
 import ContactButton from '../../constants/ContactButton'
+import img from '../../Assets/images/logo.png'
+import IMPNavbar from './IMPNavbar'
+
 // import $ from 'jquery';
 
 
@@ -31,15 +34,14 @@ const Navbar = () => {
   return (
     <>
       <header >
-        <nav id='header' className={`h-[95px] w-full flex items-center justify-between pr-[20px]  top-0 z-50  fixed transition-all duration-[0.5s] ${scrolled ? 'bg-white ' : 'bg-transparent'}`}>
+        <nav id='header' className={`h-[95px] max-w-[1400px] w-full flex items-center justify-between mx-auto top-0 z-50  fixed transition-all duration-[0.5s] px-4 ${scrolled ? 'bg-primary-color ' : 'bg-transparent'}`}>
           <div className=" flex justify-center items-center hover:cursor-pointer  ">
-            <img src="Assets/images/logo.png" alt="" className="w-[90px] h-auto " />
+            <img src={img} alt="" className="w-[90px] h-auto justify-center" />
           </div>
           
           <div className="content-center items-center hidden lg:flex">
             <ul className="flex flex-row">
               <NavbarButtons status={scrolled}/>
-               {console.log(scrolled)}
             </ul>
           </div>
           <ContactButton />
@@ -54,6 +56,8 @@ const Navbar = () => {
       </header>
 
       {menuOpen && <NavbarDropdown />}
+
+     
 
     </>
   )
