@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <header  >
-        <nav id='header' className={`h-[95px] max-w-[1400px] w-full flex items-center justify-between mx-auto top-0 z-50  fixed transition-all duration-[0.5s] px-4 ${scrolled ? 'bg-primary-color ' : 'bg-transparent'}`}>    
+        <nav id='header' className={`h-[95px] max-w-[1400px] w-full flex items-center justify-between mx-auto top-0 z-50 transition-all duration-[0.5s] px-4 ${scrolled ? 'bg-primary-color fixed' : 'bg-transparent sticky'}`}>    
           <div className=" flex justify-center items-center hover:cursor-pointer  ">
             <img src={img} alt="" className="w-[90px] h-auto justify-center" />
           </div>

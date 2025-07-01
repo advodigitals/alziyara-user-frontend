@@ -1,9 +1,16 @@
 
-import ContactButton from '../constants/ContactButton'
+// import ContactButton from '../constants/ContactButton'
 import Layouts from '../Layouts/Layouts'
 import images1 from '../Assets/images/travel1.avif'
 import images2 from '../Assets/images/travel2.jpg'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import images3 from '../Assets/images/image3.jpg'
+import images4 from '../Assets/images/image4.jpg'
+import images5 from '../Assets/images/image5.jpg'
+import images6 from '../Assets/images/image6.jpg'
+import images7 from '../Assets/images/image7.jpg'
+import images8 from '../Assets/images/image8.jpg'
+import images9 from '../Assets/images/image9.jpg'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -17,23 +24,26 @@ import 'swiper/css/scrollbar';
 const Home = () => {
   return (
     <Layouts>
-      <div className="w-full h-screen bg-white flex justify-center">
-        <div id='Heading-section' className="top-[95px] absolute ">
-             <h1 className="text-[2.5rem] leading-[3.3rem] tracking-wide  font-medium text-third-color flex-wrap max-w-[800px] text-center" >
+      <div className="w-full h-screen bg-white flex items-center flex-col ">
+        <div id='Heading-section' className=" pb-[20px]">
+             <h1 className="text-[2.5rem] leading-[3.3rem] tracking-wide  font-medium text-third-color max-w-[800px] text-center" >
               Complete Travel Solutions with 
                <span className="text-primary-color font-medium text-[3rem]"> Care, Comfort & Commitment</span>
                {/* <span className="text-primary-color font-bold"> </span> */}
              </h1>
          
         </div>
-        {/* <div className="flex max-w-[1400px] w-fit h-[calc(100vh-95px)]  bg-orange-500 absolute bottom-0">
+        <div className="flex max-w-[1400px] w-fit flex-1  bg-transparent ">
+         
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+             loop = {true}
+             slidesPerView={1.5}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
             pagination={{
               clickable: true,
             }}
@@ -41,62 +51,60 @@ const Home = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper h-full max-w-[1400px] w-[80vw]"
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            <SwiperSlide className='bg-slate-400'><img src={images1} alt="" className='block w-full h-full object-cover' /></SwiperSlide>
+            <SwiperSlide className='bg-gray-400'><img src={images2} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+            <SwiperSlide className='bg-zinc-400'><img src={images3} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+            <SwiperSlide className='bg-neutral-400'><img src={images4} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+            <SwiperSlide className='bg-stone-400'><img src={images5} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+            <SwiperSlide className='bg-red-400'><img src={images6} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+            <SwiperSlide className='bg-orange-400'><img src={images7} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+            <SwiperSlide className='bg-amber-400'><img src={images8} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+            <SwiperSlide className='bg-yellow-400'><img src={images9} alt="" className='block w-full h-full object-cover'/></SwiperSlide>
+             {/* <SwiperSlide className='bg-slate-400'></SwiperSlide>
+            <SwiperSlide className='bg-gray-400'></SwiperSlide>
+            <SwiperSlide className='bg-zinc-400'></SwiperSlide>
+            <SwiperSlide className='bg-neutral-400'></SwiperSlide>
+            <SwiperSlide className='bg-stone-400'></SwiperSlide>
+            <SwiperSlide className='bg-red-400'></SwiperSlide>
+            <SwiperSlide className='bg-orange-400'></SwiperSlide>
+            <SwiperSlide className='bg-amber-400'></SwiperSlide>
+            <SwiperSlide className='bg-yellow-400'></SwiperSlide> */}
           </Swiper>
-        </div> */}
+        </div>
 
-        {/* <div id="afterSlide">
-            <h1>hello hello</h1> <h1>hello hello</h1>
-           <h1>hello hello</h1>
-            <h1>hello hello</h1>
-             <h1>hello hello</h1>
-              <h1>hello hello</h1>
-               <h1>hello hello</h1>
-                <h1>hello hello</h1>
-                 <h1>hello hello</h1>
-
-          <h1>hello hello</h1> <h1>hello hello</h1>
-           <h1>hello hello</h1>
-            <h1>hello hello</h1>
-             <h1>hello hello</h1>
-              <h1>hello hello</h1>
-               <h1>hello hello</h1>
-                <h1>hello hello</h1>
-                 <h1>hello hello</h1>
-
-
-          <h1>hello hello</h1> <h1>hello hello</h1>
-           <h1>hello hello</h1>
-            <h1>hello hello</h1>
-             <h1>hello hello</h1>
-              <h1>hello hello</h1>
-               <h1>hello hello</h1>
-                <h1>hello hello</h1>
-                 <h1>hello hello</h1>
-
-
-          <h1>hello hello</h1> <h1>hello hello</h1>
-           <h1>hello hello</h1>
-            <h1>hello hello</h1>
-             <h1>hello hello</h1>
-              <h1>hello hello</h1>
-               <h1>hello hello</h1>
-                <h1>hello hello</h1>
-                 <h1>hello hello</h1>
-        </div> */}
+      
 
 
 
 
       </div>
+
+      {/* <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1>
+      <h1>nihal</h1> */}
+
     </Layouts>
   )
 }
