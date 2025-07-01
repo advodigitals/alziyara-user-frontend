@@ -30,7 +30,7 @@ const IMPNavbar = () => {
   ];
   return (
     <>
-      <aside className="w-full  fixed  bottom-[30px] flex justify-center items-center px-[10px] z-50">
+      <aside className="w-full  fixed  bottom-[30px] flex justify-center items-center px-[10px] z-50 lg:hidden">
         <div className=" w-full max-w-[400px] bg-primary-color rounded-[10px] px-[20px] py-[5px]">
           <ul className="flex flex-row items-center justify-between">
             {buttonIcon.map((details) => (
