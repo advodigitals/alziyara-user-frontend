@@ -24,34 +24,36 @@ import 'swiper/css/scrollbar';
 const Home = () => {
   return (
     <Layouts>
-      <div className="w-full h-[calc(100vh-95px)vh] bg-white flex items-center flex-col ">
+      <div className="w-full h-[calc(100vh-95px)] bg-white flex items-center flex-col">
         <div id='Heading-section' className=" pb-[20px]">
           <h1 className="text-[2.5rem] leading-[3.3rem] tracking-wide  font-medium text-third-color max-w-[800px] text-center" >
             Complete Travel Solutions with
             <span className="text-primary-color font-medium text-[3rem]"> Care, Comfort & Commitment</span>
             {/* <span className="text-primary-color font-bold"> </span> */}
           </h1>
-
         </div>
-        <div className="flex max-w-[1400px] w-fit flex-1  bg-transparent h-fit ">
-          <div>
-
+        <div className='w-full relative flex justify-between pb-[20px]'>
+          <div className="flex max-w-[1400px] w-screen flex-1 h-fit ">
+            <div id="leftgradient" className="absolute  top-0 bottom-0 right-0 w-[5vw] z-40 bg-gradient-to-l from-cyan-500 to-blue-500">
+            </div>
+            <div id="rightgradient" className="absolute  top-0 bottom-0 left-0 w-[5vw] z-40 bg-gradient-to-r from-cyan-500 to-blue-500">
+            </div>
             <Swiper
-              spaceBetween={30}
+              spaceBetween={15}
               centeredSlides={true}
               speed={1600}
               loop={true}
               slidesPerView={1.5}
-              autoplay={{
-                delay: 900,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 900,
+              //   disableOnInteraction: false,
+              // }}
               pagination={{
                 clickable: true,
               }}
               navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper  max-w-[1400px] w-[98vw]"
+              className="mySwiper max-w-[1400px] w-[90vw]"
             >
               <SwiperSlide ><img src={images1} alt="" className='block w-full h-screen object-cover' /></SwiperSlide>
               <SwiperSlide ><img src={images2} alt="" className='block w-full h-screen object-cover' /></SwiperSlide>
@@ -92,7 +94,6 @@ const Home = () => {
       // <h1>nihal</h1>
       // <h1>nihal</h1>
       // <h1>nihal</h1> */}
-
     </Layouts>
   )
 }
