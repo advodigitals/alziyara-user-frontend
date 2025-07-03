@@ -72,7 +72,7 @@ const SwiperCode = () => {
                     <SwiperSlide ><img src={images9} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide> */}
                 {
                     swiperImageCollection.map((images) => (
-                        <SwiperSlide><img src={images.name} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
+                        <SwiperSlide className='flex items-center justify-center overflow-hidden rounded-3xl' ><img src={images.name} alt="" className='object-cover w-full h-full' /></SwiperSlide>
                     ))
                 }
             </Swiper>

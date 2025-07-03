@@ -6,9 +6,9 @@ const PrevButton = ({ swiperRef }) => {
     <div className="flex justify-start h-full items-center">
       <button
         onClick={() => swiperRef.current?.slidePrev()}
-        className=" text-white py-2 transition">
+        className=" text-black py-2 transition mx-2">
         {console.log(swiperRef, "hello")}
-        <span><Icon icon="simple-line-icons:arrow-left" width="50" height="50" /></span>
+        <span><Icon icon="simple-line-icons:arrow-left" width="30" height="30" /></span>
       </button>
     </div>
   );

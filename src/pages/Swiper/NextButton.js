@@ -10,8 +10,8 @@ const NextButton = ({ swiperRef }) => {
     <div className="flex justify-end h-full items-center">
       <button
         onClick={() => swiperRef.current?.slideNext()}
-        className=" text-white py-2 transition ">
-        <span><Icon icon="simple-line-icons:arrow-right" width="50" height="50" /></span>
+        className=" text-black py-2 transition mx-2">
+        <span><Icon icon="simple-line-icons:arrow-right" width="30" height="30" /></span>
       </button>
     </div>
   );
