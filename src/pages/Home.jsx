@@ -1,35 +1,13 @@
 
 // import ContactButton from '../constants/ContactButton'
 import Layouts from '../Layouts/Layouts'
-import images1 from '../Assets/images/travel1.avif'
-import images2 from '../Assets/images/travel2.jpg'
-import images3 from '../Assets/images/image3.jpg'
-import images4 from '../Assets/images/image4.jpg'
-import images5 from '../Assets/images/image5.jpg'
-import images6 from '../Assets/images/image6.jpg'
-import images7 from '../Assets/images/image7.jpg'
-import images8 from '../Assets/images/image8.jpg'
-import images9 from '../Assets/images/image9.jpg'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
-
+import NextButton from './Swiper/NextButton'
+import PrevButton from './Swiper/PrevButton'
+import SwiperCode from './Swiper/SwiperCode'
+import { useRef } from "react"
+import { Swiper as SwiperType } from "swiper";
 const Home = () => {
-
-  // const imageCollection = [
-  //   {
-  //     image1 : images1,
-  //     image2 : images2,
-  //     image3 : image
-
-  //   }
-  // ]
-
+    const swiperRef = useRef<SwiperType | null>(null);
   return (
     <Layouts>
       <div className="w-full h-[calc(100vh-95px)] bg-white flex items-center flex-col">
@@ -42,37 +20,13 @@ const Home = () => {
         </div>
         <div className='w-full relative flex justify-between pb-[20px]'>
           <div className="flex max-w-[1400px] w-screen flex-1 h-fit ">
-            <div id="leftgradient" className="absolute  top-0 bottom-[20px] right-0 w-[20vw] z-40 bg-gradient-to-l from-black ">
+            <div id="leftgradient" className="absolute  top-0 bottom-[20px] left-0 w-[15vw] z-40  bg-gradient-to-r from-black  ">
+              <PrevButton swiperRef={swiperRef} />
             </div>
-            <div id="rightgradient" className="absolute  top-0 bottom-[20px] left-0 w-[20vw] z-40  bg-gradient-to-r from-black ">
+            <div id="rightgradient" className="absolute  top-0 bottom-[20px] right-0 w-[15vw] z-40 bg-gradient-to-l from-black ">
+              <NextButton swiperRef={swiperRef} />
             </div>
-            <Swiper
-              spaceBetween={15}
-              centeredSlides={true}
-              speed={2200}
-              loop={true}
-              slidesPerView={1.5}
-              autoplay={{
-                delay: 900,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper max-w-[1400px] w-[98vw]  rounded-[10px]"
-            >
-              <SwiperSlide ><img src={images1} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images2} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images3} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images4} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images5} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images6} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images7} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images8} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-              <SwiperSlide ><img src={images9} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-            </Swiper>
+           <SwiperCode/>
           </div>
         </div>
         <h1>hello</h1>
@@ -87,19 +41,7 @@ const Home = () => {
         <h1>hello</h1>
         <h1>hello</h1>
 
-          <h1>hello</h1>
         <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-
-          <h1>hello</h1>
         <h1>hello</h1>
         <h1>hello</h1>
         <h1>hello</h1>
@@ -111,7 +53,19 @@ const Home = () => {
         <h1>hello</h1>
         <h1>hello</h1>
 
-          <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+
+        <h1>hello</h1>
         <h1>hello</h1>
         <h1>hello</h1>
         <h1>hello</h1>
