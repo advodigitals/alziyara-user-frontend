@@ -5,9 +5,11 @@ const HajjUmrah = () => {
   return (
    <>
    <Layouts>
+      <div className="absolute top-[95px] left-0">
 
    
    <h1>This is HajjUmrah</h1>
+      </div>
    </Layouts>
    </>
   )

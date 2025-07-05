@@ -8,10 +8,7 @@ const NavbarButtons = (props) => {
       {
         NavbarList.map((props) => (
           <li className="list-none">
-           {/* {console.log(props.path)} */}
-           {/* {console.log(props.name)} */}
-           {console.log(scrolled)}
-            <Link to={props.path} className={`no-underline inline-block px-4  font-semibold w-fit h-fit hover:bg-primary-color rounded-lg cursor-pointer py-2 ${ scrolled ? 'text-black hover:bg-primary-color' : 'text-white hover:bg-black'}`}>{props.name}</Link>
+            <Link to={props.path} className={`no-underline inline-block px-4  font-semibold w-fit h-fit  rounded-lg cursor-pointer py-2 ${ scrolled ? 'text-black hover:bg-main-color' : 'text-black hover:bg-primary-color'}`}>{props.name}</Link>
           </li>
         ))
       }

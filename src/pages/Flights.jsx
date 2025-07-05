@@ -5,8 +5,10 @@ const Flights = () => {
   return (
     <>
     <Layouts>
+      <div className="absolute top-[95px] left-0">
 
     <h1>this is Flights</h1>
+      </div>
     </Layouts>
     </>
   )
