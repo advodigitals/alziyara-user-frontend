@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import SwiperInstance from "swiper";
+
 
 // export interface SwiperButtonProps {
 //   swiperRef: React.RefObject<SwiperInstance | null>; // Define the type for swiperRef

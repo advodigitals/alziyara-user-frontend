@@ -4,7 +4,7 @@ import NavbarButtons from './NavbarButtons'
 import NavbarDropdown from './NavbarDropdown'
 import ContactButton from '../../constants/ContactButton'
 import img from '../../Assets/images/logo.png'
-import IMPNavbar from './IMPNavbar'
+
 
 // import $ from 'jquery';
 

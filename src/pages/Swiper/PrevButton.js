@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { SwiperButtonProps } from "./NextButton";
+
 
 const PrevButton = ({ swiperRef }) => {
   return (
