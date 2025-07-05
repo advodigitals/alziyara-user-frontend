@@ -1,13 +1,12 @@
 
 // import ContactButton from '../constants/ContactButton'
 import Layouts from '../Layouts/Layouts'
-import NextButton from './Swiper/NextButton'
-import PrevButton from './Swiper/PrevButton'
+
 import SwiperCode from './Swiper/SwiperCode'
-import { useRef } from "react"
-import { Swiper as SwiperType } from "swiper";
+// import { useRef } from "react"
+// import { Swiper as SwiperType } from "swiper";
 const Home = () => {
-  const swiperRef = useRef < SwiperType | null > (null);
+
   return (
     <Layouts>
       <div className="w-full max-w-[1400px] h-[calc(100vh-95px)] bg-white flex items-center flex-col mx-auto">
@@ -26,7 +25,7 @@ const Home = () => {
             </div>
             <div id="rightgradient" className="absolute  top-0 bottom-[20px] right-0 w-[10vw] z-40 bg-gradient-to-l from-white ">
               {/* <NextButton swiperRef={swiperRef} /> */}
-              
+
             </div>
             <SwiperCode />
           </div>

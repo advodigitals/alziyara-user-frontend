@@ -10,15 +10,15 @@ import images8 from '../../Assets/images/image8.jpg'
 import images9 from '../../Assets/images/image9.jpg'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { useRef } from "react";
+
 
 const SwiperCode = () => {
-    const swiperRef = useRef(null);
+
     const swiperImageCollection = [
 
         { name: images1 },

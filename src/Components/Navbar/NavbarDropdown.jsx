@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { NavbarList } from '../../constants/NavBarItems'
 const NavbarDropdown = (props) => {
-  const scrolled = props.status
+
   return (
     <>
       <div className= "flex  items-center bg-secondary-color w-full absolute top-[95px] rounded-b-xl shadow-xl " >
