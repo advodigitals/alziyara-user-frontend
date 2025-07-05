@@ -31,14 +31,14 @@ const IMPNavbar = () => {
   return (
     <>
       <aside className="w-full  fixed  bottom-[30px] flex justify-center items-center px-[10px] z-50 lg:hidden">
-        <div className=" w-full max-w-[400px] bg-primary-color rounded-[10px] px-[20px] py-[5px]">
+        <div className=" w-full max-w-[400px] bg-gray-200  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 rounded-[10px] px-[20px] py-[5px] border border-white border-solid">
           <ul className="flex flex-row items-center justify-between">
             {buttonIcon.map((details) => (
               <div className="flex flex-col items-center">
-                <Link to={details.urls} className="text-white">
+                <Link to={details.urls} className="text-black">
                   {details.icons}
                 </Link>
-                <p className="text-white cursor-pointer text-xs">
+                <p className="text-black cursor-pointer text-xs">
                   {details.title}
                 </p>
               </div>

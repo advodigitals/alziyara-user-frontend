@@ -2,6 +2,7 @@
 module.exports = {
   mode: 'jit',
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+   
   theme: {
     extend: { 
       colors: {
@@ -14,6 +15,14 @@ module.exports = {
         "dropdown-hover" : "--dropdown-hover",
       },},
   },
-  plugins: [],
+  plugins: [
+     require('tailwind-plugin-typed')({
+      delimiter: ';',
+      typeLetterDuration: 0.1,
+      pauseAfterWordDuration: 2,
+      deleteLetterDuration: 0.05,
+      pauseAfterDeletionDuration: 1,
+    }),
+  ],
 }
 
