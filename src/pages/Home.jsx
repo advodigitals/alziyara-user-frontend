@@ -5,6 +5,7 @@ import Layouts from '../Layouts/Layouts'
 import AboutUs from './AboutUs'
 
 import SwiperCode from './Swiper/SwiperCode'
+import SwiperYoutube from './Swiper/SwiperYoutube'
 // import { useRef } from "react"
 // import { Swiper as SwiperType } from "swiper";
 const Home = () => {
@@ -60,6 +61,7 @@ const Home = () => {
 
           <AboutUs/>
           <LateestFromUs/>
+          <SwiperYoutube/>
       </div>
     </Layouts>
   )

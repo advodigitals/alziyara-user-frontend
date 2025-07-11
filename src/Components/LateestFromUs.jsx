@@ -27,7 +27,7 @@ const LateestFromUs = () => {
         <>
             <div className='gap-3'>
                 <div className="cursor-pointer bg-red-500"> 
-                    {/* <iframe class="latestVideoEmbed" vnum='0' width="600" height="340" frameborder="0" allowfullscreen></iframe> */}
+                    <iframe class="latestVideoEmbed" vnum='0' width="600" height="340" frameborder="0" allowfullscreen></iframe>
                 </div>
 
                 <div className="cursor-pointer bg-orange-500"> 
@@ -36,6 +36,22 @@ const LateestFromUs = () => {
 
                 <div className="cursor-pointer bg-amber-500">
                     <iframe class="latestVideoEmbed" vnum='2' width="600" height="340" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div className="cursor-pointer bg-amber-500">
+                    <iframe class="latestVideoEmbed" vnum='3' width="600" height="340" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div className="cursor-pointer bg-amber-500">
+                    <iframe class="latestVideoEmbed" vnum='4' width="600" height="340" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div className="cursor-pointer bg-amber-500">
+                    <iframe class="latestVideoEmbed" vnum='5' width="600" height="340" frameborder="0" allowfullscreen></iframe>
+                </div>
+            
+                <div className="cursor-pointer bg-amber-500">
+                    <iframe class="latestVideoEmbed" vnum='6' width="600" height="340" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </>

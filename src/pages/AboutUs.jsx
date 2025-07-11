@@ -3,6 +3,7 @@ import Layouts from '../Layouts/Layouts'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import founderImg from '../Assets/images/find.jpg'
 
+
 const AboutUs = () => {
   return (
     <>
@@ -36,9 +37,7 @@ const AboutUs = () => {
                 </div>
               </div>
           </div> */}
-          <div>
-            
-          </div>
+          
         </div>
       </Layouts>
     </>
