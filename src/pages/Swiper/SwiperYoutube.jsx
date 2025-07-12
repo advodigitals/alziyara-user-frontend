@@ -56,7 +56,7 @@ const SwiperYoutube = () => {
         <SwiperSlide className='h-[200px] bg-amber-500'>Slide 8</SwiperSlide>
         <SwiperSlide className='h-[200px] bg-yellow-500'>Slide 9</SwiperSlide>
       </Swiper> */}
-            <div class="swiper-container">
+            {/* <div class="swiper-container">
                 <div class="swiper-wrapper w-[98vw] h-full">
                     <div className='h-[200px] bg-slate-500' style="background-image: url(https://placekeanu.com/250/g);">1</div>
                     <div className='h-[200px] bg-slate-500' style="background-image: url(https://placekeanu.com/260);">2</div>
@@ -65,6 +65,18 @@ const SwiperYoutube = () => {
                     <div className='h-[200px] bg-slate-500' style="background-image: url(https://placekeanu.com/280/y);">5</div>
                     <div className='h-[200px] bg-slate-500' style="background-image: url(https://placekeanu.com/190/y);">6</div>
                     <div className='h-[200px] bg-slate-500' style="background-image: url(https://placekeanu.com/300/);">7</div>
+                </div>
+            </div> */}
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" ></div>
+                    <div class="swiper-slide" style="background-image: url(https://placekeanu.com/260);">2</div>
+                    <div class="swiper-slide" style="background-image: url(https://placekeanu.com/270);">3</div>
+                    <div class="swiper-slide" style="background-image: url(https://placekeanu.com/270/y);">4</div>
+                    <div class="swiper-slide" style="background-image: url(https://placekeanu.com/280/y);">5</div>
+                    <div class="swiper-slide" style="background-image: url(https://placekeanu.com/190/y);">6</div>
+                    <div class="swiper-slide" style="background-image: url(https://placekeanu.com/300/);">7</div>
                 </div>
             </div>
 
