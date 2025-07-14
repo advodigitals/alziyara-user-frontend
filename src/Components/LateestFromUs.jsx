@@ -8,44 +8,7 @@ const MAX_RESULTS = 8
 
 const LateestFromUs = () => {
 
-    const youtubeArray = [
-        {
-            vnum: "0",
-            title: "frame1"
-        },
-        {
-            vnum: "1",
-            title: "frame2"
-        },
-        {
-            vnum: "2",
-            title: "frame3"
-        },
-        {
-            vnum: "3",
-            title: "frame4"
-        },
-        {
-            vnum: "4",
-            title: "frame5"
-        },
-        {
-            vnum: "5",
-            title: "frame6"
-        },
-        {
-            vnum: "6",
-            title: "frame7"
-        },
-        {
-            vnum: "7",
-            title: "frame8"
-        },
-        {
-            vnum: "8",
-            title: "frame9"
-        },
-    ]
+    
 
     /* NEW YOUTUBE EVMBEDED CODE START*/
     const [videos, setVideos] = useState([])
@@ -108,6 +71,7 @@ const LateestFromUs = () => {
                                     showinfo="0"
                                     allowFullScreen
                                     className="rounded-[10px]"
+                                    title='slider'
                                 />
                                 
                             </div>
