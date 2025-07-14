@@ -1,6 +1,7 @@
 
 // import ContactButton from '../constants/ContactButton'
 // import LateestFromUs from '../Components/LateestFromUs'
+import InstagramSlider from '../Components/InstagramSlider'
 import YoutubeSlider from '../Components/YoutubeSlider'
 import Layouts from '../Layouts/Layouts'
 import AboutUs from './AboutUs'
@@ -62,7 +63,7 @@ const Home = () => {
 
           <AboutUs/>
           <YoutubeSlider/>
-          {/* <SwiperYoutube/> */}
+         {/* <InstagramSlider/> */}
       </div>
     </Layouts>
   )

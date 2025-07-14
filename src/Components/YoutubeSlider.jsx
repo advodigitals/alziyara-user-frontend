@@ -52,11 +52,11 @@ const YoutubeSlider = () => {
                 speed={2000}
                 // freeModeMomentum={false}
                 spaceBetween={15}
-                // autoplay={{
-                //     delay: 0,
-                //     disableOnInteraction: false,
-                //     pauseOnMouseEnter: true,
-                // }}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                }}
                 breakpoints={{
                     460:{
                         slidesPerView:2
@@ -70,7 +70,7 @@ const YoutubeSlider = () => {
 
                 }}
                 modules={[Autoplay]}
-                className="mySwiper w-full h-[300px] !ease-linear">
+                className="mySwiper w-full h-[500px] !ease-linear">
                 {videos.map((video) => (
                     <SwiperSlide className="h-full w-full ">
                         <div key={video.id.videoId} className="aspect-video h-full w-full ">
@@ -84,6 +84,7 @@ const YoutubeSlider = () => {
                                 className="rounded-[10px]"
                                 title='slider'
                             />
+                               <p className="mt-2 text-center font-semibold">{video.snippet.title}</p>
                         </div>
                     </SwiperSlide>
                 ))}
