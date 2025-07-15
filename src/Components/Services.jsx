@@ -31,7 +31,7 @@ const Services = () => {
       path : "/visa"
     },
     {
-      icon: <Icon icon="healthicons:i-certificate-paper-outline" width="48" height="48" />,
+      icon: <Icon icon="healthicons:i-certificate-paper-outline" width="43" height="43" />,
       title: "Certificate ATT .",
       content: "Trusted certificate attestation services handled quickly with care and reliable guidance.",
       path : "/certificate-attestation"
@@ -57,7 +57,7 @@ const Services = () => {
                   <h2 className='text-third-color text-[24px] font-medium h-fit'>{details.title}</h2>
                 </div>
                 <hr className='border-t-[1px_solid_#9d9d9d] mx-8 my-4' />
-                <div className='pl-2 pr-2  '>
+                <div className='pl-4 pr-4  '>
                   <p className='text-lg leading-[26px] font-light text-third-color capitalize'>{details.content}</p>
                 </div>
               </div>
