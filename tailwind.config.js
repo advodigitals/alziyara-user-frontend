@@ -13,6 +13,7 @@ module.exports = {
         "button-hover" : "var(--button-hover)",
         "black-color" : "var(--black-color)",
         "dropdown-hover" : "--dropdown-hover",
+        "service-bg" : "--background-color ",
       },},
   },
   plugins: [

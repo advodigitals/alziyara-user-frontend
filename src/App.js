@@ -7,6 +7,8 @@ import Tours from "./pages/Tours";
 import Visa from "./pages/Visa";
 import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
+import CertificateATT from "./pages/CertificateATT";
+import OnlineServices from "./pages/OnlineServices";
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <Route path="/packages" element={<Packages/>}/>
       <Route path="/tours" element={<Tours/>}/>
       <Route path="/visa" element={<Visa/>}/>
+      <Route path="/certificate-attestation" element={<CertificateATT/>}/>
+      <Route path="/online-services" element={<OnlineServices/>}/>
     </Routes>
     
     </>

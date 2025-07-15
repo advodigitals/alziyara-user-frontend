@@ -14,7 +14,7 @@ const YoutubeSlider = () => {
         window.open(YoutubeChannelURL)
 
     }
-     /* NEW YOUTUBE EVMBEDED CODE START*/
+    /* NEW YOUTUBE EVMBEDED CODE START*/
     const [videos, setVideos] = useState([])
     useEffect(() => {
         async function fetchVideos() {
@@ -58,14 +58,14 @@ const YoutubeSlider = () => {
                     pauseOnMouseEnter: true,
                 }}
                 breakpoints={{
-                    460:{
-                        slidesPerView:2
+                    460: {
+                        slidesPerView: 2
                     },
-                    600:{
-                        slidesPerView:3
+                    600: {
+                        slidesPerView: 3
                     },
-                    900:{
-                        slidesPerView:4
+                    900: {
+                        slidesPerView: 4
                     }
 
                 }}
@@ -84,15 +84,15 @@ const YoutubeSlider = () => {
                                 className="rounded-[10px]"
                                 title='slider'
                             />
-                               <p className="mt-2 text-center font-semibold">{video.snippet.title}</p>
+                            <p className="mt-2 text-center font-semibold">{video.snippet.title}</p>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
             <div className="flex w-full max-w-[1400px] mx-auto  py-2 justify-center items-center">
                 <div className="h-fit w-fit  ">
-                    <button className="w-[180px] h-[45px] bg-white rounded-[10px] flex justify-center items-center gap-3  shadow-lg shadow-slate-500/100" onClick= {handleNaivgateToYotube}>
-                        
+                    <button className="w-[180px] h-[45px] bg-white rounded-[10px] flex justify-center items-center gap-3  shadow-lg shadow-slate-500/100" onClick={handleNaivgateToYotube}>
+
                         <p className="text-primary-color text-lg font-semibold ">See More</p>
                         <Icon icon="logos:youtube-icon" width="30px" height="30" />
                     </button>

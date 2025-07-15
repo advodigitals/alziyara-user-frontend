@@ -11,7 +11,7 @@ const IMPNavbar = () => {
     },
     {
       icons: 
-      <Icon icon="ic:outline-airplane-ticket" width="24" height="24" />,
+      <Icon icon="mdi:flight" width="24" height="24" />,
       title: "Flights",
       urls: "/flights",
     },
@@ -21,9 +21,7 @@ const IMPNavbar = () => {
       urls: "/hajj-umrah",
     },
     {
-      icons: (
-        <Icon icon="fluent:shopping-bag-16-regular" width="24" height="24" />
-      ),
+      icons: <Icon icon="fontisto:holiday-village" width="24" height="24" />,
       title: "Packages",
       urls: "/packages",
     },
