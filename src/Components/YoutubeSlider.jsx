@@ -91,8 +91,8 @@ const YoutubeSlider = () => {
             </Swiper>
             <div className="flex w-full max-w-[1400px] mx-auto  py-2 justify-center items-center">
                 <div className="h-fit w-fit  ">
-                    <button className="w-[180px] h-[45px] bg-white rounded-[10px] flex justify-center items-center gap-3  shadow-lg shadow-slate-500/100">
-                        {onclick= handleNaivgateToYotube}
+                    <button className="w-[180px] h-[45px] bg-white rounded-[10px] flex justify-center items-center gap-3  shadow-lg shadow-slate-500/100" onclick= {handleNaivgateToYotube}>
+                        
                         <p className="text-primary-color text-lg font-semibold ">See More</p>
                         <Icon icon="logos:youtube-icon" width="30px" height="30" />
                     </button>
