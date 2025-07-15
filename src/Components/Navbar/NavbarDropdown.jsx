@@ -5,11 +5,11 @@ const NavbarDropdown = (props) => {
 
   return (
     <>
-      <div className= "flex  items-center bg-secondary-color w-full absolute top-[95px] rounded-b-xl shadow-xl " >
+      <div className= " bg-secondary-color w-full relative z-49 rounded-b-xl shadow-xl " >
         <ul className="flex flex-col  gap-[20px] py-[10px] " >
           {
             NavbarList.map((button) => (
-              <li className="list-none justify-start items-start ">
+              <li className="list-none  ">
                 <Link to={button.path} className="no-underline inline-block  text-black font-semibold w-full h-fit hover:bg-dropdown-hover rounded-lg cursor-pointer  left-0  px-4 " >{button.name}</Link>
               </li>
             ))

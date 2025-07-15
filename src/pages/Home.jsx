@@ -1,36 +1,32 @@
 
 // import ContactButton from '../constants/ContactButton'
+// import LateestFromUs from '../Components/LateestFromUs'
+// import InstagramSlider from '../Components/InstagramSlider'
+import AboutCards from '../Components/AboutCards'
+import HeadingSection from '../Components/HeadingSection'
+import Services from '../Components/Services'
+import SwiperSection from '../Components/SwiperSection'
+import YoutubeSlider from '../Components/YoutubeSlider'
 import Layouts from '../Layouts/Layouts'
+import AboutUs from './AboutUs'
 
-import SwiperCode from './Swiper/SwiperCode'
+// import SwiperYoutube from './Swiper/SwiperYoutube'
 // import { useRef } from "react"
 // import { Swiper as SwiperType } from "swiper";
 const Home = () => {
 
   return (
     <Layouts>
-      <div className="w-full max-w-[1400px] h-[calc(100vh-95px)] bg-white flex items-center flex-col mx-auto">
-        <div id='Heading-section' className=" pb-[20px] mt-2 mb-2">
-          <h1 className="sm:text-[2.5rem]  text-[2rem] sm:leading-[3.3rem] leading-[1.6rem] tracking-wide  font-medium text-third-color max-w-[800px] text-center" >
-            Complete Travel Solutions with <br />
-       
-            <span className="text-primary-color font-medium sm:text-[3rem] text-[1.8rem] typed-[Care.;Comfort.;Commitment.] typed-caret"> </span>
-            {/* <span className="text-primary-color font-bold"> </span> */}
-          </h1>
-        </div>
-        <div className='w-full relative flex justify-between pb-[20px]  '>
-          <div className="flex max-w-[1400px] w-screen flex-1 max-h-[600px]">
-            <div id="leftgradient" className="absolute  top-0 bottom-[20px] left-0 w-[10vw] z-40  bg-gradient-to-r from-white  ">
-              {/* <PrevButton swiperRef={swiperRef} /> */}
-            </div>
-            <div id="rightgradient" className="absolute  top-0 bottom-[20px] right-0 w-[10vw] z-40 bg-gradient-to-l from-white ">
-              {/* <NextButton swiperRef={swiperRef} /> */}
-
-            </div>
-            <SwiperCode />
-          </div>
-        </div>
-       
+      <div className="w-full max-w-[1400px]  bg-white flex items-center flex-col mx-auto ">
+        <HeadingSection />
+        <SwiperSection />
+      </div>
+      <div id="aboutUs" className="flex items-center gap-5 justify-center py-5 flex-wrap container px-4 mx-auto">
+        <AboutCards />
+        <AboutUs />
+        <YoutubeSlider />
+        {/* <InstagramSlider/> */}
+        <Services/>
       </div>
     </Layouts>
   )

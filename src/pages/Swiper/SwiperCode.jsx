@@ -45,10 +45,10 @@ const SwiperCode = () => {
                 loop={true}
                 slidesPerView={1.5}
 
-                // autoplay={{
-                //     delay: 900,
-                //     disableOnInteraction: false,
-                // }}
+                autoplay={{
+                    delay: 900,
+                    disableOnInteraction: false,
+                }}
                 pagination={{
                     clickable: true,
 
@@ -59,7 +59,7 @@ const SwiperCode = () => {
                     disabledClass: 'disabled_swiper_button'
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper max-w-[1400px] w-[98vw]  rounded-[10px]">
+                className="mySwiper max-w-[1400px] w-[98vw] rounded-[10px]">
                 {/*                 
                     <SwiperSlide ><img src={images1} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
                     <SwiperSlide ><img src={images2} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
