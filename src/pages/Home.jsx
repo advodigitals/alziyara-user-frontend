@@ -36,7 +36,7 @@ const Home = () => {
         </div>
       </div>
       <div id="aboutUs" className="   flex items-center gap-5 justify-center py-5 flex-wrap container px-4 mx-auto">
-        <div className="flex h-[35vh] text-left w-[18rem]  flex-col items-center justify-center rounded-[10px] pl-[6px] ">
+        <div className="flex h-[21vh] sm:h-[35vh] text-left w-[18rem]  flex-col items-center justify-center rounded-[10px] pl-[6px] ">
 
           <div>
             <h1 className="text-5xl font-bold  text-left text-primary-color">100k+</h1>
@@ -44,7 +44,7 @@ const Home = () => {
           </div>
 
         </div>
-        <div className="flex h-[35vh] w-[18rem] flex-col items-center  justify-center rounded-[10px] pl-[6px] ">
+        <div className="flex h-[21vh] sm:h-[35vh] w-[18rem] flex-col items-center  justify-center rounded-[10px] pl-[6px] ">
 
           <div>
             <h1 className="text-5xl font-bold text-left text-primary-color">6+</h1>
@@ -52,7 +52,7 @@ const Home = () => {
           </div>
 
         </div>
-        <div className="flex h-[35vh] w-[18rem]  flex-col  items-center justify-center rounded-[10px] pl-[6px] ">
+        <div className="flex h-[21vh] sm:h-[35vh] w-[18rem]  flex-col  items-center justify-center rounded-[10px] pl-[6px] ">
 
           <div>
             <h1 className="text-5xl text-left font-bold text-primary-color">9000+</h1>
