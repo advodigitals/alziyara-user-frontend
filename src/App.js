@@ -9,6 +9,11 @@ import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import CertificateATT from "./pages/CertificateATT";
 import OnlineServices from "./pages/OnlineServices";
+import ContactUs from "./pages/ContactUs";
+import Branches from "./pages/Branches";
+import InternationalPackages from "./pages/InternationalPackages";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 
 function App() {
@@ -25,6 +30,11 @@ function App() {
       <Route path="/visa" element={<Visa/>}/>
       <Route path="/certificate-attestation" element={<CertificateATT/>}/>
       <Route path="/online-services" element={<OnlineServices/>}/>
+      <Route path="/contact-us" element={<ContactUs/>}/>
+      <Route path="/branches" element={<Branches/>}/>
+      <Route path="/international-packages" element={<InternationalPackages/>}/>
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+      <Route path="/terms-and-conditions" element={<TermsAndConditions/>}/>
     </Routes>
     
     </>

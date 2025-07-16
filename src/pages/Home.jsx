@@ -9,6 +9,7 @@ import SwiperSection from '../Components/SwiperSection'
 import YoutubeSlider from '../Components/YoutubeSlider'
 import Layouts from '../Layouts/Layouts'
 import AboutUs from './AboutUs'
+import Footer from '../Components/Footer'
 
 // import SwiperYoutube from './Swiper/SwiperYoutube'
 // import { useRef } from "react"
@@ -28,6 +29,7 @@ const Home = () => {
         {/* <InstagramSlider/> */}
         <Services/>
       </div>
+      <Footer/>
     </Layouts>
   )
 }
