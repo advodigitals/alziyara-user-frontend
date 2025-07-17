@@ -2,6 +2,8 @@ import React from 'react'
 import FooterSocialMeadiasSection from './FooterSocialMeadiasSection'
 import FooterQuickLinksSection from './FooterQuickLinksSection'
 import FooterServicesSection from './FooterServicesSection'
+import FooterContactSection from './FooterContactSection'
+import FooterBranchSection from './FooterBranchSection'
 
 const Footer = () => {
   return (
@@ -12,14 +14,9 @@ const Footer = () => {
           <FooterQuickLinksSection />
           <FooterServicesSection />
         </div>
-        <div id="Contact-section" className="bg-teal-500">
-
-        </div>
-        <div id="Branches-section" className="bg-amber-500">
-
-        </div>
+        <FooterContactSection/>
+        <FooterBranchSection/>
         <div id="Rights-section" className="bg-lime-500 ">
-
         </div>
       </div>
     </>

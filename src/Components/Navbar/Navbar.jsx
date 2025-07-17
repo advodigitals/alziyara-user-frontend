@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="content-center items-center hidden lg:flex">
             <ul className="flex flex-row">
               <NavbarButtons status={scrolled} />
-            </ul>
+            </ul> 
           </div>
           <ContactButton />
           <div className="flex justify-center items-center bg-transparent p-[5px] cursor-pointer lg:hidden"> 

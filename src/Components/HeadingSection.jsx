@@ -7,7 +7,6 @@ const HeadingSection = () => {
                 <h1 className="sm:text-[2.5rem]  text-[2rem] sm:leading-[3.3rem] leading-[1.8rem] tracking-wide  font-medium text-third-color max-w-[800px] text-center" >
                     Complete Travel Solutions with <br />
                     <span className="text-primary-color font-medium sm:text-[3rem] text-[1.8rem] typed-[Care.;Comfort.;Commitment.] typed-caret"> </span>
-                    {/* <span className="text-primary-color font-bold"> </span> */}
                 </h1>
             </div>
         </>

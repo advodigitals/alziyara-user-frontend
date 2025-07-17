@@ -19,20 +19,12 @@ const YoutubeSlider = () => {
     useEffect(() => {
         async function fetchVideos() {
             try {
-                console.log("API KEY:", YOUTUBE_API_KEY);
+                
                 const res = await fetch(
                     `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
                 )
                 const data = await res.json()
 
-
-
-                data.items.forEach((item, index) => {
-                    console.log(`🔹 Item ${index + 1}:`, item);
-                });
-
-
-                console.log("Fetched YouTube data:", data);
                 const videoItems = data.items.filter(item => item.id.kind === "youtube#video")
                 setVideos(videoItems);
             } catch (error) {
