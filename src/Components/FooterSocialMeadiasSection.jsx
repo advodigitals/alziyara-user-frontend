@@ -31,7 +31,7 @@ const FooterSocialMeadiasSection = () => {
 
                             <div className={`flex flex-row items-center gap-3  justify-center hover:text-black`} onMouseEnter={() => handleMouseEnter(setVisibleOne)} onMouseLeave={() => handleMouseLeave(setVisibleOne)}>
                                 <span className={`p-2 border border-solid border-white rounded-[40px] text-white ${visibleOne && "bg-black"}`} ><Icon icon="ei:sc-facebook" width="30" height="30" /></span>
-                                <p className={` text-base  font-normal ${visibleOne ? "text-black" : "text-white"}`} >FACEBOOK</p>
+                                <p className={` text-base  font-normal ${visibleOne ? "text-black" : "text-white"}`} >FACEBOOK</p> 
                             </div>
                         </Link>
                         <Link to={("https://www.instagram.com/alziyaramalappuram?igsh=MWo2OWdrbnllaXk4ZA==")}>

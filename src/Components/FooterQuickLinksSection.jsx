@@ -10,7 +10,7 @@ const FooterQuickLinksSection = () => {
                 <div className="w-full h-fit py-2 flex sm:justify-center justify-start">
                     <h1 className="text-3xl font-bold text-white"> QUICK LINKS</h1>
                 </div>
-                <div className="flex w-full h-full flex-row ">
+                <div className="flex w-full h-full flex-row pl-2 sm:pl-0">
                     <div className="flex flex-1   pt-3 flex-col sm:items-center ">
                         <div className='flex flex-col gap-4'>
                             {

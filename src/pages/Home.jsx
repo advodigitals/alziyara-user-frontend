@@ -24,12 +24,12 @@ const Home = () => {
       </div>
       <div id="aboutUs" className="flex items-center gap-5 justify-center py-5 flex-wrap container px-4 mx-auto">
         <AboutCards />
+        <Services />
         <AboutUs />
         <YoutubeSlider />
         {/* <InstagramSlider/> */}
-        <Services/>
       </div>
-      <Footer/>
+      <Footer />
     </Layouts>
   )
 }

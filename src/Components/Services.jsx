@@ -47,7 +47,7 @@ const Services = () => {
 
   return (
     <>
-      <div className="w-full max-w-[1440px] mx-auto h-fit bg-service-bg flex flex-row flex-wrap gap-y-6 gap-x-9 py-4 px-6 justify-center ">
+      <div className="w-full max-w-[1400px] mx-auto h-fit bg-service-bg flex flex-row flex-wrap gap-y-6 gap-x-9 py-4 px-6 justify-center ">
         {
           ServiceCardDetails.map((details) => (
             <Link to={details.path}>

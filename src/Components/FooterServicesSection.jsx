@@ -11,8 +11,8 @@ const FooterServicesSection = () => {
                     <div className="w-full h-fit py-2 flex  sm:justify-center justify-start">
                         <h1 className="text-3xl font-bold text-white">SERVICES</h1>
                     </div>
-                    <div className="flex w-full h-full flex-row px-2">
-                        <div className="flex flex-1   pt-3 flex-col items-center ">
+                    <div className="flex w-full h-full flex-row  sm:pr-0 pr-2 pl-1 sm:pl-0">
+                        <div className="flex flex-1   pt-3 flex-col sm:items-center items-start">
                             <div className='flex flex-col gap-4'>
                                 {
                                     servicesTagSectionOne.map((details) => (
