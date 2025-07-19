@@ -12,7 +12,7 @@ const FooterContactSection = () => {
                     {
                         customerSupportArray.map((details) => (
                             <div className="  h-full flex-1 flex-col flex sm:items-center items-start md:pl-0 pl-2 md:py-3 py-2">
-                                <div className="flex md:flex-col flex-row sm:items-center items-start gap-2">
+                                <div className="flex md:flex-col flex-row sm:items-center items-start ">
                                     <p className="font-light text-white">{details.name}</p>
                                     <p className="font-light text-white">{details.section}</p>
                                 </div>

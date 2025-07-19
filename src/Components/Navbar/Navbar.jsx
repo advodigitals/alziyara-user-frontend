@@ -4,6 +4,7 @@ import NavbarButtons from './NavbarButtons'
 import NavbarDropdown from './NavbarDropdown'
 import ContactButton from '../../constants/ContactButton'
 import img from '../../Assets/images/logo.png'
+import VisaDropdown from './VisaDropdown'
 
 
 // import $ from 'jquery';
@@ -35,8 +36,9 @@ const Navbar = () => {
             <img src={img} alt="" className="w-[90px] h-auto justify-center" />
           </div>
           <div className="content-center items-center hidden lg:flex">
-            <ul className="flex flex-row">
+            <ul className=" flex items-center">
               <NavbarButtons status={scrolled} />
+            
             </ul> 
           </div>
           <ContactButton />

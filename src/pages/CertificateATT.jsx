@@ -5,7 +5,7 @@ const CertificateATT = () => {
     return (
         <>
             <Layouts>
-                <div className="absolute top-[95px] left-0">
+                <div className="absolute top-[95px] left-0 w-full">
                     <h1>Certiicate ATT</h1>
                 </div>
             </Layouts>
