@@ -7,7 +7,7 @@ const IMPNavbar = () => {
     {
       icons: <Icon icon="guidance:passports" width="22" height="22" />,
       title: "Visa",
-      urls: "/visa",
+      urls: "/globla-visa",
     },
     {
       icons: 

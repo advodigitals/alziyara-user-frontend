@@ -12,8 +12,8 @@ const GlobalVisa = () => {
             <Layouts>
                 <div className="flex h-full w-full max-w-[2000px] mx-auto flex-col  items-center pb-4 ">
                     <div id="img" className="w-full h-[28rem] flex justify-center items-center flex-col gap-10   bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${VisaBg})` }}>
-                        <h1 className="text-7xl font-bold text-black">GLOBAL VISA</h1>
-                        <p className="capitalize text-3xl font-medium text-black ">search the country</p>
+                        <h1 className="text-7xl font-bold text-black text-center">GLOBAL VISA</h1>
+                        <p className="capitalize text-3xl font-medium text-black text-center">search the country</p>
                         <div id="search-input" className="px-2 w-full flex justify-center items-center ">
                             <input type="text" placeholder='Country Name' className='min-w-[20rem] h-[3rem] pl-4 rounded-[10px] border-none outline-none' />
                         </div>
@@ -27,7 +27,7 @@ const GlobalVisa = () => {
                             </p>
                         </div>
                         <div className="h-full w-full max-w-7xl mx-auto sm:px-5 px-2 grid ">
-                            <div id="visa-section" className=" h-full w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 sm:gap-6 gap-2 ">
+                            <div id="visa-section" className=" h-full w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 sm:gap-6 gap-4 ">
                                 {
                                     glblVisaCountryDetails.map((details) => (
                                         <Link className='  h-[12rem] bg-white rounded-[10px]'>
