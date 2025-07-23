@@ -24,6 +24,7 @@ module.exports = {
         "black-color" : "var(--black-color)",
         "dropdown-hover" : "--dropdown-hover",
         "service-bg" : "--background-color ",
+        "visa-bg" : "--visabg-color",
       },},
   },
   plugins: [

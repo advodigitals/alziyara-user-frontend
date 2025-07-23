@@ -4,7 +4,7 @@ import Flights from "./pages/Flights";
 import HajjUmrah from "./pages/HajjUmrah";
 import Packages from "./pages/Packages";
 import Tours from "./pages/Tours";
-import Visa from "./pages/Visa";
+// import Visa from "./pages/Visa";
 import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import CertificateATT from "./pages/CertificateATT";
@@ -30,7 +30,7 @@ function App() {
         <Route path="/hajj-umrah" element={<HajjUmrah />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/tours" element={<Tours />} />
-        <Route path="/visa" element={<Visa />} />
+        {/* <Route path="/gcc-visa" element={<Visa />} /> */}
         <Route path="/certificate-attestation" element={<CertificateATT />} />
         <Route path="/online-services" element={<OnlineServices />} />
         <Route path="/contact-us" element={<ContactUs />} />

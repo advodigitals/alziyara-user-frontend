@@ -1,3 +1,5 @@
+import { Icon } from "@iconify/react/dist/iconify.js"
+
 export const NavbarList = [
     {
       id : "1",
@@ -15,8 +17,9 @@ export const NavbarList = [
     }, {
       id : "4",
       name: "Visa",
-      path: "/visa",
-      dropdown : true
+      // path: "/",
+      dropdown : true,
+      dropdownIcon : <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />
 
     }, {
       id : "5",
@@ -39,14 +42,15 @@ export const NavbarList = [
 
 
 export const visaDropdown = [
-  {
-    id : "1",
-    name : "Globla Visa",
-    path : "/globla-visa"
-  },
+
   {
     id : "2",
     name : "GCC Visa",
     path : "/gcc-visa"
+  },
+    {
+    id : "1",
+    name : "Globla Visa",
+    path : "/globla-visa"
   },
 ]
