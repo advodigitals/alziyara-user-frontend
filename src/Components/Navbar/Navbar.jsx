@@ -4,7 +4,7 @@ import NavbarButtons from './NavbarButtons'
 import NavbarDropdown from './NavbarDropdown'
 import ContactButton from '../../constants/ContactButton'
 import img from '../../Assets/images/logo.png'
-import VisaDropdown from './VisaDropdown'
+
 
 
 // import $ from 'jquery';
