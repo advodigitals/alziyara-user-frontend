@@ -22,9 +22,9 @@ module.exports = {
         "main-color" : "var(--main-color)",
         "button-hover" : "var(--button-hover)",
         "black-color" : "var(--black-color)",
-        "dropdown-hover" : "--dropdown-hover",
-        "service-bg" : "--background-color ",
-        "visa-bg" : "--visabg-color",
+        "dropdown-hover" : "var(--dropdown-hover)",
+        "service-bg" : "var(--background-color)",
+        "visa-bg" : "var(--visa-color)",
       },},
   },
   plugins: [
