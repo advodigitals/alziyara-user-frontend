@@ -30,7 +30,7 @@ const GlobalVisa = () => {
                             <div id="visa-section" className=" h-full w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 sm:gap-6 gap-4 ">
                                 {
                                     glblVisaCountryDetails.map((details) => (
-                                        <Link className='  h-[12rem] bg-white rounded-[10px]'>
+                                        <Link to={"/visa-page"} className='  h-[12rem] bg-white rounded-[10px]'>
                                             <div className="w-full h-full  flex  flex-col items-center  rounded-[10px] gap-x-6 gap-y-6 md:gap-y-9 border border-primary-color  ">
                                                 <div className='w-full h-[6rem] flex-1 flex shadow-lg'>
                                                     <img src={details.imgae} alt="" className='rounded-t-[10px]' />
