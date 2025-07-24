@@ -16,6 +16,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import GCCVisa from "./pages/GCCVisa";
 import GlobalVisa from "./pages/GlobalVisa";
+import VisaIndvidualPage from "./pages/VisaIndvidualPage";
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/gcc-visa" element={<GCCVisa />} />
         <Route path="/globla-visa" element={<GlobalVisa/>}/>
+        <Route path="/visa-page" element={<VisaIndvidualPage/>}/>
       </Routes>
     </>
   );
