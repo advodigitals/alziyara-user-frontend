@@ -55,19 +55,21 @@ const VisaIndvidualPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="h-[12rem] w-[23rem] flex bg-black fixed right-5 bottom-5 z-30 rounded-[10px] shadow-lg border flex-col p-4 gap-4">
-                        <h1 className="text-xl font-bold text-white">Need Help?</h1>
-                        <p className='text-base text-white'>Our visa team is ready to assist you with all your questions.</p>
-                        <a href="https://api.whatsapp.com/send?phone=+918289830339&text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20visa%20options%20and%20requirements%20for%20Australia">
-                            <div className='flex flex-row gap-5 items-center'>
-                                <span className='text-primary-color'><Icon icon="bxl:whatsapp" width="28" height="28" /></span>
-                                <p className='text-white'>+91 8289 830 339</p>
-                            </div>
-                            <div className="flex flex-row gap-5 items-center">
-                                <span className='text-primary-color'><Icon icon="typcn:mail" width="28" height="28" /></span>
-                                <p className='text-white'>support@alziyaratravels.com</p>
-                            </div>
-                        </a>
+                    <div className="w-full h-full flex justify-center md:justify-end">
+                        <div className="h-[12rem] w-[23rem] flex bg-black md:fixed md:right-5 md:bottom-5 md:z-30 rounded-[10px] shadow-lg border flex-col p-4 gap-4">
+                            <h1 className="text-xl font-bold text-white">Need Help?</h1>
+                            <p className='text-base text-white'>Our visa team is ready to assist you with all your questions.</p>
+                            <a href="https://api.whatsapp.com/send?phone=+918289830339&text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20visa%20options%20and%20requirements%20for%20Australia">
+                                <div className='flex flex-row gap-5 items-center'>
+                                    <span className='text-primary-color'><Icon icon="bxl:whatsapp" width="28" height="28" /></span>
+                                    <p className='text-white'>+91 8289 830 339</p>
+                                </div>
+                                <div className="flex flex-row gap-5 items-center">
+                                    <span className='text-primary-color'><Icon icon="typcn:mail" width="28" height="28" /></span>
+                                    <p className='text-white'>support@alziyaratravels.com</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </Layouts>
