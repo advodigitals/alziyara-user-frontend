@@ -32,6 +32,7 @@ module.exports = {
         "dropdown-hover" : "var(--dropdown-hover)",
         "service-bg" : "var(--background-color)",
         "visa-bg" : "var(--visa-color)",
+        "visa-help-color" : "var(--visa-help)",
       },},
   },
   plugins: [

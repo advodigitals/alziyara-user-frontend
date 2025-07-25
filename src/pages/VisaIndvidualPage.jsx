@@ -1,12 +1,14 @@
 import React from 'react'
 import Layouts from '../Layouts/Layouts'
 import VisaBg from '../Assets/images/visabg.jpg'
+import { Icon } from '@iconify/react/dist/iconify.js'
+
 
 const VisaIndvidualPage = () => {
     return (
         <>
             <Layouts>
-                <div className="h-full w-full  max-w-[2000px] mx-auto flex flex-col gap-5">
+                <div className="h-full w-full  max-w-[2000px] mx-auto flex flex-col gap-5 ">
                     <div id="img" className="w-full  h-[20rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${VisaBg})` }}>
                         <div className='h-full w-full flex '>
                             <div className='container mx-auto flex flex-col justify-center md:items-start items-center'>
@@ -16,7 +18,7 @@ const VisaIndvidualPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex h-full  flex-col gap-3 container mx-auto items-center md:items-start pb-10">
+                    <div className="flex h-full  flex-col gap-3 container mx-auto items-center md:items-start ">
                         <h1 className='text-2xl font-semibold'>Types of AUSTRIA Visa</h1>
                         <div className="  w-full h-full grid justify-center ">
                             <div className="w-full h-full grid justify-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-5">
@@ -52,6 +54,20 @@ const VisaIndvidualPage = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="h-[12rem] w-[23rem] flex bg-black fixed right-5 bottom-5 z-30 rounded-[10px] shadow-lg border flex-col p-4 gap-4">
+                        <h1 className="text-xl font-bold text-white">Need Help?</h1>
+                        <p className='text-base text-white'>Our visa team is ready to assist you with all your questions.</p>
+                        <a href="https://api.whatsapp.com/send?phone=+918289830339&text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20visa%20options%20and%20requirements%20for%20Australia">
+                            <div className='flex flex-row gap-5 items-center'>
+                                <span className='text-primary-color'><Icon icon="bxl:whatsapp" width="28" height="28" /></span>
+                                <p className='text-white'>+91 8289 830 339</p>
+                            </div>
+                            <div className="flex flex-row gap-5 items-center">
+                                <span className='text-primary-color'><Icon icon="typcn:mail" width="28" height="28" /></span>
+                                <p className='text-white'>support@alziyaratravels.com</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </Layouts>
