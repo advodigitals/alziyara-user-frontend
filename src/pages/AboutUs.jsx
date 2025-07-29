@@ -11,7 +11,7 @@ const AboutUs = () => {
       <Layouts>
         <div className="w-full h-full  gap-8 flex flex-col">
           <div id="aboutUs" className="flex flex-col items-center container mx-auto gap-[3rem] p-5 ">
-            <h1 className="text-4xl font-bold text-third-color">About Us<span className="text-primary-color">.</span></h1>
+            <h1 className="text-4xl font-bold text-black">About Us<span className="text-primary-color">.</span></h1>
             <div className="flex gap-4 md:flex-row flex-col items-center justify-center ">
               <div id="video" className="flex-1">
                 <iframe className="rounded-[10px] h-[315px]  w-full" src="https://www.youtube.com/embed/nIPmt1ye6HU?si=owXw7is7PyNd7qUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

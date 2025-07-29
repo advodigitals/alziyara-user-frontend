@@ -22,7 +22,7 @@ const Home = () => {
         <HeadingSection />
         <SwiperSection />
       </div>
-      <div id="aboutUs" className="flex items-center gap-5 justify-center py-5 flex-wrap container px-4 mx-auto">
+      <div id="aboutUs" className="flex w-full max-w-[2000px] items-center gap-5 justify-center py-5 flex-wrap  mx-auto">
         <AboutCards />
         <Services />
         <AboutUs />
