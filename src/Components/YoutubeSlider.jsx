@@ -44,11 +44,11 @@ const YoutubeSlider = () => {
                 speed={2000}
                 // freeModeMomentum={false}
                 spaceBetween={15}
-                autoplay={{
-                    delay: 0,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                }}
+                // autoplay={{
+                //     delay: 0,
+                //     disableOnInteraction: false,
+                //     pauseOnMouseEnter: true,
+                // }}
                 breakpoints={{
                     460: {
                         slidesPerView: 2
@@ -58,7 +58,11 @@ const YoutubeSlider = () => {
                     },
                     900: {
                         slidesPerView: 4
+                    },
+                    1300 : {
+                        slidesPerView : 5
                     }
+                    
 
                 }}
                 modules={[Autoplay]}
