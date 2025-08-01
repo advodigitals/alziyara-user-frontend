@@ -41,7 +41,7 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/gcc-visa" element={<GCCVisa />} />
         <Route path="/globla-visa" element={<GlobalVisa/>}/>
-        <Route path="/visa-page" element={<VisaIndvidualPage/>}/>
+        <Route path="/globla-visa/visa-page" element={<VisaIndvidualPage/>}/>
       </Routes>
     </>
   );
