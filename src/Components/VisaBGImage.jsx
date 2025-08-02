@@ -9,7 +9,7 @@ const VisaBGImage = (props) => {
                     <h1 className="text-7xl font-bold text-white text-center">{props.heading}</h1>
                     <div id="search-input" className="px-2 w-fit flex flex-col ">
                         <label className="capitalize text-base font-medium text-white text-start">search the country</label>
-                        <input type="text"   placeholder='Country Name' className='w-[19rem] h-[3rem] p-3 rounded-[10px] border-none outline-none text-start ' onChange={(e) => setSearch(e.target.value)}/>
+                        <input type="text"   placeholder='Country Name' className='w-[19rem] h-[3rem] p-3 rounded-[10px] border-none outline-none text-start ' onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
                     </div>
                 </div>
             </div>

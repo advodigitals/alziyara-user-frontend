@@ -31,7 +31,7 @@ const GCCVisa = () => {
                                                     <img src={details.imgae} alt="" className='rounded-t-[10px]' />
                                                 </div>
                                                 <div className='flex  justify-center w-full h-fit '>
-                                                    <p className='font-semibold text-xl text-center'>{details.title}</p>
+                                                    <p className='font-semibold text-xl text-center uppercase'>{details.title}</p>
                                                 </div>
                                             </div>
                                         </Link>

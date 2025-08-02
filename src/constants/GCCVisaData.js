@@ -8,7 +8,7 @@ import imageOman from '../Assets/images-gcc-visa/oman.png'
 export const GCCCountryVisaDetails = [
         {
             imgae: imageSaudi,
-            title: "SAUDI ARABIA"
+            title: "saudi arabia"
         },
           {
             imgae: imageKuwait,
