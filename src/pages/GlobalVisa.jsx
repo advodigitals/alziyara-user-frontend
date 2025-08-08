@@ -1,12 +1,27 @@
-import React, { useState, Suspense } from 'react'
+import React, { useState, Suspense, useEffect } from 'react'
 import Layouts from '../Layouts/Layouts'
-import { glblVisaCountryDetails } from '../constants/GlobalVisaData'
+// import { glblVisaCountryDetails } from '../constants/GlobalVisaData'
 import VisaBGImage from '../Components/VisaBGImage'
+import axios from 'axios'
 // import VisaCountryMap from '../Components/VisaCountryMap'
 const VisaCountryMap = React.lazy(() => import("../Components/VisaCountryMap"))
 
 const GlobalVisa = () => {
     const [search, setSearch] = useState('')
+    const [visaCountryData ,setVisaCountryData] = useState([])
+
+
+    useEffect (() => {
+        visaCountriesDataFunction ()
+
+    },[])
+
+
+    const visaCountriesDataFunction  = async () => {
+        const visaCountryDataArray = await axios.get("http://localhost:3007/api/v1/visa/get?type=global")
+        setVisaCountryData(visaCountryDataArray?.data?.visaCountries)
+    }
+
     return (
         <>
             <Layouts>
@@ -22,7 +37,7 @@ const GlobalVisa = () => {
                         <Suspense fallback={<div>Loading...</div>}>
                             <div className="h-full w-full max-w-7xl mx-auto sm:px-5 px-2 grid ">
                                 <div id="visa-section" className=" h-full w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 sm:gap-6 gap-4 ">
-                                    <VisaCountryMap visaCountryDataArray={glblVisaCountryDetails} search={search} />
+                                    <VisaCountryMap visaCountryDataArray={visaCountryData} search={search} />
                                 </div>
                             </div>
                         </Suspense>

@@ -4,10 +4,12 @@ import { Link } from 'react-router'
 const VisaCountryMap = (props) => {
     const visaCountryDataArray = props.visaCountryDataArray
     const search = props.search
+
+    console.log(visaCountryDataArray)
     return (
         <>
             {
-                visaCountryDataArray.filter((details) => {
+               visaCountryDataArray.length > 0 && visaCountryDataArray.filter((details) => {
                     return search === '' ? details : details.title.toLowerCase().startsWith(search)
                 }).map((details) => (
                     <Link to={"/globla-visa/visa-page"} className='  h-[12rem] bg-white rounded-[10px]'>
