@@ -15,9 +15,10 @@ const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"))
 const TermsAndConditions = React.lazy(() => import("./pages/TermsAndConditions"))
 const Home = React.lazy(() => import("./pages/Home"))
 const GCCVisa = React.lazy(() => import("./pages/GCCVisa"))
-const GlobalVisa = React.lazy(() => import('./pages/GlobalVisa'))
+const Visa = React.lazy(() => import('./pages/Visa'))
 const VisaIndvidualPage = React.lazy(() => import("./pages/VisaIndvidualPage"))
 
+// import Visa from "./pages/Visa"
 // import Home from "./pages/Home";
 // import Visa from "./pages/Visa";
 // import Blog from "./pages/Blog";
@@ -59,7 +60,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/gcc-visa" element={<GCCVisa />} />
-          <Route path="/globla-visa" element={<GlobalVisa />} />
+          <Route path="/visa" element={<Visa />} />
           <Route path="/globla-visa/visa-page" element={<VisaIndvidualPage />} />
         </Routes>
       </Suspense>

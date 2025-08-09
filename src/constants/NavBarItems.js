@@ -46,11 +46,13 @@ export const visaDropdown = [
   {
     id : "2",
     name : "GCC Visa",
-    path : "/gcc-visa"
+    path : "/visa",
+    dataPath : "gcc"
   },
     {
     id : "1",
     name : "Globla Visa",
-    path : "/globla-visa"
+    path : "/visa",
+    dataPath : "global"
   },
 ]
