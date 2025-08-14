@@ -2,47 +2,52 @@ import React, { useState, Suspense, useEffect } from 'react'
 import Layouts from '../Layouts/Layouts'
 import VisaBGImage from '../Components/VisaBGImage'
 import axios from 'axios'
-import { useLocation } from 'react-router'
 import GlobalVisaText from '../Components/GlobalVisaText'
 import GccVisaText from '../Components/GccVisaText'
+import { useParams } from 'react-router'
 // import { glblVisaCountryDetails } from '../constants/GlobalVisaData'
 // import VisaCountryMap from '../Components/VisaCountryMap'
 const VisaCountryMap = React.lazy(() => import("../Components/VisaCountryMap"))
 
 const Visa = () => {
-    const location = useLocation()
     const [search, setSearch] = useState('')
-    const [visaCountryData ,setVisaCountryData] = useState([])
-    const {type} = location.state
-    console.log({type},"type")
+    const [visaCountryData, setVisaCountryData] = useState([])
+    const { type } = useParams()
+    useEffect(() => {
+        visaCountriesDataFunction()
+    }, [ type ])
 
+    useEffect(() => {
+        console.log("search" , search);
+        
+        if(search.trim()){
+            visaCountriesDataSearch()
+        }else{
+            visaCountriesDataFunction()
+        }
+    },[search])
 
-    useEffect (() => {
-        visaCountriesDataFunction ()
-        // visaCountriesDataSearch ()
-    },[])
-
-
-    const visaCountriesDataFunction  = async () => {
+    const visaCountriesDataFunction = async () => {
         const visaCountryDataArray = await axios.get(`http://localhost:3007/api/v1/visa/get?type=${type}`)
         setVisaCountryData(visaCountryDataArray?.data?.visaCountries)
     }
-    // const visaCountriesDataSearch = async () => {
-    //    const visaSearchCountryDataArray = await axios.get(`http://localhost:3007/api/v1/visa/search/${search}`)
-    //    setVisaCountryData(visaSearchCountryDataArray?.data?.visaCountries)
+    const visaCountriesDataSearch = async () => {
+        console.log(search,"search on visa page")
+        console.log("hlo on visa page");
+        const visaSearchCountryDataArray = await axios.get(`http://localhost:3007/api/v1/visa/search/${type}/${search}`)
+        setVisaCountryData(visaSearchCountryDataArray?.data?.data)
+        console.log(visaCountryData,"state")
+    }
 
-    // }
-    
 
     return (
         <>
             <Layouts>
                 <div className="flex h-full w-full max-w-[2000px] mx-auto flex-col  items-center pb-4 ">
-                    <VisaBGImage heading={type  == "global" ? "GLOBAL VISA" : "GCC VISA"} setSearch={setSearch} />
-                    {console.log("search",search)}
+                    <VisaBGImage heading={type === "global" ? "GLOBAL VISA" : "GCC VISA"} setSearch={setSearch} visaCountriesDataSearch={visaCountriesDataSearch} search={search}/>
                     <div className='w-full h-full  flex flex-col gap-4 md:gap-8 bg-white' >
                         <div id="text" className="px-4 justify-center text-center sm:mt-5 text-base">
-                           {type == "global" ? <GlobalVisaText/> : <GccVisaText/>}
+                            {type === "global" ? <GlobalVisaText /> : <GccVisaText />}
                         </div>
                         <Suspense fallback={<div>Loading...</div>}>
                             <div className="h-full w-full max-w-7xl mx-auto sm:px-5 px-2 grid ">

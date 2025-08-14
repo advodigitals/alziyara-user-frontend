@@ -60,7 +60,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/gcc-visa" element={<GCCVisa />} />
-          <Route path="/visa" element={<Visa />} />
+          <Route path="/visa/:type" element={<Visa />} />
           <Route path="/globla-visa/visa-page" element={<VisaIndvidualPage />} />
         </Routes>
       </Suspense>

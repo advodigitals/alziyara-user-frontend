@@ -12,7 +12,6 @@ const NavbarButtons = (props) => {
   }
   const handleMouseLeave = () => {
     setVisaDropdownOption(false)
-    console.log(visaDropdownOption, "false");
   }
   return (
     <>
