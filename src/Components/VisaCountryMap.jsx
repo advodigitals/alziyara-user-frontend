@@ -27,6 +27,3 @@ const VisaCountryMap = (props) => {
 
 export default VisaCountryMap
 
-// .filter((details) => {
-//                     return search === '' ? details : details.title.toLowerCase().startsWith(search)
-//                 })
