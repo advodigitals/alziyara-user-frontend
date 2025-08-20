@@ -30,7 +30,7 @@ module.exports = {
         "button-hover" : "var(--button-hover)",
         "black-color" : "var(--black-color)",
         "dropdown-hover" : "var(--dropdown-hover)",
-        "service-bg" : "var(--background-color)",
+        "hash-color-bg" : "var(--background-color)",
         "visa-bg" : "var(--visa-color)",
         "visa-help-color" : "var(--visa-help)",
       },},

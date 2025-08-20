@@ -60,16 +60,6 @@ const SwiperCode = () => {
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper max-w-[1400px] w-[98vw] rounded-[10px]">
-                {/*                 
-                    <SwiperSlide ><img src={images1} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images2} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images3} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images4} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images5} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images6} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images7} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images8} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide>
-                    <SwiperSlide ><img src={images9} alt="" className='block w-full h-screen object-cover rounded-[10px]' /></SwiperSlide> */}
                 {
                     swiperImageCollection.map((images) => (
                         <SwiperSlide className='flex items-center justify-center overflow-hidden rounded-3xl hover:cursor-grab' ><img src={images.name} alt="" className='object-cover w-full h-full' /></SwiperSlide>

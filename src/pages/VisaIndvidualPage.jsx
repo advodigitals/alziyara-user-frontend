@@ -2,9 +2,12 @@ import React from 'react'
 import Layouts from '../Layouts/Layouts'
 import VisaBg from '../Assets/images/visabg.jpg'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { useParams } from 'react-router'
 
 
 const VisaIndvidualPage = () => {
+     const { name } = useParams()
+     
     return (
         <>
             <Layouts>
@@ -13,7 +16,7 @@ const VisaIndvidualPage = () => {
                         <div className="bg-black  bg-opacity-50 w-full h-full ">
                         <div className='h-full w-full flex '>
                             <div className='container mx-auto flex flex-col justify-center md:items-start items-center'>
-                                <h1 className="text-4xl font-bold text-white text-left">AUSTRIA VISA</h1>
+                                <h1 className="text-4xl font-bold text-white text-left">{name} VISA</h1>
                                 <p className="w-fit text-lg font-medium text-white text-left bg-primary-color p-2 rounded-[10px]">Price Starting at <span className='capitalize text-2xl font-medium text-black text-center'>INR 14515*</span></p>
                             </div>
                         </div>
@@ -21,7 +24,7 @@ const VisaIndvidualPage = () => {
                     </div>
 
                     <div className="flex h-full  flex-col gap-3 container mx-auto items-center md:items-start ">
-                        <h1 className='text-2xl font-semibold'>Types of AUSTRIA Visa</h1>
+                        <h1 className='text-2xl font-semibold '>Types of {name} Visa</h1>
                         <div className="  w-full h-full grid justify-center ">
                             <div className="w-full h-full grid justify-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-5 ">
 

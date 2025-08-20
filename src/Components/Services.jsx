@@ -47,7 +47,7 @@ const Services = () => {
 
   return (
     <>
-      <div className=" bg-service-bg w-full h-full flex flex-col">
+      <div className=" bg-hash-color-bg w-full h-full flex flex-col">
          <div className=" flex justify-center items-center py-6">
              <h1 className="text-4xl font-bold text-black">Services We Offer<span className="text-primary-color">.</span></h1>
           </div>

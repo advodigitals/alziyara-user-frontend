@@ -10,9 +10,9 @@
 #root,
 #docs-root {
   --primary-color: #00b372;
+  --button-hover : #62C680;
   --secondary-color: #FFFFFF;
   --third-color : #9d9d9d;
-  --button-hover : #62C680;
   --main-color:#AFAFAF;
   --black-color : #000000;
   --background-color : #F5F5F5;
