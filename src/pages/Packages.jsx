@@ -3,28 +3,40 @@ import Layouts from '../Layouts/Layouts'
 import SubPageBGImage from '../Components/SubPageBGImage'
 import PackageText from '../Components/PackageText'
 import PackageMapAll from '../Components/PackageMapAll'
-import { handleAllPackageDisplay } from '../api/package/package'
+import { handleAllPackageDisplay, handlePackageSearch } from '../api/package/package'
 
 
 const Packages = () => {
+  const [search, setSearch] = useState('')
   const [packageData , setPackageData] = useState([])
 
   useEffect(() => {
     allPackageData()
   },[])
 
+  useEffect (() => {
+    if (search.trim()) {
+            PackageDataSearch()
+        } else {
+            allPackageData()
+        }
+  },[search])
+
   const allPackageData = async () => {
     const allPackageDataArray = await handleAllPackageDisplay()
-    console.log(allPackageDataArray,"first")
     setPackageData(allPackageDataArray?.data)
   }
 
-  console.log("packageData " , packageData);
+  const PackageDataSearch = async () => {
+    const PackageDataArray = await handlePackageSearch(search)
+    setPackageData(PackageDataArray?.data)
+  }
+
   return (
     <>
       <Layouts>
         <div className="flex h-full w-full max-w-[2000px] mx-auto flex-col  items-center  gap-3 pb-4">
-          <SubPageBGImage heading={"Packages"} inputSubHeading={"search the Package"} inputPlaceholder={"Country Name"} />
+          <SubPageBGImage heading={"Packages"} inputSubHeading={"search the Package"} inputPlaceholder={"Country Name"} setSearch={setSearch} />
           <div id="pageText" className="px-4 justify-center text-center sm:mt-5 text-base w-full max-w-[1200px] mx-auto">
            <PackageText/>
           </div>

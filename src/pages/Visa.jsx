@@ -32,7 +32,6 @@ const Visa = () => {
     const visaCountriesDataSearch = async () => {
         const visaSearchCountryDataArray = await handleVisaSearchCountry({ type, search })
         setVisaCountryData(visaSearchCountryDataArray?.data)
-        console.log(visaCountryData, "state")
     }
 
 

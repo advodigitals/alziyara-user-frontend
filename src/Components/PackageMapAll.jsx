@@ -37,7 +37,7 @@ const PackageMapAll = ({packageDataArray}) => {
                                 </div>
                             </div>
                             <div id="read-more-btn" className="mt-2">
-                                <Link>
+                                <Link to={`/packages/${details.slug}`} >
                                     <div className="flex  p-2 rounded-[10px] text-white  hover:text-primary-color bg-primary-color hover:bg-white transition-all duration-[0.5s]  shadow-lg shadow-slate-600/50 border border-primary-color" >
                                         <p className="text-lg uppercase font-semibold  ">view details</p>
                                     </div>

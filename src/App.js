@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router";
+import PackageIndividualPage from "./pages/PackageIndividualPage";
 const Blog = React.lazy(() => import("./pages/Blog"))
 const Flights = React.lazy(() => import("./pages/Flights"))
 const HajjUmrah = React.lazy(() => import("./pages/HajjUmrah"))
@@ -55,7 +56,8 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/visa/:type" element={<Visa />} />
-          <Route path="/page/:name" element={<VisaIndvidualPage />} />
+          <Route path="/visa/:name" element={<VisaIndvidualPage />} />
+          <Route path="/packages/:slug" element={<PackageIndividualPage />} />
         </Routes>
       </Suspense>
     </>
