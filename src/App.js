@@ -55,7 +55,7 @@ function App() {
           <Route path="/international-packages" element={<InternationalPackages />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/visa/:type" element={<Visa />} />
+          <Route path="/visas/:type" element={<Visa />} />
           <Route path="/visa/:name" element={<VisaIndvidualPage />} />
           <Route path="/packages/:slug" element={<PackageIndividualPage />} />
         </Routes>
