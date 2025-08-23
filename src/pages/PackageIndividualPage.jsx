@@ -12,7 +12,7 @@ const PackageIndividualPage = () => {
 
     useEffect(() => {
         allPackageData()
-    }, [isOpen])
+    }, [])
 
     const allPackageData = async () => {
         const allPackageDataArray = await handleAllPackageDisplay(slug)
@@ -20,9 +20,9 @@ const PackageIndividualPage = () => {
     }
 
     const handleIsOpen = (index) => {
-        if(index == isOpen){
+        if (index == isOpen) {
             setIsOpen(null)
-        }else{
+        } else {
 
             setIsOpen(index)
         }
@@ -30,7 +30,7 @@ const PackageIndividualPage = () => {
     return (
         <>
             <Layouts>
-                <div className="w-full h-full max-w-[2000px] mx-auto flex flex-col pb-10">
+                <div className="w-full h-full max-w-[2000px] mx-auto flex flex-col pb-10 gap-8">
                     <div id="heading-section" className="flex h-fit w-full  flex-col lg:flex-row max-w-[1200px] mx-auto  gap-y-6">
                         <div id="main-heading" className="flex lg:basis-1/2 items-center justify-center mx-auto p-3 ">
                             <h1 className="capitalize text-5xl text-black font-normal text-center lg:text-left ">{packageData.name}</h1>
@@ -40,7 +40,7 @@ const PackageIndividualPage = () => {
                                 <div className="flex flex-col gap-y-2">
                                     <div className="flex flex-row gap-x-3">
                                         <Icon className='text-primary-color' icon="famicons:location-outline" width="22" height="22" />
-                                        <p className="capitalize text-black font-normal text-base">bali,indonasia </p>
+                                        <p className="capitalize text-black font-normal text-base">{packageData.location}</p>
                                     </div>
                                     <div className="flex flex-row gap-x-3">
                                         <Icon className='text-primary-color' icon="basil:clock-outline" width="22" height="22" />
@@ -48,7 +48,7 @@ const PackageIndividualPage = () => {
                                     </div>
                                 </div>
                                 <div className="flex w-full">
-                                    <p className="capitalize text-third-color font-nromal text-base text-left">{packageData.description}</p>
+                                    <p className="capitalize text-third-color font-nromal text-base text-left">{packageData.shortDescription}</p>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ const PackageIndividualPage = () => {
                                     <div className="flex flex-1 flex-col text-black font-medium gap-4  px-4">
                                         <div className="flex flex-col text-left gap-4">
                                             <p className="text-base font-medium">{packageData.amountPerPerson}</p>
-                                            <p className="text-base font-medium">20 Available</p>
+                                            <p className="text-base font-medium capitalize">{packageData.availableQuota}</p>
                                             <p className="text-base font-medium">{packageData.dateOfTravel}</p>
                                         </div>
                                     </div>
@@ -78,10 +78,7 @@ const PackageIndividualPage = () => {
                             </div>
                             <hr className='border-[3px_solid_#9d9d9d] mx-6 my-8' />
                             <div className="text-third-color px-2 font-normal text-base">
-                                <p className=""> going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
-                                    in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
-                                    making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
-                                    of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                                <p className="">{packageData.longDescription}</p>
                             </div>
                             <div className="w-full flex flex-col p-2 gap-3">
                                 <h1 className="text-black text-3xl font-semibold capitalize">includes <span className='text-primary-color text-3xl font-semibold'>:</span></h1>
@@ -99,7 +96,7 @@ const PackageIndividualPage = () => {
                             <div className=" w-full flex flex-col p-2 gap-3">
                                 <h1 className="text-black text-3xl font-semibold capitalize">excludes <span className='text-primary-color text-3xl font-semibold'>:</span></h1>
                                 {
-                                    packageData.exclusion && packageData.exclusion.map((points, index) => (
+                                    packageData.exclusion && packageData.exclusion.map((points) => (
                                         <div className="flex flex-row justify-start items-center gap-3">
                                             <Icon className='text-primary-color' icon="simple-icons:ticktick" width="16" height="16" />
                                             <p className="text-base font-normal text-third-color">{points}</p>
@@ -115,27 +112,23 @@ const PackageIndividualPage = () => {
                             <div className="flex flex-col h-full w-full gap-5 ">
                                 {
                                     packageData.itinerary && packageData.itinerary.map((details, index) => (
-                                        <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-center  shadow-lg shadow-slate-600/50  py-4 transition-all duration-300`} onClick={() => handleIsOpen(index)}>
-                                            <p className={`capitalize text-black font-medium  flex justify-center  min-w-[100px] `}>{details.day}</p>
+                                        <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50  py-4 `} onClick={() => handleIsOpen(index)}>
+                                            <p className={`capitalize text-black font-medium justify-center  flex  min-w-[100px] `}>{details.day}</p>
                                             <div className="flex flex-col flex-1 items-start gap-2">
                                                 <p className="capitalize text-black font-medium  ">{details.subHeading}</p>
-                                                {
 
-                                                    isOpen == index &&
-                                                    <div className="flex flex-col w-full items-start gap-2 pl-5 ">
-                                                        <ul>
-                                                            {
-                                                                details.activities && details.activities.map((points) => (
-                                                                    <li className='capitalize text-primary-color font-light '>
-                                                                        {points}
-                                                                    </li>
 
-                                                                ))
-                                                            }
+                                                <div className={`overflow-hidden transition-all duration-[0.5s] ${isOpen == index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                                    <ul className="pl-5 flex flex-col gap-2">
+                                                        {details.activities && details.activities.map((points) => (
+                                                                <li  className="capitalize text-primary-color font-light">
+                                                                    {points}
+                                                                </li>
+                                                            ))}
+                                                    </ul>
+                                                </div>
 
-                                                        </ul>
-                                                    </div>
-                                                }
+
                                             </div>
                                         </div>
                                     ))
