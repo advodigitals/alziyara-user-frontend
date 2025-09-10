@@ -6,10 +6,11 @@ import AboutCards from '../Components/AboutCards'
 import HeadingSection from '../Components/HeadingSection'
 import Services from '../Components/Services'
 import SwiperSection from '../Components/SwiperSection'
-import YoutubeSlider from '../Components/YoutubeSlider'
+// import YoutubeSlider from '../Components/YoutubeSlider'
 import Layouts from '../Layouts/Layouts'
 import AboutUs from './AboutUs'
 import Footer from '../Components/Footer'
+import TestimonialsSection from '../Components/TestimonialsSection'
 
 // import SwiperYoutube from './Swiper/SwiperYoutube'
 // import { useRef } from "react"
@@ -26,8 +27,9 @@ const Home = () => {
         <AboutCards />
         <Services />
         <AboutUs />
-        <YoutubeSlider />
+        {/* <YoutubeSlider /> */}
         {/* <InstagramSlider/> */}
+        <TestimonialsSection/>
       </div>
       <Footer />
     </Layouts>
