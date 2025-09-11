@@ -6,7 +6,6 @@ import StarIcon from '@mui/icons-material/Star';
 
 const StarRating = (props) => {
     const ratingValue = props.rating
-    const textWhite = props.textWhite
     // const labels = {
     //     0.5: 'Useless',
     //     1: 'Useless+',
@@ -23,7 +22,7 @@ const StarRating = (props) => {
     return (
         <>
             <Box className="flex items-center justify-center gap-1 text-lg font-medium">
-                 <Box className={textWhite ? "text-white" : "text-black"}>{[value]}</Box> 
+                 <Box >{[value]}</Box> 
                 <Rating
                     name="text-feedback"
                     value={value}

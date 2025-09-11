@@ -19,25 +19,26 @@ const TestimonialsSection = () => {
                         effect={'cards'}
                         grabCursor={true}
                         modules={[EffectCards]}
-                        className="w-[190px] sm:w-[300px] h-[300px]  "
+                        className="w-[210px] sm:w-[300px] h-[370px] md:h-[300px]"
                     >
-                        <SwiperSlide className=' flex h-full w-full bg-primary-color rounded-[10px] px-4 py-8 '>
-                            <div className="h-full w-full flex flex-col justify-between rounded-[10px]">
+                        <SwiperSlide className=' flex h-full w-full bg-white rounded-[10px] px-4 py-4  shadow-lg shadow-slate-600/50'>
+                            <div className="h-full w-full flex flex-col gap-5 rounded-[10px] items-center justify-start">
                                 <div className="flex  w-full h-fit gap-3">
                                     <div id="profile-icon" className="flex w-[4rem] h-full justify-start items-center">
                                         <img className='w-full h-[3rem] rounded-[50%] border-none object-cover bg-black' src={profileImage} alt="" />
                                     </div>
                                     <div id="details" className="flex w-full h-full flex-col items-start justify-center">
-                                        <p className="text-white text-xl font-semibold">sahmeer cp</p>
+                                        <p className="text-black text-xl font-semibold">sahmeer cp</p>
                                         <p className="text-black text-sm font-light">7 days ago</p>
                                     </div>
                                 </div>
-                                <div className="flex ">
-                                    <StarRating rating={3.5} textWhite={true} />
+                                <div className="flex  w-full justify-start">
+                                    <StarRating rating={3.5} />
                                 </div>
-                                <p className="text-base text-white font-normal">which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                                <p className="text-base text-black font-normal">which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
                             </div>
                         </SwiperSlide>
+                       
                     </Swiper>
                 </div>
             </div>
@@ -48,16 +49,3 @@ const TestimonialsSection = () => {
 export default TestimonialsSection
 
 
-//  <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-orange-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-amber-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-yellow-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-lime-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-green-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-emerald-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-red-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-orange-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-amber-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-yellow-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-lime-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-green-500'>Slide 1</SwiperSlide>
-//                         <SwiperSlide className=' flex items-center justify-center rounded-[10px] bg-emerald-500'>Slide 1</SwiperSlide>
