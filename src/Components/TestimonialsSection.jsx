@@ -29,7 +29,7 @@ const TestimonialsSection = () => {
                                     </div>
                                     <div id="details" className="flex w-full h-full flex-col items-start justify-center">
                                         <p className="text-black text-xl font-semibold">sahmeer cp</p>
-                                        <p className="text-black text-sm font-light">7 days ago</p>
+                                        <p className="text-third-color text-sm font-light">7 days ago</p>
                                     </div>
                                 </div>
                                 <div className="flex  w-full justify-start">
