@@ -22,13 +22,13 @@ const Services = () => {
       icon: <Icon icon="fontisto:holiday-village" width="41" height="41" />,
       title: "Tour packages",
       content: "International and Domestic budget tour packeges with best budget and proper guidence.",
-      path: "/packages"
+      
     },
     {
       icon: <Icon icon="guidance:passports" width="41" height="41" />,
       title: "Visa Services",
       content: "Complete visa assistance with fast and customer-friendly support for all your travel needs.",
-      path: "/visa"
+      
     },
     {
       icon: <Icon icon="healthicons:i-certificate-paper-outline" width="43" height="43" />,
@@ -54,8 +54,8 @@ const Services = () => {
         <div className="w-full max-w-[1400px] mx-auto h-fit  flex flex-row flex-wrap gap-y-6 gap-x-9 py-4 px-6 justify-center pb-14">
           {
             ServiceCardDetails.map((details) => (
-              <Link to={details.path}>
-                <div id="Services-cards" className="flex  w-[20rem] h-[15rem] rounded-[10px] bg-white flex-col shadow-lg shadow-slate-600/50 cursor-pointer">
+              <Link to={details.path} className={`${ details.path ? "cursor-pointer" : "cursor-default"}`}>
+                <div id="Services-cards" className="flex  w-[20rem] h-[15rem] rounded-[10px] bg-white flex-col shadow-lg shadow-slate-600/50 ">
                   <div id="heading" className="flex flex-row gap-8 justify-start pt-4 pl-2">
                     <span className='text-black h-fit'>{details.icon}</span>
                     <h2 className='text-black text-[24px] font-medium h-fit'>{details.title}<span className='text-primary-color text-[24px] font-medium'>.</span></h2>

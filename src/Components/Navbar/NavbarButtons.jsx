@@ -1,26 +1,28 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router'
 import { NavbarList } from '../../constants/NavBarItems'
-import VisaDropdown from './VisaDropdown'
+import NavbarButtonDropdown from './NavbarButtonDropdown'
 const NavbarButtons = (props) => {
   const scrolled = props.status
-  const [visaDropdownOption, setVisaDropdownOption] = useState(false)
-  const handleMouseEnter = (status) => {
-    if (status) {
-      setVisaDropdownOption(true)
-    }
+  const [DropdownOption, setDropdownOption] = useState(false)
+  const handleMouseEnter = (dropbutton) => {
+
+      setDropdownOption(dropbutton)
+    
   }
   const handleMouseLeave = () => {
-    setVisaDropdownOption(false)
+    setDropdownOption(false)
+
   }
   return (
     <>
       {
-        NavbarList.map((props) => (
-          <li className="list-none" onMouseEnter={() => handleMouseEnter(props.dropdown)} onMouseLeave={() => handleMouseLeave()}>
+        NavbarList.map((dropbutton) => (
+
+          <li className="list-none" onMouseEnter={() => handleMouseEnter(dropbutton.dropdown ? dropbutton.name : '')} onMouseLeave={() => handleMouseLeave()}>
             <div className=" ">
-              <Link to={props.path} className={`no-underline  px-4  font-semibold w-fit h-fit  rounded-lg cursor-pointer py-2 flex gap-1 ${scrolled ? 'text-black hover:bg-main-color' : 'text-black hover:bg-button-hover'}`}>{props.name}{props.dropdownIcon}</Link>
-              {props.dropdown && visaDropdownOption && <VisaDropdown status={scrolled}/>}
+              <Link to={dropbutton.path} className={`no-underline  px-4  font-semibold w-fit h-fit  rounded-lg cursor-pointer py-2 flex gap-1 ${scrolled ? 'text-black hover:bg-main-color' : 'text-black hover:bg-button-hover'}`}>{dropbutton.name}{dropbutton.dropdownIcon}</Link>
+              {dropbutton.name === DropdownOption && DropdownOption && <NavbarButtonDropdown status={scrolled} data={dropbutton.dropdownData} />}
             </div>
           </li>
         ))

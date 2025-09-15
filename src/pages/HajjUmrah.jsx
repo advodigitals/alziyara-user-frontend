@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layouts from '../Layouts/Layouts'
 import hajjUmrahHeadingImage from '../Assets/images/hajj&umrah-heading-image.jpg'
 import hajjUmrahExplainImage from "../Assets/images/umrah-hajj-image.jpg"
@@ -7,6 +7,52 @@ import { Link } from 'react-router'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 const HajjUmrah = () => {
+   const [pillarUmrahIsOpen, setPillarUmrahIsOpen] = useState(null)
+   const [umrahMainSpotsIsOpen, setUmrahMainSpotsIsOpen] = useState(null)
+
+   const handleUmrahMainSpotsIsOpen = (index) => {
+      if (index == umrahMainSpotsIsOpen) {
+         setUmrahMainSpotsIsOpen(null)
+      } else {
+
+         setUmrahMainSpotsIsOpen(index)
+      }
+
+   }
+
+
+   const handlePillarsOfUmrahIsOpen = (index) => {
+      if (index == pillarUmrahIsOpen) {
+         setPillarUmrahIsOpen(null)
+      } else {
+
+         setPillarUmrahIsOpen(index)
+      }
+
+   }
+
+   const UmrahPillers = [
+      {
+         step: "Step 1",
+         name: "Ihram (الإحرام)",
+         explanation: "Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the Prophet, peace and blessings be upon him, designated certain locations as Miqat."
+      },
+      {
+         step: "Step 2",
+         name: "Tawaf (الطواف)",
+         explanation: "Tawaf is the seven-circumambulation of the Kaaba. Beginning with the Black stone, which is located on the pilgrim's left side. The pilgrim should use this time for supplication and prayer."
+      },
+      {
+         step: "Step 3",
+         name: "Sa’i (السعي)",
+         explanation: "Sa’ee begins with Safa and finishes at Marwa, two small hills close to the Kaaba. Every direction is counted as one as Muslims move back and forth between them seven times. It is suggested that the performer supplicate, pray, or read the Quran during this time."
+      },
+      {
+         step: "Step 4",
+         name: "Tahallul (التحلل أو الحلق/التقصير)",
+         explanation: "Tahallul is shaving or trimming the hair, which marks the completion of Umrah."
+      },
+   ]
    const serviceArray = [
       {
          title: "Visa Assistance",
@@ -15,16 +61,20 @@ const HajjUmrah = () => {
       {
          title: "Accommodation Arrangements",
          text: "Comfortable and convenient accommodations near holy sites."
-      }, {
+      },
+       {
          title: "Expert Guided Tours",
          text: "Culturally enriching and insightful spiritual guidance."
-      }, {
+      },
+       {
          title: "Transportation Services",
          text: "Reliable transportation services throughout your pilgrimage."
-      }, {
+      },
+       {
          title: "24/7 Support",
          text: "A dedicated support team is available anytime for assistance."
-      }, {
+      },
+       {
          title: "Group Packages",
          text: "Customized itineraries for groups of all sizes."
       },
@@ -44,6 +94,7 @@ const HajjUmrah = () => {
 
                   </div>
                </div>
+               
                <div className="flex lg:flex-row flex-col w-full h-fit max-w-[1200px] mx-auto px-4">
                   <div id="image-section" className="flex  flex-1 p-3 items-center justify-center lg:justify-normal">
                      <img className="  w-[80%] rounded-[10px]  " src={hajjUmrahExplainImage} alt="" />
@@ -60,6 +111,7 @@ const HajjUmrah = () => {
                      </div>
                   </div>
                </div>
+
                <div className="flex w-full h-[30rem] flex-col items-center bg-hash-color-bg pt-6 gap-7">
                   <h1 className="text-4xl font-bold text-black text-center">Available Packages<span className="text-primary-color">.</span></h1>
                   <div className=" w-full h-full max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center px-3">
@@ -70,6 +122,7 @@ const HajjUmrah = () => {
                      </Link>
                   </div>
                </div>
+
                <div className="flex h-fit w-full max-w-[1400px] mx-auto flex-col items-center gap-7 px-2">
                   <h1 className="text-4xl font-bold text-black">Services we Provide<span className="text-primary-color">.</span></h1>
                   <div className="flex h-full w-full lg:flex-row flex-col ">
@@ -92,13 +145,54 @@ const HajjUmrah = () => {
                   </div>
                </div>
 
-               <div className="w-full h-[40rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${umrahBackgroundImage})` }}>
-                  <div className="w-full  h-full   bg-gradient-to-r from-white flex justify-start  px-2 py-4 pt-10">
-                     <div className="flex flex-col max-w-[900px] w-full h-full gap-9">
+               <div className="w-full h-fit bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${umrahBackgroundImage})` }}>
+                  <div className="w-full  h-full   bg-gradient-to-b from-white opacity-90 flex flex-col justify-start gap-5 px-2 py-4 pt-10">
+                     <div className="flex flex-col max-w-[900px] w-full h-fit gap-9">
                         <h1 className="text-3xl text-black font-light">About <span className="text-black font-semibold text-3xl">Umrah</span></h1>
                         <p className="text-black text-xl font-normal">Experience the spiritual journey of Umrah with comfort and peace of mind. Umrah is a sacred pilgrimage to Makkah, performed by Muslims seeking blessings,
                            forgiveness, and closeness to Allah. Unlike Hajj, it can be performed at any time of the year, making it a beautiful opportunity for believers to renew their faith and find inner peace. We are here
                            to make your journey smooth and memorable, so you can focus on worship while we take care of the rest.</p>
+                     </div>
+                     <div className="flex flex-col md:flex-row h-full w-full px-4 gap-6">
+                        <div className="flex h-full flex-1 flex-col gap-3">
+                           <div className="p-3 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
+                              <h3 className="text-black text-2xl font-semibold capitalize">Pillars Of Umrah <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
+                           </div>
+                           <div className="flex flex-col h-full w-full gap-5">
+                              {
+                                 UmrahPillers.map((step, index) => (
+                                    <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-3  " onClick={() => handlePillarsOfUmrahIsOpen(index)}>
+                                       <p className="capitalize text-black font-semibold text-lg justify-center  flex  min-w-[100px] ">{step.step}</p>
+                                       <div className="flex flex-col  flex-1 items-start  gap-2 ">
+                                          <p className="capitalize text-black text-lg font-semibold ">{step.name}</p>
+                                          <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${pillarUmrahIsOpen == index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                             <p className="capitalize text-third-color text-base font-medium ">{step.explanation}</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 ))
+                              }
+                           </div>
+                        </div>
+                        <div className="flex h-full flex-1 flex-col gap-3">
+                           <div className="p-3 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
+                              <h3 className="text-black text-2xl font-semibold capitalize">top attractions <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
+                           </div>
+                           <div className="flex flex-col h-full w-full gap-5">
+                              <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-3  " onClick={() => handleUmrahMainSpotsIsOpen(1)}>
+                                 <p className=" min-w-[100px] "></p>
+                                 <div className="flex flex-col  flex-1 items-start  gap-2 ">
+                                    <p className="capitalize text-black text-lg font-semibold ">Ihram</p>
+                                    <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${umrahMainSpotsIsOpen == 1 ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                       <p className="capitalize text-third-color text-base font-medium ">
+                                          Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the
+                                          Prophet, peace and blessings be upon him, designated certain locations as Miqat.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -109,3 +203,4 @@ const HajjUmrah = () => {
 }
 
 export default HajjUmrah
+// shadow-white/50
