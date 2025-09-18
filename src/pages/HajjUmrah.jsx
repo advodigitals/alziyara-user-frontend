@@ -11,7 +11,7 @@ const HajjUmrah = () => {
    const [umrahMainSpotsIsOpen, setUmrahMainSpotsIsOpen] = useState(null)
 
    const handleUmrahMainSpotsIsOpen = (index) => {
-      if (index == umrahMainSpotsIsOpen) {
+      if (index === umrahMainSpotsIsOpen) {
          setUmrahMainSpotsIsOpen(null)
       } else {
 
@@ -22,7 +22,7 @@ const HajjUmrah = () => {
 
 
    const handlePillarsOfUmrahIsOpen = (index) => {
-      if (index == pillarUmrahIsOpen) {
+      if (index === pillarUmrahIsOpen) {
          setPillarUmrahIsOpen(null)
       } else {
 
@@ -165,7 +165,7 @@ const HajjUmrah = () => {
                                        <p className="capitalize text-black font-semibold text-lg justify-center  flex  min-w-[100px] ">{step.step}</p>
                                        <div className="flex flex-col  flex-1 items-start  gap-2 ">
                                           <p className="capitalize text-black text-lg font-semibold ">{step.name}</p>
-                                          <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${pillarUmrahIsOpen == index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                          <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${pillarUmrahIsOpen === index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
                                              <p className="capitalize text-third-color text-base font-medium ">{step.explanation}</p>
                                           </div>
                                        </div>
@@ -183,7 +183,7 @@ const HajjUmrah = () => {
                                  <p className=" min-w-[100px] "></p>
                                  <div className="flex flex-col  flex-1 items-start  gap-2 ">
                                     <p className="capitalize text-black text-lg font-semibold ">Ihram</p>
-                                    <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${umrahMainSpotsIsOpen == 1 ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                    <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${umrahMainSpotsIsOpen === 1 ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
                                        <p className="capitalize text-third-color text-base font-medium ">
                                           Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the
                                           Prophet, peace and blessings be upon him, designated certain locations as Miqat.

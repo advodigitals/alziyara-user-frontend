@@ -12,7 +12,7 @@ const PackageIndividualPage = () => {
 
     useEffect(() => {
         allPackageData()
-    }, [])
+    },)
 
     const allPackageData = async () => {
         const allPackageDataArray = await handleAllPackageDisplay(slug)
@@ -20,7 +20,7 @@ const PackageIndividualPage = () => {
     }
 
     const handleIsOpen = (index) => {
-        if (index == isOpen) {
+        if (index === isOpen) {
             setIsOpen(null)
         } else {
 
@@ -118,7 +118,7 @@ const PackageIndividualPage = () => {
                                                 <p className="capitalize text-black font-medium  ">{details.subHeading}</p>
 
 
-                                                <div className={`overflow-hidden transition-all duration-[0.5s] ${isOpen == index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                                <div className={`overflow-hidden transition-all duration-[0.5s] ${isOpen === index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
                                                     <ul className="pl-5 flex flex-col gap-2">
                                                         {details.activities && details.activities.map((points) => (
                                                                 <li  className="capitalize text-primary-color font-light">

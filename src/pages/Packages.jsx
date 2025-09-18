@@ -17,6 +17,7 @@ const Packages = () => {
     allPackageData()
   },[type])
 
+
   useEffect (() => {
     if (search.trim()) {
             PackageDataSearch()
@@ -25,6 +26,7 @@ const Packages = () => {
             allPackageData()
         }
   },[search])
+
 
   const allPackageData = async () => {
     const allPackageDataArray = await handleAllPackageDisplay(type)
