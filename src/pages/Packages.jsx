@@ -4,26 +4,30 @@ import SubPageBGImage from '../Components/SubPageBGImage'
 import PackageText from '../Components/PackageText'
 import PackageMapAll from '../Components/PackageMapAll'
 import { handleAllPackageDisplay, handlePackageSearch } from '../api/package/package'
+import { useParams } from 'react-router'
 
 
 const Packages = () => {
   const [search, setSearch] = useState('')
   const [packageData , setPackageData] = useState([])
 
+  const { type } = useParams()
+
   useEffect(() => {
     allPackageData()
-  },[])
+  },[type])
 
   useEffect (() => {
     if (search.trim()) {
             PackageDataSearch()
         } else {
+          
             allPackageData()
         }
   },[search])
 
   const allPackageData = async () => {
-    const allPackageDataArray = await handleAllPackageDisplay()
+    const allPackageDataArray = await handleAllPackageDisplay(type)
     setPackageData(allPackageDataArray?.data)
   }
 
@@ -31,6 +35,10 @@ const Packages = () => {
     const PackageDataArray = await handlePackageSearch(search)
     setPackageData(PackageDataArray?.data)
   }
+
+console.log(packageData,"tpe")
+
+
 
   return (
     <>

@@ -11,7 +11,6 @@ const CertificateATT = React.lazy(() => import("./pages/CertificateATT"))
 const OnlineServices = React.lazy(() => import("./pages/OnlineServices"))
 const ContactUs = React.lazy(() => import("./pages/ContactUs"))
 const Branches = React.lazy(() => import("./pages/Branches"))
-const InternationalPackages = React.lazy(() => import("./pages/InternationalPackages"))
 const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"))
 const TermsAndConditions = React.lazy(() => import("./pages/TermsAndConditions"))
 const Home = React.lazy(() => import("./pages/Home"))
@@ -46,17 +45,17 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/flights" element={<Flights />} />
           <Route path="/hajj-umrah" element={<HajjUmrah />} />
-          <Route path="/packages" element={<Packages />} />
           <Route path="/tours" element={<Tours />} />
           <Route path="/certificate-attestation" element={<CertificateATT />} />
           <Route path="/online-services" element={<OnlineServices />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/branches" element={<Branches />} />
-          <Route path="/international-packages" element={<InternationalPackages />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/visas/:type" element={<Visa />} />
           <Route path="/visa/:name" element={<VisaIndvidualPage />} />
+          <Route path="/packages/:type" element={<Packages />} />
+          {/* <Route path="/packages/:type" element={<PackageIndividualPage />} /> */}
           <Route path="/packages/:slug" element={<PackageIndividualPage />} />
         </Routes>
       </Suspense>

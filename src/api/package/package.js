@@ -1,8 +1,9 @@
 import api from "../axios";
 
-export const handleAllPackageDisplay = async (slug) => {
+export const handleAllPackageDisplay = async (type) => {
     try {
-        const { data } = await api.get(`/packages/get?name=${slug !== undefined ? slug : ''}`)
+        const { data } = await api.get(`/packages/get?type=${type}`)
+        console.log(data)
         return data
     } catch (error) {
         console.log(error.response.data);
@@ -19,3 +20,6 @@ export const handlePackageSearch = async (key) => {
         return error.response.data;
     }
 }
+
+
+    // const { data } = await api.get(`/packages/get?type=${type !== undefined ? type : ''}`)

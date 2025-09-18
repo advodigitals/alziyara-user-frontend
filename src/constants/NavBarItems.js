@@ -57,6 +57,7 @@ export const NavbarList = [
         name: "International Packages",
         path: "/packages",
         dataPath: "international-packages"
+        
       },
       {
         id: "1",
