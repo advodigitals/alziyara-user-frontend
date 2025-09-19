@@ -15,6 +15,7 @@ const Visa = () => {
     const { type } = useParams()
     useEffect(() => {
         visaCountriesDataFunction()
+        // eslint-disable-next-line 
     },[type])
 
     useEffect(() => {
@@ -22,7 +23,9 @@ const Visa = () => {
             visaCountriesDataSearch()
         } else {
             visaCountriesDataFunction()
+        
         }
+        // eslint-disable-next-line 
     },[search])
 
     const visaCountriesDataFunction = async () => {

@@ -15,6 +15,7 @@ const Packages = () => {
 
   useEffect(() => {
     allPackageData()
+    // eslint-disable-next-line 
   },[type])
 
   useEffect (() => {
@@ -24,6 +25,7 @@ const Packages = () => {
           
             allPackageData()
         }
+        // eslint-disable-next-line 
   },[search])
 
   const allPackageData = async () => {
