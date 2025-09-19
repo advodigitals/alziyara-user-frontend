@@ -56,7 +56,7 @@ function App() {
           <Route path="/visa/:name" element={<VisaIndvidualPage />} />
           <Route path="/packages/:type" element={<Packages />} />
           {/* <Route path="/packages/:type" element={<PackageIndividualPage />} /> */}
-          <Route path="/packages/:slug" element={<PackageIndividualPage />} />
+          <Route path="/package/:name" element={<PackageIndividualPage />} />
         </Routes>
       </Suspense>
     </>

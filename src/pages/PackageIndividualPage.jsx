@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import Layouts from '../Layouts/Layouts'
 import { useParams } from 'react-router'
-import { handleAllPackageDisplay } from '../api/package/package'
+import {  handleSinglePackage } from '../api/package/package'
 import { Icon } from '@iconify/react/dist/iconify.js'
 // import image from '../Assets/test.jpg'
 
 const PackageIndividualPage = () => {
     const [packageData, setPackageData] = useState([])
     const [isOpen, setIsOpen] = useState(null)
-    const { slug } = useParams()
+    const { name } = useParams()
 
     useEffect(() => {
         allPackageData()
     },)
+    console.log(name,"sljug on package")
 
     const allPackageData = async () => {
-        const allPackageDataArray = await handleAllPackageDisplay(slug)
+        const allPackageDataArray = await handleSinglePackage(name)
+        console.log(allPackageDataArray.data[0], "data")
         setPackageData(allPackageDataArray?.data[0])
     }
 
@@ -56,7 +58,7 @@ const PackageIndividualPage = () => {
                     <div id="image-section" className="flex w-full  h-[30rem] ">
                         <img src={packageData.coverImg} alt="" className='h-full w-full object-cover ' />
                     </div>
-                    <div id="remaining-details-section" className="flex h-[55rem] w-full max-w-[1200px] mx-auto md:flex-row flex-col pt-10 p-2">
+                    <div id="remaining-details-section" className="flex h-fit w-full max-w-[1200px] mx-auto md:flex-row flex-col pt-10 p-2">
                         <div className="flex h-full basis-1/2 flex-col gap-5 ">
                             <div className="flex flex-row  w-full ">
                                 <div id="details" className="flex w-full flex-row gap-8  p-2">

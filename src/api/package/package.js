@@ -3,11 +3,22 @@ import api from "../axios";
 export const handleAllPackageDisplay = async (type) => {
     try {
         const { data } = await api.get(`/packages/get?type=${type}`)
-        console.log(data)
         return data
     } catch (error) {
         console.log(error.response.data);
         return error.response.data;
+    }
+}
+
+export const handleSinglePackage = async (slug) => {
+    try {
+        console.log(slug,"slug")
+        const { data } = await api.get(`/packages/get?name=${slug}`)
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error.response.data)
+        return error.response.data
     }
 }
 

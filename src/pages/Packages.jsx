@@ -17,7 +17,6 @@ const Packages = () => {
     allPackageData()
   },[type])
 
-
   useEffect (() => {
     if (search.trim()) {
             PackageDataSearch()
@@ -26,7 +25,6 @@ const Packages = () => {
             allPackageData()
         }
   },[search])
-
 
   const allPackageData = async () => {
     const allPackageDataArray = await handleAllPackageDisplay(type)
@@ -38,7 +36,7 @@ const Packages = () => {
     setPackageData(PackageDataArray?.data)
   }
 
-console.log(packageData,"tpe")
+
 
 
 
@@ -60,3 +58,5 @@ console.log(packageData,"tpe")
 }
 
 export default Packages
+
+
