@@ -1,5 +1,6 @@
 import api from "../axios";
 
+
 export const handleAllPackageDisplay = async (type) => {
     try {
         const { data } = await api.get(`/packages/get?type=${type}`)
