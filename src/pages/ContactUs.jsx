@@ -66,8 +66,8 @@ const ContactUs = () => {
           <div className="w-full h-fit max-w-[1400px] mx-auto flex flex-col items-center gap-8 bg-hash-color-bg p-3">
             <h1 className="text-4xl font-bold text-black text-center">Available Packages<span className="text-primary-color">.</span></h1>
             {
-              branchDetails.map((details) => (
-                <div className="w-fit h-fit flex flex-col md:flex-row justify-center items-center  bg-white shadow-lg shadow-slate-600/50 rounded-[10px] gap-10 py-6 md:py-3 px-1 md:px-8">
+              branchDetails.map(( details , index ) => (
+                <div key={index} className={`w-fit h-fit flex flex-col ${ index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row" } justify-center items-center  bg-white shadow-lg shadow-slate-600/50 rounded-[10px] gap-10 py-6 md:py-3 px-1 md:px-8`}>
                   <div className="h-fit  flex-1 flex flex-col w-full max-w-[300px] justify-center items-center gap-3">
                     <div className="flex flex-row justify-center items-center gap-2 ">
                       <Icon icon="ion:location-sharp" className="text-primary-color font-semibold text-xl" />
@@ -88,7 +88,6 @@ const ContactUs = () => {
             }
 
           </div>
-
         </div>
       </Layouts>
     </>
