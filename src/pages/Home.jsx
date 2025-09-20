@@ -6,7 +6,7 @@ import AboutCards from '../Components/AboutCards'
 import HeadingSection from '../Components/HeadingSection'
 import Services from '../Components/Services'
 import SwiperSection from '../Components/SwiperSection'
-// import YoutubeSlider from '../Components/YoutubeSlider'
+import YoutubeSlider from '../Components/YoutubeSlider'
 import Layouts from '../Layouts/Layouts'
 import AboutUs from './AboutUs'
 import Footer from '../Components/Footer'
@@ -27,7 +27,7 @@ const Home = () => {
         <AboutCards />
         <Services />
         <AboutUs />
-        {/* <YoutubeSlider /> */}
+        <YoutubeSlider />
         {/* <InstagramSlider/> */}
         <TestimonialsSection/>
       </div>
