@@ -11,10 +11,10 @@ export const handleAllPackageDisplay = async (type) => {
     }
 }
 
-export const handleSinglePackage = async (slug) => {
+export const handleSinglePackage = async (name) => {
     try {
-        console.log(slug,"slug")
-        const { data } = await api.get(`/packages/get?name=${slug}`)
+        // console.log(slug,"slug")
+        const { data } = await api.get(`/packages/get?name=${name}`)
         console.log(data)
         return data
     } catch (error) {

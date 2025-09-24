@@ -11,15 +11,17 @@ const PackageIndividualPage = () => {
     const { name } = useParams()
 
     useEffect(() => {
-        allPackageData()
-    },)
-    console.log(name,"sljug on package")
-
-    const allPackageData = async () => {
+        const allPackageData = async () => {
         const allPackageDataArray = await handleSinglePackage(name)
-        console.log(allPackageDataArray.data[0], "data")
-        setPackageData(allPackageDataArray?.data[0])
+        setPackageData(allPackageDataArray?.data)
     }
+        allPackageData()
+    },[name])
+
+    // const allPackageData = async () => {
+    //     const allPackageDataArray = await handleSinglePackage(name)
+    //     setPackageData(allPackageDataArray?.data)
+    // }
 
     const handleIsOpen = (index) => {
         if (index === isOpen) {
@@ -86,7 +88,7 @@ const PackageIndividualPage = () => {
                                 <h1 className="text-black text-3xl font-semibold capitalize">includes <span className='text-primary-color text-3xl font-semibold'>:</span></h1>
                                 {
                                     packageData.inclusion && packageData.inclusion.map((points) => (
-                                        <div className="flex flex-row justify-start items-center gap-3">
+                                        <div className=" flex flex-row justify-start items-center gap-3">
                                             <Icon className='text-primary-color' icon="simple-icons:ticktick" width="16" height="16" />
                                             <p className="text-base font-normal text-third-color">{points}</p>
                                         </div>
@@ -99,7 +101,7 @@ const PackageIndividualPage = () => {
                                 <h1 className="text-black text-3xl font-semibold capitalize">excludes <span className='text-primary-color text-3xl font-semibold'>:</span></h1>
                                 {
                                     packageData.exclusion && packageData.exclusion.map((points) => (
-                                        <div className="flex flex-row justify-start items-center gap-3">
+                                        <div className=" flex flex-row justify-start items-center gap-3">
                                             <Icon className='text-primary-color' icon="simple-icons:ticktick" width="16" height="16" />
                                             <p className="text-base font-normal text-third-color">{points}</p>
                                         </div>

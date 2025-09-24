@@ -27,8 +27,9 @@ const StarRating = (props) => {
                     name="text-feedback"
                     value={value}
                     readOnly
-                    precision={0.5}
-                    emptyIcon={<StarIcon style={{ opacity: 0.55 }}  />}
+                    precision={0.1}
+                    max={5}
+                    emptyIcon={<StarIcon style={{ opacity: 1 }}  />}
                 />
             </Box>
         </>
