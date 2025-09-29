@@ -27,7 +27,7 @@ const Home = () => {
         <AboutCards />
         <Services />
         <AboutUs />
-        <YoutubeSlider />
+        {/* <YoutubeSlider /> */}
         {/* <InstagramSlider/> */}
         <TestimonialsSection/>
       </div>

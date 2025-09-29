@@ -15,7 +15,6 @@ export const handleSinglePackage = async (name) => {
     try {
         // console.log(slug,"slug")
         const { data } = await api.get(`/packages/get?name=${name}`)
-        console.log(data)
         return data
     } catch (error) {
         console.log(error.response.data)
