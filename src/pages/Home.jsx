@@ -11,6 +11,7 @@ import Layouts from '../Layouts/Layouts'
 import AboutUs from './AboutUs'
 import Footer from '../Components/Footer'
 import TestimonialsSection from '../Components/TestimonialsSection'
+import FAQ from './FAQ'
 
 // import SwiperYoutube from './Swiper/SwiperYoutube'
 // import { useRef } from "react"
@@ -29,6 +30,7 @@ const Home = () => {
         <AboutUs />
         {/* <YoutubeSlider /> */}
         {/* <InstagramSlider/> */}
+        <FAQ/>
         <TestimonialsSection/>
       </div>
       <Footer />
