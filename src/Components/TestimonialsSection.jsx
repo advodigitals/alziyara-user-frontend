@@ -9,7 +9,7 @@ import profileImage from "../Assets/images/image5.jpg"
 const TestimonialsSection = () => {
     return (
         <>
-            <div className="flex  w-full h-fit lg:flex-row flex-col max-w-[1100px] mx-auto px-3 gap-y-4 pb-5 md:pb-10 pt-6">
+            <div className="flex  w-full h-fit lg:flex-row flex-col container mx-auto px-3 gap-y-4 pb-5 md:pb-10 pt-6">
                 <div id="title-block" className="flex flex-1 items-center justify-center text-center lg:text-left">
                     <h1 className="text-4xl sm:text-6xl font-medium text-primary-color sm:leading-[68px]"><span className="text-4xl sm:text-6xl font-bold text-black leading-[58px]">Stories</span> From Our <span className="text-4xl sm:text-6xl font-bold text-black leading-[58px]">Customers</span>.</h1>
                 </div>

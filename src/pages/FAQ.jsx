@@ -57,7 +57,7 @@ const FAQ = () => {
     return (
         <>
             <div className="flex w-full h-fit max-w-[1800px] mx-auto  bg-hash-color-bg ">
-                <div className="flex w-full h-fit flex-col items-center max-w-[1100px] mx-auto pt-6 gap-8 bg-hash-color-bg px-3 pb-5 md:pb-10">
+                <div className="flex w-full h-fit flex-col items-center container mx-auto pt-6 gap-8 bg-hash-color-bg px-3 pb-5 md:pb-10">
 
                 <h1 className="text-4xl font-bold text-black capitalize text-center">frequently asked questions<span className="text-primary-color text-4xl font-bold">.</span></h1>
                 <div className="flex flex-col w-full max-w-[800px] mx-auto h-full gap-6">

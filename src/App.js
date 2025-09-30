@@ -10,7 +10,6 @@ const AboutUs = React.lazy(() => import("./pages/AboutUs"))
 const CertificateATT = React.lazy(() => import("./pages/CertificateATT"))
 const OnlineServices = React.lazy(() => import("./pages/OnlineServices"))
 const ContactUs = React.lazy(() => import("./pages/ContactUs"))
-const Branches = React.lazy(() => import("./pages/Branches"))
 const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"))
 const TermsAndConditions = React.lazy(() => import("./pages/TermsAndConditions"))
 const Home = React.lazy(() => import("./pages/Home"))
@@ -49,7 +48,6 @@ function App() {
           <Route path="/certificate-attestation" element={<CertificateATT />} />
           <Route path="/online-services" element={<OnlineServices />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/branches" element={<Branches />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/visas/:type" element={<Visa />} />

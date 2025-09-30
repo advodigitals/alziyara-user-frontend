@@ -3,7 +3,7 @@ import React from 'react'
 const AboutUsSection = () => {
     return (
         <>
-            <div id="aboutUs" className="flex flex-col items-center w-full max-w-[1100px] mx-auto gap-8 pt-6 px-3">
+            <div id="aboutUs" className="flex flex-col items-center w-full container mx-auto gap-8 pt-6 px-3 ">
                 <h1 className="text-4xl font-bold text-black">About Us<span className="text-primary-color">.</span></h1>
                 <div className="flex gap-4 md:flex-row flex-col items-center justify-center gap">
                     <div id="video" className="flex-1">

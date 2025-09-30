@@ -51,7 +51,7 @@ const Services = () => {
         <div className=" flex justify-center items-center ">
           <h1 className="text-4xl font-bold text-black text-center">Services We Offer<span className="text-primary-color">.</span></h1>
         </div>
-        <div className="w-full max-w-[1200px] mx-auto h-fit  flex flex-row flex-wrap gap-y-9 gap-x-3  justify-evenly ">
+        <div className="w-full container mx-auto h-fit  flex flex-row flex-wrap gap-y-9 gap-x-3  justify-evenly ">
           {
             ServiceCardDetails.map((details) => (
               <Link to={details.path} className={`${details.path ? "cursor-pointer" : "cursor-default"}`}>

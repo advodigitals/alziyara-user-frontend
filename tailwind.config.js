@@ -6,20 +6,21 @@ module.exports = {
   theme: {
      container: {
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        DEFAULT: '4rem',
+        sm: '5rem',
+        md: '6rem',
+        lg: '7rem',
+        xl: '8rem',
+        '2xl': '9rem',
       },
-      screens: {
-        xsm : '510px',
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl':'1536px',
-      },
+      // screens: {
+      //   xsm : '510px',
+      //   sm: '640px',
+      //   md: '768px',
+      //   lg: '1024px',
+      //   xl: '1280px',
+      //   '2xl':'1536px',
+      // },
     },
     extend: { 
       colors: {

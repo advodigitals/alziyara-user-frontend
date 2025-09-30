@@ -9,7 +9,7 @@ const VisaBGImage = ({ setSearch, heading ,inputSubHeading , inputPlaceholder })
         <>
             <div id="img" className="w-full  h-fit bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${VisaBg})` }}>
                 <div className="w-full  h-full   bg-black bg-opacity-50 flex justify-center items-center">
-                    <div className="w-full max-w-[1100px]  h-full flex justify-center items-center flex-col py-8  gap-6 md:gap-0 md:flex-row md:justify-between md:px-4 px-0 ">
+                    <div className="w-full container  h-full flex justify-center items-center flex-col py-8  gap-6 md:gap-0 md:flex-row md:justify-between md:px-4 px-0 ">
                         <h1 className="text-6xl font-bold text-white text-center">{heading}</h1>
                         <div id="search-input" className="px-2 w-fit flex flex-col ">
                             <label className="capitalize text-base font-medium text-white text-start">{inputSubHeading}</label>

@@ -84,7 +84,7 @@ const HajjUmrah = () => {
          <Layouts>
             <div className="flex h-full w-full max-w-[2000px] mx-auto flex-col  items-center gap-8  pb-4" >
                <div id="heading-image-section" className="w-full h-fit  sm:h-[25rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${hajjUmrahHeadingImage})` }}>
-                  <div className="w-full  h-full bg-black bg-opacity-70 flex flex-col items-center justify-center gap-7">
+                  <div className="w-full  h-full  bg-black bg-opacity-70 flex flex-col items-center justify-center gap-7">
                      <div className="w-full max-w-[900px] mx-auto px-2 sm:py-2 py-5">
                         <h1 className="capitalize text-white font-semibold text-6xl text-center">journey to the holy cities with us</h1>
                      </div>
@@ -95,7 +95,7 @@ const HajjUmrah = () => {
                   </div>
                </div>
                
-               <div className="flex lg:flex-row flex-col w-full h-fit max-w-[1200px] mx-auto px-4">
+               <div className="flex lg:flex-row flex-col w-full h-fit container mx-auto px-4">
                   <div id="image-section" className="flex  flex-1 p-3 items-center justify-center lg:justify-normal">
                      <img className="  w-[80%] rounded-[10px]  " src={hajjUmrahExplainImage} alt="" />
                   </div>
