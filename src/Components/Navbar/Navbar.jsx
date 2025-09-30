@@ -4,6 +4,7 @@ import NavbarButtons from './NavbarButtons'
 import NavbarDropdown from './NavbarDropdown'
 import ContactButton from '../../constants/ContactButton'
 import img from '../../Assets/images/logo.png'
+import { Link } from 'react-router'
 
 
 
@@ -33,7 +34,9 @@ const Navbar = () => {
       <header className={`w-full  top-0 left-0 right-0  z-50 transition-all duration-[0.5s]  h-[95px] ${scrolled ? 'bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30  fixed' : 'bg-transparent sticky'}`} >
         <nav id='header' className={` max-w-[1400px] mx-auto w-full flex items-center justify-between   px-4`}>
           <div className=" flex justify-center items-center hover:cursor-pointer  ">
+            <Link className='w-fit h-fit' to={"/"}>
             <img src={img} alt="" className="w-[90px] h-auto justify-center" />
+            </Link>
           </div>
           <div className="content-center items-center hidden lg:flex">
             <ul className=" flex items-center">

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import Layouts from '../Layouts/Layouts'
 import SubPageBGImage from '../Components/SubPageBGImage'
 import PackageText from '../Components/PackageText'
-import PackageMapAll from '../Components/PackageMapAll'
+// import PackageMapAll from '../Components/PackageMapAll'
 import { handleAllPackageDisplay, handlePackageSearch } from '../api/package/package'
 import { useParams } from 'react-router'
+const PackageMapAll = React.lazy(() => import("../Components/PackageMapAll"))
 
 
 const Packages = () => {
@@ -50,9 +51,11 @@ const Packages = () => {
           <div id="pageText" className="px-4 justify-center text-center sm:mt-5 text-base w-full max-w-[1200px] mx-auto">
            <PackageText/>
           </div>
+           <Suspense fallback={<div>Loading...</div>}>
           <div className=" w-full h-fit flex flex-col items-center justify-center bg-hash-color-bg px-3 py-5 md:py-10 gap-9 ">
             <PackageMapAll packageDataArray={packageData}/>
           </div>
+          </Suspense>
         </div>
       </Layouts>
     </>

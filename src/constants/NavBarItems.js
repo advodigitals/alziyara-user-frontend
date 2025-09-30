@@ -9,13 +9,9 @@ export const NavbarList = [
     id: "2",
     name: "About Us",
     path: "/about-us"
-  }, {
+  }, 
+  {
     id: "3",
-    name: "Tours",
-    path: "/tours",
-
-  }, {
-    id: "4",
     name: "Visa",
     dropdown: true,
     dropdownIcon: <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />,
@@ -36,18 +32,14 @@ export const NavbarList = [
     ]
     
   }, 
+   
   {
-    id: "5",
-    name: "Flights",
-    path: "/flights"
-  }, 
-  {
-    id: "6",
+    id: "4",
     name: "Hajj-Umrah",
     path: "/hajj-umrah"
   }, 
   {
-    id: "7",
+    id: "5",
     name: "Packages",
     dropdown: true,
     dropdownIcon: <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />,

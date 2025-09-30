@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import IMPNavbar from '../Components/Navbar/IMPNavbar'
+import GoBack from '../Components/GoBack'
 
 
 const Layouts = ({children}) => {
@@ -8,6 +9,7 @@ const Layouts = ({children}) => {
     <>
     <Navbar/>
     <IMPNavbar/>
+    <GoBack/>
     {children}
     
     </>

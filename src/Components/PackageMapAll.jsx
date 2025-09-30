@@ -3,16 +3,16 @@ import StarRating from '../Components/StarRating'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router'
 
-const PackageMapAll = ({packageDataArray}) => {
+const PackageMapAll = ({ packageDataArray }) => {
 
-    
+
     return (
         <>
             {
                 packageDataArray.length > 0 && packageDataArray.map((details) => (
                     <div className="w-full max-w-[900px] mx-auto h-fit flex sm:flex-row flex-col bg-white shadow-lg shadow-slate-600/50 rounded-[10px]">
                         <div id="image" alt="" className=" basis-2/5 max-h-[25rem] ">
-                            <img src={details.coverImg} alt="" className=" h-full w-full object-cover rounded-[10px] "/>
+                            <img src={details.coverImg} alt="" className=" h-full w-full object-cover rounded-[10px] " />
                         </div>
                         <div id="details" className="flex flex-col items-center justify-center basis-3/5 h-full bg-white sm:rounded-r-[10px] rounded-b-[10px]  p-6 gap-4">
                             <div id="only-text" className="flex w-full h-full flex-col items-start justify-start gap-3 ">
@@ -27,7 +27,7 @@ const PackageMapAll = ({packageDataArray}) => {
                                 <h1 className="capitalize text-xl font-semibold text-primary-color">top attractions</h1>
                                 <div className="flex flex-col items-start sm:flex-row gap-x-6 gap-y-2 flex-wrap">
                                     {
-                                       details.topAttraction && details?.topAttraction.map((points) => (
+                                        details.topAttraction && details?.topAttraction.map((points) => (
                                             <div className="flex flex-row justify-center gap-2 items-center">
                                                 <Icon className='text-primary-color' icon="simple-icons:ticktick" width="16" height="16" />
                                                 <p className='text-sm'>{points}</p>

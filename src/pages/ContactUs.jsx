@@ -4,6 +4,7 @@ import contactTopIMage from "../Assets/images/hajj&umrah-heading-image.jpg"
 import { Link } from 'react-router'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { branchDetails } from '../constants/FooterBranchDetails'
+import BranchSection from '../Components/BranchSection'
 
 
 const ContactUs = () => {
@@ -63,31 +64,7 @@ const ContactUs = () => {
             </div>
 
           </div>
-          <div className="w-full h-fit max-w-[1400px] mx-auto flex flex-col items-center gap-8 bg-hash-color-bg p-3">
-            <h1 className="text-4xl font-bold text-black text-center">Available Packages<span className="text-primary-color">.</span></h1>
-            {
-              branchDetails.map(( details , index ) => (
-                <div key={index} className={`w-fit h-fit flex flex-col ${ index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row" } justify-center items-center  bg-white shadow-lg shadow-slate-600/50 rounded-[10px] gap-10 py-6 md:py-3 px-1 md:px-8`}>
-                  <div className="h-fit  flex-1 flex flex-col w-full max-w-[300px] justify-center items-center gap-3">
-                    <div className="flex flex-row justify-center items-center gap-2 ">
-                      <Icon icon="ion:location-sharp" className="text-primary-color font-semibold text-xl" />
-                      <h5 className="text-black text-lg font-medium uppercase">{details.name}</h5>
-                    </div>
-                    <p className="text-third-color text-lg font-normal capitalize text-center">{details.address}</p>
-                    <div className="flex flex-row justify-center items-center gap-2">
-                      <Icon icon="si:phone-fill" className="text-primary-color font-semibold text-xl" />
-                      <a href={details.href}><p className="font-medium text-lg text-third-color hover:text-black ">{details.number}</p></a>
-                    </div>
-                  </div>
-                  <div className="h-fit w-fit ">
-                    <iframe title='map' src={details.map} className='w-[270px] sm:w-[300px] h-[200px] border-none rounded-[10px]' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
-
-                </div>
-              ))
-            }
-
-          </div>
+         <BranchSection />
         </div>
       </Layouts>
     </>

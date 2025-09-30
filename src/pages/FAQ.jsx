@@ -56,25 +56,25 @@ const FAQ = () => {
 
     return (
         <>
-            <div className="flex w-full h-fit flex-col items-center max-w-[1400px] mx-auto pt-6 gap-9 bg-hash-color-bg sm:p-8  p-3">
+            <div className="flex w-full h-fit max-w-[1800px] mx-auto  bg-hash-color-bg ">
+                <div className="flex w-full h-fit flex-col items-center max-w-[1100px] mx-auto pt-6 gap-8 bg-hash-color-bg px-3 pb-5 md:pb-10">
+
                 <h1 className="text-4xl font-bold text-black capitalize text-center">frequently asked questions<span className="text-primary-color text-4xl font-bold">.</span></h1>
-                <div className="flex flex-col w-full h-full gap-6">
+                <div className="flex flex-col w-full max-w-[800px] mx-auto h-full gap-6">
                     {
                          FAQArray.map((details, index) => (
-                        <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50 gap-3 py-4 `} onClick={() => handleIsOpen(index)}>
+                        <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50 gap-3 py-1 `} onClick={() => handleIsOpen(index)}>
                             <div className="flex flex-col flex-1 items-start justify-center py-3 px-10">
                                 <p className="capitalize text-black font-normal text-lg md:text-xl">{details.question}</p>
                                 <div className={`overflow-hidden transition-all duration-[0.5s] md:max-w-[75%] max-w-[100%] ${isOpen === index ? "md:max-h-[200px] max-h-fit opacity-100 mt-5" : "max-h-0 opacity-0 mt-0"}`}>
-                                    <p className="capitalize text-third-color md:text-lg text-base font-normal  ">
-                                        Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the
-                                        Prophet, peace and blessings be upon him, designated certain locations as Miqat.
-                                    </p>
+                                    <p className="capitalize text-third-color md:text-lg text-base font-normal  ">{details.answer}</p>
                                 </div>
                             </div>
                         </div>
                         ))
                     }
 
+                </div>
                 </div>
             </div>
         </>

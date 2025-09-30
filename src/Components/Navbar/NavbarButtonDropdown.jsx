@@ -14,7 +14,7 @@ const NavbarButtonDropdown = (props) => {
                 {
                    dropdownData && dropdownData.map((dropbutton) => (
                         <li className="h-full w-full block rounded-[10px] shadow-sm shadow-slate-600/50 ">
-                             <Link to={`${dropbutton.path}/${dropbutton.dataPath}`} className="no-underline inline-block font-semibold w-full h-fit cursor-pointer hover:bg-black hover:text-white px-3 py-2 rounded-[10px]">{dropbutton.name}</Link>
+                             <Link to={`${dropbutton.path}/${dropbutton.dataPath}`} className="no-underline inline-block font-semibold w-full h-fit cursor-pointer hover:bg-white hover:text-primary-color px-3 py-2 rounded-[10px]">{dropbutton.name}</Link>
                          </li>
                     ))
                 }
