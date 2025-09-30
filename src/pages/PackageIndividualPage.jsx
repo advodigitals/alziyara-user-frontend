@@ -52,4 +52,3 @@ const PackageIndividualPage = () => {
 }
 
 export default PackageIndividualPage
-{/* <Icon icon="fluent:person-star-48-regular" width="48" height="48" /> */ }

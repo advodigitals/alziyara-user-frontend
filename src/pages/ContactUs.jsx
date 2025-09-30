@@ -2,8 +2,6 @@ import React from 'react'
 import Layouts from '../Layouts/Layouts'
 import contactTopIMage from "../Assets/images/hajj&umrah-heading-image.jpg"
 import { Link } from 'react-router'
-import { Icon } from '@iconify/react/dist/iconify.js'
-import { branchDetails } from '../constants/FooterBranchDetails'
 import BranchSection from '../Components/BranchSection'
 
 
