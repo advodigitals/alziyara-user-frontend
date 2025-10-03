@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 const PackageHeroDataSection = ({ packageData }) => {
     return (
         <>
-            <div id="heading-section" className="flex h-fit w-full  flex-col lg:flex-row max-w-[1200px] mx-auto  gap-y-6">
+            <div id="heading-section" className="flex h-fit w-full  flex-col lg:flex-row container mx-auto  gap-y-6">
                 <div id="main-heading" className="flex lg:basis-1/2 items-center justify-center mx-auto p-3 ">
                     <h1 className="capitalize text-5xl text-black font-normal text-center lg:text-left ">{packageData.name}</h1>
                 </div>

@@ -35,7 +35,7 @@ const PackageIndividualPage = () => {
                     <div id="image-section" className="flex w-full  h-[30rem] ">
                         <img src={packageData.coverImg} alt="" className='h-full w-full object-cover ' />
                     </div>
-                    <div id="remaining-details-section" className="flex h-fit w-full max-w-[1200px] mx-auto md:flex-row flex-col pt-10 p-2">
+                    <div id="remaining-details-section" className="flex h-fit w-full container mx-auto md:flex-row flex-col pt-10 p-2">
                         <div className="flex h-full basis-1/2 flex-col gap-5 ">
                             <PackageRestDataSection packageData={packageData} />
                             <hr className='border-[3px_solid_#9d9d9d] mx-6 my-8' />

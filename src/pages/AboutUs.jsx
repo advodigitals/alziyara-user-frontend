@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <>
       <Layouts>
-        <div className="w-full h-full  gap-8 flex flex-col">
+        <div className="w-full h-full container mx-auto  gap-8 flex flex-col px-0">
          <AboutUsSection />
           {/* <div id="founder" className="flex flex-col items-center container mx-auto gap-[3rem] p-5  ">
               <h1 className="text-4xl font-bold text-third-color">Founder<span className="text-primary-color">.</span></h1>

@@ -6,7 +6,7 @@ const BranchSection = () => {
     return (
         <div className="w-full h-fit container mx-auto flex flex-col  items-center gap-8 bg-hash-color-bg p-3">
             <h1 className="text-4xl font-bold text-black text-center capitalize">our locations<span className="text-primary-color">.</span></h1>
-            <div className="w-full h-full flex flex-col lg:flex-row lg:justify-center items-center flex-wrap  xl:gap-8 gap-2">
+            <div className="w-full h-full flex flex-col lg:flex-row lg:justify-center items-center flex-wrap  xl:gap-8 gap-6">
 
                 {
                     branchDetails.map((details, index) => (

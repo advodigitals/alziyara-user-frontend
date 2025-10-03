@@ -48,8 +48,8 @@ const Visa = () => {
                             {type === "global" ? <GlobalVisaText /> : <GccVisaText />}
                         </div>
                         <Suspense fallback={<div>Loading...</div>}>
-                            <div className="h-full w-full max-w-[1100px] mx-auto sm:px-5 px-2 grid ">
-                                <div id="visa-section" className=" h-full w-full container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  sm:gap-6 gap-4 justify-center">
+                            <div className="h-full w-full container mx-auto sm:px-5 px-2 grid ">
+                                <div id="visa-section" className=" h-full w-full  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  sm:gap-6 gap-4 justify-center">
                                     <VisaCountryMap visaCountryDataArray={visaCountryData}  />
                                 </div>
                             </div>

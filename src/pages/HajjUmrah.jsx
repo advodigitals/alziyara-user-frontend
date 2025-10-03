@@ -82,8 +82,8 @@ const HajjUmrah = () => {
    return (
       <>
          <Layouts>
-            <div className="flex h-full w-full max-w-[2000px] mx-auto flex-col  items-center gap-8  pb-4" >
-               <div id="heading-image-section" className="w-full h-fit  sm:h-[25rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${hajjUmrahHeadingImage})` }}>
+            <div className="flex h-full w-full  flex-col  items-center gap-8  pb-4" >
+               <div id="heading-image-section" className="w-full h-fit max-w-[2000px] mx-auto sm:h-[25rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${hajjUmrahHeadingImage})` }}>
                   <div className="w-full  h-full  bg-black bg-opacity-70 flex flex-col items-center justify-center gap-7">
                      <div className="w-full max-w-[900px] mx-auto px-2 sm:py-2 py-5">
                         <h1 className="capitalize text-white font-semibold text-6xl text-center">journey to the holy cities with us</h1>
@@ -112,9 +112,9 @@ const HajjUmrah = () => {
                   </div>
                </div>
 
-               <div className="flex w-full h-[30rem] flex-col items-center bg-hash-color-bg pt-6 gap-7">
+               <div className="flex w-full h-[30rem] max-w-[2000px] mx-auto flex-col items-center bg-hash-color-bg pt-6 gap-7">
                   <h1 className="text-4xl font-bold text-black text-center">Available Packages<span className="text-primary-color">.</span></h1>
-                  <div className=" w-full h-full max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center px-3">
+                  <div className=" w-full h-full container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center px-3">
                      <Link className='h-fit w-fit'>
                         <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
 
@@ -123,11 +123,11 @@ const HajjUmrah = () => {
                   </div>
                </div>
 
-               <div className="flex h-fit w-full max-w-[1400px] mx-auto flex-col items-center gap-7 px-2">
-                  <h1 className="text-4xl font-bold text-black">Services we Provide<span className="text-primary-color">.</span></h1>
+               <div className="flex h-fit w-full container mx-auto flex-col items-center gap-7 px-2">
+                  <h1 className="text-4xl font-bold text-black text-center">Services we Provide<span className="text-primary-color">.</span></h1>
                   <div className="flex h-full w-full lg:flex-row flex-col ">
                      <div className="flex  basis-1/4 items-center lg:justify-start justify-center">
-                        <h1 className="text-5xl  font-medium text-primary-color leading-[68px] "><span className="text-5xl  font-bold text-black leading-[58px]">Explore </span>World with <span className="text-5xl  font-bold text-black leading-[58px]">Expertise</span>.</h1>
+                        <h1 className="text-5xl  font-medium text-primary-color leading-[68px] md:text-left text-center"><span className="text-5xl  font-bold text-black leading-[58px]">Explore </span>World with <span className="text-5xl  font-bold text-black leading-[58px]">Expertise</span>.</h1>
                      </div>
                      <div className="flex h-full basis-3/4 flex-wrap  justify-center gap-x-4 p-2 gap-y-5">
                         {
@@ -146,14 +146,14 @@ const HajjUmrah = () => {
                </div>
 
                <div className="w-full h-fit bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${umrahBackgroundImage})` }}>
-                  <div className="w-full  h-full   bg-gradient-to-b from-white opacity-90 flex flex-col justify-start gap-5 px-2 py-4 pt-10">
-                     <div className="flex flex-col max-w-[900px] w-full h-fit gap-9">
-                        <h1 className="text-3xl text-black font-light">About <span className="text-black font-semibold text-3xl">Umrah</span></h1>
-                        <p className="text-black text-xl font-normal">Experience the spiritual journey of Umrah with comfort and peace of mind. Umrah is a sacred pilgrimage to Makkah, performed by Muslims seeking blessings,
+                  <div className="w-full  h-full   bg-gradient-to-b from-white opacity-90 flex flex-col  justify-start gap-5 px-2 py-4 pt-10">
+                     <div className="flex flex-col mx-auto container  w-full h-fit gap-9">
+                        <h1 className="text-3xl text-black font-light max-w-[900px]">About <span className="text-black font-semibold text-3xl">Umrah</span></h1>
+                        <p className="text-black text-xl font-normal max-w-[900px]">Experience the spiritual journey of Umrah with comfort and peace of mind. Umrah is a sacred pilgrimage to Makkah, performed by Muslims seeking blessings,
                            forgiveness, and closeness to Allah. Unlike Hajj, it can be performed at any time of the year, making it a beautiful opportunity for believers to renew their faith and find inner peace. We are here
                            to make your journey smooth and memorable, so you can focus on worship while we take care of the rest.</p>
                      </div>
-                     <div className="flex flex-col md:flex-row h-full w-full px-4 gap-6">
+                     <div className="container mx-auto flex flex-col md:flex-row h-full w-full px-4 gap-6">
                         <div className="flex h-full flex-1 flex-col gap-3">
                            <div className="p-3 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
                               <h3 className="text-black text-2xl font-semibold capitalize">Pillars Of Umrah <span className='text-primary-color text-2xl font-semibold'>:</span></h3>

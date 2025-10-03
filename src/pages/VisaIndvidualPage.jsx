@@ -24,7 +24,7 @@ const VisaIndvidualPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex h-full w-full flex-col gap-3  max-w-[1120px]  mx-auto items-center md:items-start  ">
+                    <div className="flex h-full w-full flex-col gap-3 container  mx-auto items-center md:items-start  ">
                         <h1 className='text-2xl font-semibold '>Types of {name} Visa</h1>
                         <div className="  w-full h-full grid justify-center max-w-[1100px] mx-auto">
                             <div className="w-full h-full grid justify-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-5 ">

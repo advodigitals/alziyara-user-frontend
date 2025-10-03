@@ -6,12 +6,12 @@ module.exports = {
   theme: {
      container: {
       padding: {
-        DEFAULT: '4rem',
-        sm: '5rem',
-        md: '6rem',
-        lg: '7rem',
-        xl: '8rem',
-        '2xl': '9rem',
+        DEFAULT: '1rem',
+        sm: '2rem',
+        md: '3rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
       // screens: {
       //   xsm : '510px',
