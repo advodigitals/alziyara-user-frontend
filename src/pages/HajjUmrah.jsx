@@ -9,6 +9,8 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 const HajjUmrah = () => {
    const [pillarUmrahIsOpen, setPillarUmrahIsOpen] = useState(null)
    const [umrahMainSpotsIsOpen, setUmrahMainSpotsIsOpen] = useState(null)
+   const [pillarHajjIsOpen , setPillarHajjIsOpen] = useState(null)
+   const [hajjMainSpotsIsOpen , setHajjMainSpotsIsOpen] = useState (null)
 
    const handleUmrahMainSpotsIsOpen = (index) => {
       if (index === umrahMainSpotsIsOpen) {
@@ -16,6 +18,16 @@ const HajjUmrah = () => {
       } else {
 
          setUmrahMainSpotsIsOpen(index)
+      }
+
+   }
+   
+      const handleHajjMainSpotsIsOpen = (index) => {
+      if (index === hajjMainSpotsIsOpen) {
+         setHajjMainSpotsIsOpen(null)
+      } else {
+
+         setHajjMainSpotsIsOpen(index)
       }
 
    }
@@ -30,6 +42,71 @@ const HajjUmrah = () => {
       }
 
    }
+
+   const handlePillarsOfHajjIsOpen = (index) => {
+      if (index === pillarHajjIsOpen) {
+         setPillarHajjIsOpen(null)
+      }else{
+         setPillarHajjIsOpen(index)
+      }
+   }
+
+   const HajjPillers = [
+      {
+         step: "Ihram",
+         dateName: " 8th Dhul-Hijjah (ذو الحجة)",
+         activities: [
+            "Ihram (إحرام) – Make the intention for Hajj, enter the sacred state of Ihram, and begin with Talbiyah: “لبيك اللهم لبيك…”",
+         ]
+      },
+      {
+         step: "Day 1",
+         dateName: "8th Dhul-Hijjah - Mina (مِنى)",
+         activities: [
+            "Travel to Mina (مِنى)",
+            "Spend the day and night in prayer and remembrance of Allah."
+         ]
+      },
+      {
+         step: "Day 2",
+         dateName: " 9th Dhul-Hijjah - Arafah (عرفة)",
+         activities: [
+            "Move to Arafah (عرفة).",
+            "Stand in Wuquf (وقوف) – the most important pillar of Hajj.",
+            "After sunset, proceed to Muzdalifah (مزدلفة).",
+            "Pray, rest under the open sky, and collect pebbles (ḥaṣā حصى)."
+         ]
+      },
+      {
+         step: "Day 3",
+         dateName: "10th Dhul-Hijjah - Eid al-Adha (عيد الأضحى)",
+         activities: [
+            "Return to Mina (مِنى).",
+            "Ramy (رمي الجمرات) → Throw 7 pebbles at the largest Jamarah (جمرة العقبة الكبرى).",
+            "Qurbani (قرباني / نحر) → Offer the sacrifice of an animal.",
+            "Halq (حلق) or Taqsir (تقصير) → Shave or shorten hair (women cut a small portion).Ihram restrictions are now lifted.",
+            "Travel to Makkah (مكة المكرمة) → Perform Tawaf al-Ifadah (طواف الإفاضة) and Sa’i (سعي) between Safa (الصفا) and Marwah (المروة)."
+         ]
+      },
+      {
+         step: "Day 4",
+         dateName: "11th–13th Dhul-Hijjah (أيام التشريق )",
+         activities: [
+            "Stay in Mina (مِنى).",
+            "Each day, perform Ramy (رمي الجمرات) → Throw 7 pebbles at each of the three Jamarat (الجمرات الثلاث) → total 21 pebbles per day.",
+            "Pilgrims may leave Mina after the 12th or remain until the 13th.",
+         ]
+      },
+      {
+         step: "Farewell",
+         dateName: "Tawaf al-Wada (طواف الوداع)",
+         activities: [
+            "Tawaf al-Wada (طواف الوداع) – Perform the farewell circumambulation of the Kaaba, bidding goodbye to the Sacred House with love and gratitude.",
+
+         ]
+      },
+   ]
+   
 
    const UmrahPillers = [
       {
@@ -62,19 +139,19 @@ const HajjUmrah = () => {
          title: "Accommodation Arrangements",
          text: "Comfortable and convenient accommodations near holy sites."
       },
-       {
+      {
          title: "Expert Guided Tours",
          text: "Culturally enriching and insightful spiritual guidance."
       },
-       {
+      {
          title: "Transportation Services",
          text: "Reliable transportation services throughout your pilgrimage."
       },
-       {
+      {
          title: "24/7 Support",
          text: "A dedicated support team is available anytime for assistance."
       },
-       {
+      {
          title: "Group Packages",
          text: "Customized itineraries for groups of all sizes."
       },
@@ -82,7 +159,7 @@ const HajjUmrah = () => {
    return (
       <>
          <Layouts>
-            <div className="flex h-full w-full  flex-col  items-center gap-8  pb-4" >
+            <div className="flex h-full w-full  flex-col  items-center gap-8  " >
                <div id="heading-image-section" className="w-full h-fit max-w-[2000px] mx-auto sm:h-[25rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${hajjUmrahHeadingImage})` }}>
                   <div className="w-full  h-full  bg-black bg-opacity-70 flex flex-col items-center justify-center gap-7">
                      <div className="w-full max-w-[900px] mx-auto px-2 sm:py-2 py-5">
@@ -94,7 +171,7 @@ const HajjUmrah = () => {
 
                   </div>
                </div>
-               
+
                <div className="flex lg:flex-row flex-col w-full h-fit container mx-auto px-4">
                   <div id="image-section" className="flex  flex-1 p-3 items-center justify-center lg:justify-normal">
                      <img className="  w-[80%] rounded-[10px]  " src={hajjUmrahExplainImage} alt="" />
@@ -112,15 +189,80 @@ const HajjUmrah = () => {
                   </div>
                </div>
 
-               <div className="flex w-full h-[30rem] max-w-[2000px] mx-auto flex-col items-center bg-hash-color-bg pt-6 gap-7">
-                  <h1 className="text-4xl font-bold text-black text-center">Available Packages<span className="text-primary-color">.</span></h1>
-                  <div className=" w-full h-full container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center px-3">
-                     <Link className='h-fit w-fit'>
-                        <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+               <div className="flex w-full h-fit max-w-[2000px] mx-auto flex-col items-center bg-hash-color-bg py-6 gap-8">
+                  <h1 className="text-4xl font-bold text-black text-center capitalize">available packages<span className="text-primary-color text-4xl font-bold">.</span></h1>
+                  <div className="flex w-full h-fit flex-col container mx-auto items-start gap-4">
+                     <h3 className="text-2xl font-medium text-black text-left capitalize">umrah packages<span className="text-primary-color text-2xl font-medium ">:</span></h3>
+                     <div className=" w-full h-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-5">
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
 
-                        </div>
-                     </Link>
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                     </div>
                   </div>
+
+                  <div className="flex w-full h-fit flex-col container mx-auto items-start gap-4">
+                     <h3 className="text-2xl font-medium text-black text-left capitalize">hajj packages<span className="text-primary-color text-2xl font-medium ">:</span></h3>
+                     <div className=" w-full h-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-5">
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                        <Link className='h-fit w-fit'>
+                           <div className="flex w-[300px] h-[250px] rounded-[10px] bg-primary-color">
+
+                           </div>
+                        </Link>
+                     </div>
+                  </div>
+
                </div>
 
                <div className="flex h-fit w-full container mx-auto flex-col items-center gap-7 px-2">
@@ -146,27 +288,26 @@ const HajjUmrah = () => {
                </div>
 
                <div className="w-full h-fit bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${umrahBackgroundImage})` }}>
-                  <div className="w-full  h-full   bg-gradient-to-b from-white opacity-90 flex flex-col  justify-start gap-5 px-2 py-4 pt-10">
+                  <div className="w-full  h-full bg-black bg-opacity-70 flex flex-col  justify-start gap-9 px-2 py-4 pt-10">
                      <div className="flex flex-col mx-auto container  w-full h-fit gap-9">
-                        <h1 className="text-3xl text-black font-light max-w-[900px]">About <span className="text-black font-semibold text-3xl">Umrah</span></h1>
-                        <p className="text-black text-xl font-normal max-w-[900px]">Experience the spiritual journey of Umrah with comfort and peace of mind. Umrah is a sacred pilgrimage to Makkah, performed by Muslims seeking blessings,
-                           forgiveness, and closeness to Allah. Unlike Hajj, it can be performed at any time of the year, making it a beautiful opportunity for believers to renew their faith and find inner peace. We are here
-                           to make your journey smooth and memorable, so you can focus on worship while we take care of the rest.</p>
+                        <h1 className="text-3xl text-white font-light max-w-[900px]">About <span className="text-white font-semibold text-3xl">Umrah</span></h1>
+                        <p className="text-white text-xl font-normal max-w-[900px]">Umrah is a sacred journey of faith and devotion, giving every Muslim a chance to stand before the holy Kaaba, remember Allah sincerely, and seek forgiveness. Though smaller than Hajj, it brings great spiritual reward,
+                           cleansing the soul, bringing peace to the heart, and renewing the believer’s connection with their Creator.</p>
                      </div>
                      <div className="container mx-auto flex flex-col md:flex-row h-full w-full px-4 gap-6">
                         <div className="flex h-full flex-1 flex-col gap-3">
-                           <div className="p-3 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
-                              <h3 className="text-black text-2xl font-semibold capitalize">Pillars Of Umrah <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
+                           <div className="px-3 py-2 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
+                              <h3 className="text-black text-2xl font-semibold ">Pillars of Umrah <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
                            </div>
                            <div className="flex flex-col h-full w-full gap-5">
                               {
                                  UmrahPillers.map((step, index) => (
-                                    <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-3  " onClick={() => handlePillarsOfUmrahIsOpen(index)}>
+                                    <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-2  " onClick={() => handlePillarsOfUmrahIsOpen(index)}>
                                        <p className="capitalize text-black font-semibold text-lg justify-center  flex  min-w-[100px] ">{step.step}</p>
                                        <div className="flex flex-col  flex-1 items-start  gap-2 ">
                                           <p className="capitalize text-black text-lg font-semibold ">{step.name}</p>
                                           <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${pillarUmrahIsOpen === index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                                             <p className="capitalize text-third-color text-base font-medium ">{step.explanation}</p>
+                                             <p className=" text-primary-color font-light text-base">{step.explanation}</p>
                                           </div>
                                        </div>
                                     </div>
@@ -175,16 +316,16 @@ const HajjUmrah = () => {
                            </div>
                         </div>
                         <div className="flex h-full flex-1 flex-col gap-3">
-                           <div className="p-3 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
+                           <div className="px-3 py-2 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
                               <h3 className="text-black text-2xl font-semibold capitalize">top attractions <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
                            </div>
                            <div className="flex flex-col h-full w-full gap-5">
-                              <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-3  " onClick={() => handleUmrahMainSpotsIsOpen(1)}>
+                              <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-2  " onClick={() => handleUmrahMainSpotsIsOpen(1)}>
                                  <p className=" min-w-[100px] "></p>
                                  <div className="flex flex-col  flex-1 items-start  gap-2 ">
                                     <p className="capitalize text-black text-lg font-semibold ">Ihram</p>
                                     <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${umrahMainSpotsIsOpen === 1 ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                                       <p className="capitalize text-third-color text-base font-medium ">
+                                       <p className="text-primary-color font-light text-base">
                                           Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the
                                           Prophet, peace and blessings be upon him, designated certain locations as Miqat.
                                        </p>
@@ -194,6 +335,66 @@ const HajjUmrah = () => {
                            </div>
                         </div>
                      </div>
+
+                     <div className="flex flex-col mx-auto container  w-full h-fit gap-9">
+                        <h1 className="text-3xl text-white font-light max-w-[900px] capitalize">about <span className="text-white font-semibold text-3xl">hajj</span></h1>
+                        <p className="text-white text-xl font-normal max-w-[900px]">
+                           Hajj is a sacred journey of faith where Muslims come together in Makkah, standing equal before Allah. It is a time of prayer, humility, and reflection, cleansing
+                           the heart from sins and drawing closer to Allah with peace and devotion.
+                        </p>
+                     </div>
+                     <div className="container mx-auto flex flex-col md:flex-row h-full w-full px-4 gap-6">
+                        <div className="flex h-full flex-1 flex-col gap-3">
+                           <div className="px-3 py-2 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
+                              <h3 className="text-black text-2xl font-semibold ">Pillars Of Hajj <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
+                           </div>
+                           <div className="flex flex-col h-full w-full gap-5">
+                              {
+                                 HajjPillers.map((day, index) => (
+                                    <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-2  " onClick={() => handlePillarsOfHajjIsOpen(index)}>
+                                       <p className="capitalize text-black font-semibold text-lg justify-center  flex  min-w-[100px] ">{day.step}</p>
+                                       <div className="flex flex-col  flex-1 items-start  gap-2 ">
+                                          <p className="capitalize text-black text-lg font-semibold ">{day.dateName}</p>
+                                          <div className={`overflow-hidden transition-all duration-[.5s] px-3 ${pillarHajjIsOpen === index ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                             {/* <p className="capitalize text-third-color text-base font-medium ">{step.explanation}</p> */}
+                                             <ul className="pl- flex flex-col gap-2">
+                                                {day.activities && day.activities.map((points) => (
+                                                   <div className="flex flex-row items-start">
+                                                      <Icon icon="lucide:dot" className='text-primary-color font-light  ' width="25" height="25" />
+                                                      <li className=" text-primary-color font-light text-base">
+                                                         {points}
+                                                      </li>
+                                                   </div>
+                                                ))}
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 ))
+                              }
+                           </div>
+                        </div>
+                        <div className="flex h-full flex-1 flex-col gap-3">
+                           <div className="px-3 py-2 h-fit w-fit bg-white rounded-[10px] shadow-lg shadow-slate-800/100">
+                              <h3 className="text-black text-2xl font-semibold capitalize">top attractions <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
+                           </div>
+                           <div className="flex flex-col h-full w-full gap-5">
+                              <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-2  " onClick={() => handleHajjMainSpotsIsOpen(1)}>
+                                 <p className=" min-w-[100px] "></p>
+                                 <div className="flex flex-col  flex-1 items-start  gap-2 ">
+                                    <p className="capitalize text-black text-lg font-semibold ">Ihram</p>
+                                    <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${hajjMainSpotsIsOpen === 1 ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                       <p className="text-primary-color font-light text-base">
+                                          Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the
+                                          Prophet, peace and blessings be upon him, designated certain locations as Miqat.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
                   </div>
                </div>
             </div>
@@ -204,3 +405,4 @@ const HajjUmrah = () => {
 
 export default HajjUmrah
 // shadow-white/50
+//  text-third-color text-base font-medium

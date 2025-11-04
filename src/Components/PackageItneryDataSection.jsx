@@ -18,7 +18,7 @@ const PackageItneryDataSection = ({ packageData }) => {
                 <div className="flex flex-col h-full w-full gap-5 ">
                     {
                         packageData.itinerary && packageData.itinerary.map((details, index) => (
-                            <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50  py-4 `} onClick={() => handleIsOpen(index)}>
+                            <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50  py-4  cursor-pointer`} onClick={() => handleIsOpen(index)}>
                                 <p className={`capitalize text-black font-medium justify-center  flex  min-w-[100px] `}>{details.day}</p>
                                 <div className="flex flex-col flex-1 items-start gap-2">
                                     <p className="capitalize text-black font-medium  ">{details.subHeading}</p>

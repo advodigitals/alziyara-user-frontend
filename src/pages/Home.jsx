@@ -8,9 +8,8 @@ import Services from '../Components/Services'
 import SwiperSection from '../Components/SwiperSection'
 // import YoutubeSlider from '../Components/YoutubeSlider'
 import Layouts from '../Layouts/Layouts'
-import Footer from '../Components/Footer'
 import TestimonialsSection from '../Components/TestimonialsSection'
-import FAQ from './FAQ'
+import FAQ from '../Components/FAQ'
 import AboutUsSection from '../Components/AboutUsSection'
 
 
@@ -24,20 +23,20 @@ const Home = () => {
   return (
     <>
       <Layouts>
-      <div className="w-full max-w-[1400px]  bg-white flex items-center flex-col mx-auto ">
-        <HeadingSection />
-        <SwiperSection />
-      </div>
-      <div id="aboutUs" className="flex w-full max-w-[1400px] items-center gap-5 justify-center py-5 flex-wrap  mx-auto">
-        <AboutCards />
-        <Services />
-        <AboutUsSection />
-        {/* <YoutubeSlider /> */}
-        {/* <InstagramSlider/> */}
-        <FAQ />
-        <TestimonialsSection />
-      </div>
-      <Footer />
+        <div className="w-full max-w-[1400px]  bg-white flex items-center flex-col mx-auto ">
+          <HeadingSection />
+          <SwiperSection />
+        </div>
+        <div id="aboutUs" className="flex w-full max-w-[1400px] items-center gap-5 justify-center py-5 flex-wrap  mx-auto">
+          <AboutCards />
+          <Services />
+          <AboutUsSection />
+          {/* <YoutubeSlider /> */}
+          {/* <InstagramSlider/> */}
+          <FAQ />
+          <TestimonialsSection />
+        </div>
+        
       </Layouts>
     </>
   )

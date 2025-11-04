@@ -25,3 +25,4 @@ export const socialMediaDetails = [
     },
 
 ]
+// bg-[#E4405F]
