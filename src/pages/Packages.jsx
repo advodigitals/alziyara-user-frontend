@@ -45,7 +45,7 @@ const Packages = () => {
 
   return (
     <>
-      <Layouts>
+      <Layouts page={"Packages"} >
         <div className="flex h-full w-full max-w-[2000px] mx-auto flex-col  items-center  gap-3 pb-4">
           <SubPageBGImage heading={"Packages"} inputSubHeading={"search the Package"} inputPlaceholder={"Country Name"} setSearch={setSearch} />
           <div id="pageText" className="px-4 justify-center text-center sm:mt-5 text-base w-full container mx-auto">

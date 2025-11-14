@@ -1,16 +1,18 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import IMPNavbar from '../Components/Navbar/IMPNavbar'
-import GoBack from '../Components/GoBack'
+// import GoBack from '../Components/GoBack'
 import Footer from '../Components/Footer'
 
 
-const Layouts = ({ children }) => {
+const Layouts = ({ children , page }) => {
+
   return (
     <>
-      <Navbar />
+      <Navbar page={page }/>
+
       <IMPNavbar />
-      <GoBack />
+      {/* <GoBack /> */}
       {children}
 
       <Footer />

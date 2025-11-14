@@ -40,7 +40,7 @@ const Visa = () => {
 
     return (
         <>
-            <Layouts>
+            <Layouts page={"Visa"}>
                 <div className="flex h-full w-full max-w-[2000px] mx-auto flex-col  items-center pb-4 gap-6">
                     <SubPageBGImage heading={type === "global" ? "GLOBAL VISA" : "GCC VISA"} setSearch={setSearch}  inputSubHeading={"search the country"} inputPlaceholder={"Country Name"}/>
                     <div className='w-full h-full  flex flex-col gap-4 md:gap-8 bg-white' >

@@ -11,7 +11,7 @@ import { Link } from 'react-router'
 // import $ from 'jquery';
 
 
-const Navbar = () => {
+const Navbar = ({ page }) => {
 
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -39,8 +39,8 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="content-center items-center hidden lg:flex">
-            <ul className=" flex items-center">
-              <NavbarButtons status={scrolled} />
+            <ul className=" flex items-center gap-1">
+              <NavbarButtons status={scrolled} page={page} />
             
             </ul> 
           </div>

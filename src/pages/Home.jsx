@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <Layouts>
+      <Layouts page={"Home"}>
         <div className="w-full max-w-[1400px]  bg-white flex items-center flex-col mx-auto ">
           <HeadingSection />
           <SwiperSection />

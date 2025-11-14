@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router";
 import PackageIndividualPage from "./pages/PackageIndividualPage";
+import { ThreeDot } from "react-loading-indicators";
 const Blog = React.lazy(() => import("./pages/Blog"))
 const Flights = React.lazy(() => import("./pages/Flights"))
 const HajjUmrah = React.lazy(() => import("./pages/HajjUmrah"))
@@ -37,7 +38,7 @@ const VisaIndvidualPage = React.lazy(() => import("./pages/VisaIndvidualPage"))
 function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="flex w-full h-[100vh] justify-center items-center capitalize gap-5 "  ><ThreeDot variant="bounce" color="#00b372" size="medium" text="Loading" textColor="#000000" /></div>}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />

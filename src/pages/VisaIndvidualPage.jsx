@@ -62,8 +62,6 @@ const VisaIndvidualPage = () => {
                                         <p className='text-white text-base py-3 font-normal '>Required Documents</p>
                                     </div>
                                 </div>
-                               
-
 
 
                             </div>
@@ -92,3 +90,4 @@ const VisaIndvidualPage = () => {
 }
 
 export default VisaIndvidualPage
+ 

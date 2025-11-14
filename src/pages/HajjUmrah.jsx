@@ -158,7 +158,7 @@ const HajjUmrah = () => {
    ]
    return (
       <>
-         <Layouts>
+         <Layouts page={"Hajj-Umrah"}>
             <div className="flex h-full w-full  flex-col  items-center gap-8  " >
                <div id="heading-image-section" className="w-full h-fit max-w-[2000px] mx-auto sm:h-[25rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${hajjUmrahHeadingImage})` }}>
                   <div className="w-full  h-full  bg-black bg-opacity-70 flex flex-col items-center justify-center gap-7">

@@ -1,13 +1,13 @@
 import React from 'react'
-import images1 from '../../Assets/images/travel1.avif'
-import images2 from '../../Assets/images/travel2.jpg'
+import images1 from '../../Assets/images/image1.jpg'
+import images2 from '../../Assets/images/image2.jpg'
 import images3 from '../../Assets/images/image3.jpg'
 import images4 from '../../Assets/images/image4.jpg'
 import images5 from '../../Assets/images/image5.jpg'
 import images6 from '../../Assets/images/image6.jpg'
-import images7 from '../../Assets/images/image7.jpg'
-import images8 from '../../Assets/images/image8.jpg'
-import images9 from '../../Assets/images/image9.jpg'
+// import images7 from '../../Assets/images/image7.jpg'
+// import images8 from '../../Assets/images/image8.jpg'
+// import images9 from '../../Assets/images/image9.jpg'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -27,9 +27,9 @@ const SwiperCode = () => {
         { name: images4 },
         { name: images5 },
         { name: images6 },
-        { name: images7 },
-        { name: images8 },
-        { name: images9 },
+        // { name: images7 },
+        // { name: images8 },
+        // { name: images9 },
     ]
     return (
         <>

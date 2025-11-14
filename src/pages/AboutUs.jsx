@@ -10,7 +10,7 @@ import AboutUsSection from '../Components/AboutUsSection'
 const AboutUs = () => {
   return (
     <>
-      <Layouts>
+      <Layouts page={"About Us"} >
         <div className="w-full h-full container mx-auto  gap-8 flex flex-col px-0">
          <AboutUsSection />
           {/* <div id="founder" className="flex flex-col items-center container mx-auto gap-[3rem] p-5  ">

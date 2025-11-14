@@ -10,10 +10,10 @@ const NavbarButtonDropdown = (props) => {
 
     return (
         <>
-            <div className={`flex flex-col   fixed top-[61px] w-fit rounded-[10px]  ${scrolled ? "bg-third-color " : "bg-button-hover"}`}>
+            <div className={`flex flex-col bg-white border border-primary-color  fixed top-[61px] w-fit rounded-[10px]  transition-all duration-[0.2s]  shadow-lg shadow-slate-950/90 gap-1`}>
                 {
                    dropdownData && dropdownData.map((dropbutton) => (
-                        <li className="h-full w-full block rounded-[10px] shadow-sm shadow-slate-600/50 ">
+                        <li className="h-full w-full block rounded-[10px] hover:shadow-lg shadow-slate-950/90 hover:text-primary-color text-black hover:border border-primary-color">
                              <Link to={`${dropbutton.path}/${dropbutton.dataPath}`} className="no-underline inline-block font-semibold w-full h-fit cursor-pointer hover:bg-white hover:text-primary-color px-3 py-2 rounded-[10px]">{dropbutton.name}</Link>
                          </li>
                     ))
@@ -26,3 +26,6 @@ const NavbarButtonDropdown = (props) => {
 export default NavbarButtonDropdown
 // state={{type : dropbutton.dataPath}}
 // VisaDropdown
+
+
+
