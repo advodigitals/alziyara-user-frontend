@@ -1,22 +1,24 @@
 
-// import ContactButton from '../constants/ContactButton'
-// import LateestFromUs from '../Components/LateestFromUs'
-// import InstagramSlider from '../Components/InstagramSlider'
-import AboutCards from '../Components/AboutCards'
-import HeadingSection from '../Components/HeadingSection'
-import Services from '../Components/Services'
-import SwiperSection from '../Components/SwiperSection'
-// import YoutubeSlider from '../Components/YoutubeSlider'
-import Layouts from '../Layouts/Layouts'
-import TestimonialsSection from '../Components/TestimonialsSection'
-import FAQ from '../Components/FAQ'
-import AboutUsSection from '../Components/AboutUsSection'
-
-
-
-// import SwiperYoutube from './Swiper/SwiperYoutube'
+import React from 'react'
 // import { useRef } from "react"
+import Layouts from '../Layouts/Layouts'
 // import { Swiper as SwiperType } from "swiper";
+// import SwiperYoutube from './Swiper/SwiperYoutube'
+
+
+const FAQ = React.lazy (() => import("../Components/FAQ"))
+const Services = React.lazy (() => import("../Components/Services"))
+const AboutCards = React.lazy(() => import("../Components/AboutCards"))
+const SwiperSection = React.lazy (() => import("../Components/SwiperSection"))
+const HeadingSection = React.lazy(() => import("../Components/HeadingSection"))
+const AboutUsSection = React.lazy (() => import("../Components/AboutUsSection"))
+const TestimonialsSection =  React.lazy (() => import("../Components/TestimonialsSection")) 
+// const YoutubeSlider = React.lazy (() => import("../Components/YoutubeSlider"))
+
+
+
+
+
 const Home = () => {
 
 

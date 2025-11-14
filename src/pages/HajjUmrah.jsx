@@ -5,6 +5,9 @@ import hajjUmrahExplainImage from "../Assets/images/umrah-hajj-image.jpg"
 import umrahBackgroundImage from "../Assets/images/umrah-background-image.jpg"
 import { Link } from 'react-router'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { HajjPillers } from '../constants/HajjPillers'
+import { UmrahPillers } from '../constants/UmrahPillers'
+import { serviceArray } from '../constants/HajjUmrahServiceArray'
 
 const HajjUmrah = () => {
    const [pillarUmrahIsOpen, setPillarUmrahIsOpen] = useState(null)
@@ -51,111 +54,11 @@ const HajjUmrah = () => {
       }
    }
 
-   const HajjPillers = [
-      {
-         step: "Ihram",
-         dateName: " 8th Dhul-Hijjah (ذو الحجة)",
-         activities: [
-            "Ihram (إحرام) – Make the intention for Hajj, enter the sacred state of Ihram, and begin with Talbiyah: “لبيك اللهم لبيك…”",
-         ]
-      },
-      {
-         step: "Day 1",
-         dateName: "8th Dhul-Hijjah - Mina (مِنى)",
-         activities: [
-            "Travel to Mina (مِنى)",
-            "Spend the day and night in prayer and remembrance of Allah."
-         ]
-      },
-      {
-         step: "Day 2",
-         dateName: " 9th Dhul-Hijjah - Arafah (عرفة)",
-         activities: [
-            "Move to Arafah (عرفة).",
-            "Stand in Wuquf (وقوف) – the most important pillar of Hajj.",
-            "After sunset, proceed to Muzdalifah (مزدلفة).",
-            "Pray, rest under the open sky, and collect pebbles (ḥaṣā حصى)."
-         ]
-      },
-      {
-         step: "Day 3",
-         dateName: "10th Dhul-Hijjah - Eid al-Adha (عيد الأضحى)",
-         activities: [
-            "Return to Mina (مِنى).",
-            "Ramy (رمي الجمرات) → Throw 7 pebbles at the largest Jamarah (جمرة العقبة الكبرى).",
-            "Qurbani (قرباني / نحر) → Offer the sacrifice of an animal.",
-            "Halq (حلق) or Taqsir (تقصير) → Shave or shorten hair (women cut a small portion).Ihram restrictions are now lifted.",
-            "Travel to Makkah (مكة المكرمة) → Perform Tawaf al-Ifadah (طواف الإفاضة) and Sa’i (سعي) between Safa (الصفا) and Marwah (المروة)."
-         ]
-      },
-      {
-         step: "Day 4",
-         dateName: "11th–13th Dhul-Hijjah (أيام التشريق )",
-         activities: [
-            "Stay in Mina (مِنى).",
-            "Each day, perform Ramy (رمي الجمرات) → Throw 7 pebbles at each of the three Jamarat (الجمرات الثلاث) → total 21 pebbles per day.",
-            "Pilgrims may leave Mina after the 12th or remain until the 13th.",
-         ]
-      },
-      {
-         step: "Farewell",
-         dateName: "Tawaf al-Wada (طواف الوداع)",
-         activities: [
-            "Tawaf al-Wada (طواف الوداع) – Perform the farewell circumambulation of the Kaaba, bidding goodbye to the Sacred House with love and gratitude.",
-
-         ]
-      },
-   ]
+   
    
 
-   const UmrahPillers = [
-      {
-         step: "Step 1",
-         name: "Ihram (الإحرام)",
-         explanation: "Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the Prophet, peace and blessings be upon him, designated certain locations as Miqat."
-      },
-      {
-         step: "Step 2",
-         name: "Tawaf (الطواف)",
-         explanation: "Tawaf is the seven-circumambulation of the Kaaba. Beginning with the Black stone, which is located on the pilgrim's left side. The pilgrim should use this time for supplication and prayer."
-      },
-      {
-         step: "Step 3",
-         name: "Sa’i (السعي)",
-         explanation: "Sa’ee begins with Safa and finishes at Marwa, two small hills close to the Kaaba. Every direction is counted as one as Muslims move back and forth between them seven times. It is suggested that the performer supplicate, pray, or read the Quran during this time."
-      },
-      {
-         step: "Step 4",
-         name: "Tahallul (التحلل أو الحلق/التقصير)",
-         explanation: "Tahallul is shaving or trimming the hair, which marks the completion of Umrah."
-      },
-   ]
-   const serviceArray = [
-      {
-         title: "Visa Assistance",
-         text: "Smooth and easy visa application for a stress-free journey."
-      },
-      {
-         title: "Accommodation Arrangements",
-         text: "Comfortable and convenient accommodations near holy sites."
-      },
-      {
-         title: "Expert Guided Tours",
-         text: "Culturally enriching and insightful spiritual guidance."
-      },
-      {
-         title: "Transportation Services",
-         text: "Reliable transportation services throughout your pilgrimage."
-      },
-      {
-         title: "24/7 Support",
-         text: "A dedicated support team is available anytime for assistance."
-      },
-      {
-         title: "Group Packages",
-         text: "Customized itineraries for groups of all sizes."
-      },
-   ]
+   
+   
    return (
       <>
          <Layouts page={"Hajj-Umrah"}>

@@ -1,10 +1,9 @@
 import React from 'react'
 import Layouts from '../Layouts/Layouts'
-import BranchSection from '../Components/BranchSection'
-import AboutUsSection from '../Components/AboutUsSection'
-
-// import { Icon } from '@iconify/react/dist/iconify.js'
 // import founderImg from '../Assets/images/find.jpg'
+const BranchSection = React.lazy (() => import("../Components/BranchSection"))
+const AboutUsSection = React.lazy (() => import("../Components/AboutUsSection"))
+
 
 
 const AboutUs = () => {
