@@ -6,7 +6,7 @@ import { Link } from 'react-router'
 
 const NavbarButtonDropdown = (props) => {
    const dropdownData = props.data
-   const scrolled = props.status
+
 
     return (
         <>
