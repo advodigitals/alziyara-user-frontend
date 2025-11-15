@@ -1,5 +1,6 @@
 import React from 'react'
 import Layouts from '../Layouts/Layouts'
+import AllPageHeroSection from '../Components/AllPageHeroSection'
 // import founderImg from '../Assets/images/find.jpg'
 const BranchSection = React.lazy (() => import("../Components/BranchSection"))
 const AboutUsSection = React.lazy (() => import("../Components/AboutUsSection"))
@@ -10,6 +11,7 @@ const AboutUs = () => {
   return (
     <>
       <Layouts page={"About Us"} >
+        <AllPageHeroSection title={"About us"} titleDes={"want to know more"}/>
         <div className="w-full h-full container mx-auto  gap-8 flex flex-col px-0">
          <AboutUsSection />
           {/* <div id="founder" className="flex flex-col items-center container mx-auto gap-[3rem] p-5  ">

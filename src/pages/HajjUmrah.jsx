@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import Layouts from '../Layouts/Layouts'
-import hajjUmrahHeadingImage from '../Assets/images/hajj&umrah-heading-image.jpg'
-import hajjUmrahExplainImage from "../Assets/images/umrah-hajj-image.jpg"
+// import hajjUmrahHeadingImage from '../Assets/images/hajj&umrah-heading-image.jpg'
+// import hajjUmrahExplainImage from "../Assets/images/umrah-hajj-image.jpg"
 import umrahBackgroundImage from "../Assets/images/umrah-background-image.jpg"
 import { Link } from 'react-router'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { HajjPillers } from '../constants/HajjPillers'
 import { UmrahPillers } from '../constants/UmrahPillers'
 import { serviceArray } from '../constants/HajjUmrahServiceArray'
+import HajjUmrahHeroSection from '../Components/HajjUmrahHeroSection'
+import HajjUmrahPageExplanation from '../Components/HajjUmrahPageExplanation'
 
 const HajjUmrah = () => {
    const [pillarUmrahIsOpen, setPillarUmrahIsOpen] = useState(null)
@@ -16,6 +18,7 @@ const HajjUmrah = () => {
    const [hajjMainSpotsIsOpen , setHajjMainSpotsIsOpen] = useState (null)
 
    const handleUmrahMainSpotsIsOpen = (index) => {
+      
       if (index === umrahMainSpotsIsOpen) {
          setUmrahMainSpotsIsOpen(null)
       } else {
@@ -63,7 +66,7 @@ const HajjUmrah = () => {
       <>
          <Layouts page={"Hajj-Umrah"}>
             <div className="flex h-full w-full  flex-col  items-center gap-8  " >
-               <div id="heading-image-section" className="w-full h-fit max-w-[2000px] mx-auto sm:h-[25rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${hajjUmrahHeadingImage})` }}>
+               {/* <div id="heading-image-section" className="w-full h-fit max-w-[2000px] mx-auto sm:h-[25rem] bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${hajjUmrahHeadingImage})` }}>
                   <div className="w-full  h-full  bg-black bg-opacity-70 flex flex-col items-center justify-center gap-7">
                      <div className="w-full max-w-[900px] mx-auto px-2 sm:py-2 py-5">
                         <h1 className="capitalize text-white font-semibold text-6xl text-center">journey to the holy cities with us</h1>
@@ -73,9 +76,10 @@ const HajjUmrah = () => {
                      </div>
 
                   </div>
-               </div>
+               </div> */}
+               <HajjUmrahHeroSection title={"journey to the holy cities with us"} titleDes={"Your dream to visit the holy cities of Mecca and Madina is now our responsibility. We ensure that your journey to perform hajj and umrah is smooth and peaceful."}/>
 
-               <div className="flex lg:flex-row flex-col w-full h-fit container mx-auto px-4">
+               {/* <div className="flex lg:flex-row flex-col w-full h-fit container mx-auto px-4">
                   <div id="image-section" className="flex  flex-1 p-3 items-center justify-center lg:justify-normal">
                      <img className="  w-[80%] rounded-[10px]  " src={hajjUmrahExplainImage} alt="" />
                   </div>
@@ -90,7 +94,8 @@ const HajjUmrah = () => {
                         <hr className='border-[8px_solid_#9d9d9d] mx-3 my-6' />
                      </div>
                   </div>
-               </div>
+               </div> */}
+               <HajjUmrahPageExplanation />
 
                <div className="flex w-full h-fit max-w-[2000px] mx-auto flex-col items-center bg-hash-color-bg py-6 gap-8">
                   <h1 className="text-4xl font-bold text-black text-center capitalize">available packages<span className="text-primary-color text-4xl font-bold">.</span></h1>
