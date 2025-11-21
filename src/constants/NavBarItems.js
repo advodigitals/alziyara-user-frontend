@@ -60,11 +60,11 @@ export const NavbarList = [
 
     ]
   }, 
-  {
-    id: "8",
-    name: "Blog",
-    path: "/blog"
-  },
+  // {
+  //   id: "8",
+  //   name: "Blog",
+  //   path: "/blog"
+  // },
 ]
 
 

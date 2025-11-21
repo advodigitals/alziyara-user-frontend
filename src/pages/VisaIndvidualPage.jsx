@@ -15,12 +15,12 @@ const VisaIndvidualPage = () => {
 
                     <div id="img" className="w-full  h-fit bg-cover bg-center bg-no-repeat " style={{ backgroundImage: `url(${VisaBg})` }} >
                         <div className="bg-black  bg-opacity-50 w-full h-full ">
-                            <div className='h-full w-full flex container mx-auto py-8'>
+                            <div className='h-full w-full flex items-center mx-auto py-8'>
                                 <div className='container mx-auto flex flex-col justify-center md:items-start items-center'>
                                     <h1 className="text-4xl font-bold text-white text-left">{name} VISA</h1>
-                                    <div className="w-fit bg-white  p-2 rounded-[10px] shadow-lg shadow-slate-800/100">
+                                    {/* <div className="w-fit bg-white  p-2 rounded-[10px] shadow-lg shadow-slate-800/100">
                                         <p className="w-fit text-lg font-medium text-black text-left ">Price Starting at <span className='capitalize text-2xl font-medium text-primary-color text-center'>INR 14515*</span></p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
