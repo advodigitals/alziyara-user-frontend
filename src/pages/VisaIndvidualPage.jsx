@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router'
 import Layouts from '../Layouts/Layouts'
+import { useParams } from 'react-router'
 import VisaBg from '../Assets/images/visabg.jpg'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import { useParams } from 'react-router'
+import { VisaDetails } from '../constants/VisaDetails'
+
 
 
 const VisaIndvidualPage = () => {
@@ -27,12 +30,13 @@ const VisaIndvidualPage = () => {
                     </div>
 
                     <div className="flex h-full w-full flex-col gap-3 container  mx-auto items-center md:items-start  ">
-                        <h1 className='text-2xl font-semibold '>Types of {name} visa</h1>
-                        <div className="  w-full h-full grid justify-center max-w-[1100px] mx-auto">
-                            <div className="w-full h-full grid justify-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-5 ">
+                        {/* <h1 className='text-2xl font-semibold '>available visas </h1> */}
+                        <h3 className="text-2xl font-medium text-third-color text-left capitalize">available visa options <span className="text-primary-color text-2xl font-medium ">:</span></h3>
+                        <div className="  w-full h-full grid  md:justify-normal justify-center  mx-auto">
+                            <div className="w-full h-full grid justify-center  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 ">
 
 
-                                <div id='card' className="flex flex-col h-fit w-fit border">
+                                {/* <div id='card' className="flex flex-col h-fit w-fit border">
                                     <div className="flex bg-blue-500 pl-4">
                                         <p className='text-white text-xl py-3 font-bold'>TOURIST</p>
                                     </div>
@@ -61,8 +65,27 @@ const VisaIndvidualPage = () => {
                                     <div className="flex w-full bg-red-500 justify-center">
                                         <p className='text-white text-base py-3 font-normal '>Required Documents</p>
                                     </div>
-                                </div>
+                                </div> */}
 
+                                {/* <Link className='h-fit w-fit'>
+                                    <div className="flex w-[300px] h-[250px] rounded-[10px] ">
+                                    <img src={notAvailableImage} alt="" />
+                                    </div>
+                                </Link> */}
+                                {
+                                    VisaDetails.map((visa, index) => (
+                                        <div className='h-fit w-fit flex flex-row gap-2  rounded-[10px] cursor-pointer text-white hover:text-primary-color bg-primary-color hover:bg-white transition-color duration-[.5s] shadow-lg shadow-slate-600/50 border border-primary-color '>
+                                            <div className="flex w-[280px] h-[150px] rounded-[10px] hover:bg-white    justify-center items-center px-2">
+                                                <p className=" text-3xl font-medium capitalize text-center ">{visa.name}</p>
+                                            </div>
+                                            <div className="">
+
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                                 
+                            
 
                             </div>
                         </div>
@@ -90,4 +113,3 @@ const VisaIndvidualPage = () => {
 }
 
 export default VisaIndvidualPage
- 

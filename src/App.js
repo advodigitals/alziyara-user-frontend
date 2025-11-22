@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Routes, Route } from "react-router";
 import PackageIndividualPage from "./pages/PackageIndividualPage";
 import { ThreeDot } from "react-loading-indicators";
-// const Blog = React.lazy(() => import("./pages/Blog"))
+const Blog = React.lazy(() => import("./pages/Blog"))
 // const Flights = React.lazy(() => import("./pages/Flights"))
 const HajjUmrah = React.lazy(() => import("./pages/HajjUmrah"))
 const Packages = React.lazy(() => import("./pages/Packages"))
@@ -42,7 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
-          {/* <Route path="/blog" element={<Blog />} /> */}
+          <Route path="/blog" element={<Blog />} />
           {/* <Route path="/flights" element={<Flights />} /> */}
           <Route path="/hajj-umrah" element={<HajjUmrah />} />
           {/* <Route path="/tours" element={<Tours />} /> */}
