@@ -83,11 +83,11 @@ const VisaIndvidualPage = () => {
                                 </Link> */}
                                 {
                                     VisaDetails.map((visa, index) => (
-                                        <div className='h-fit w-fit flex flex-row   rounded-[10px] cursor-pointer  ' onClick={() => handleIsOpen(index)}>
-                                            <div className={`flex h-[150px] w-[280px] rounded-[10px]   justify-center items-center px-2  text-white hover:text-primary-color bg-primary-color hover:bg-white overflow-hidden transition-all duration-[.5s] shadow-lg shadow-slate-600/50 border border-primary-color  ${isOpen === index ?  `w-0 h-0 opacity-0` : `h-[150px] w-[280px] opacity-100`  }`}>
+                                        <div className='h-fit w-fit flex flex-row rounded-[10px] cursor-pointer  ' onClick={() => handleIsOpen(index)}>
+                                            <div className={`flex  rounded-[10px] justify-center items-center   text-white hover:text-primary-color bg-primary-color hover:bg-white overflow-hidden transition-all duration-[.5s] shadow-lg shadow-slate-600/50 border border-primary-color  ${isOpen === index ?  `w-0 h-0 opacity-0` : `h-[150px] w-[280px] opacity-100 px-2`  }`}>
                                                 <p className=" text-3xl font-medium capitalize text-center ">{visa.name}</p>
                                             </div>
-                                            <div className={`overflow-hidden transition-all duration-[0.5s] rounded-[10px] px-2  text-primary-color bg-white shadow-lg shadow-slate-600/50 border border-primary-color ${isOpen === index ? "min-h-[150px] w-[280px] opacity-100   " : "h-0 w-0 opacity-0"}`}>
+                                            <div className={`overflow-hidden transition-all duration-[0.5s] rounded-[10px]   text-primary-color bg-white shadow-lg shadow-slate-600/50 border border-primary-color ${isOpen === index ? "min-h-[150px] w-[280px] opacity-100 px-2  " : "h-0 w-0 opacity-0"}`}>
                                                 <ul className=" flex flex-col ">
                                                     {visa.documets && visa.documets.map((points) => (
                                                         <li className="flex flex-row items-center  capitalize text-black font-medium ">
