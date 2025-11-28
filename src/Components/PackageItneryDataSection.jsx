@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useState } from 'react'
 
 const PackageItneryDataSection = ({ packageData }) => {
@@ -27,7 +28,8 @@ const PackageItneryDataSection = ({ packageData }) => {
                                     <div className={`overflow-hidden transition-all duration-[0.5s] ${isOpen === index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
                                         <ul className="pl-5 flex flex-col gap-2">
                                             {details.activities && details.activities.map((points) => (
-                                                <li className="capitalize text-primary-color font-light">
+                                                <li className="capitalize text-primary-color font-light flex flex-row items-center gap-2">
+                                                    <Icon icon="icon-park-outline:dot" />
                                                     {points}
                                                 </li>
                                             ))}
