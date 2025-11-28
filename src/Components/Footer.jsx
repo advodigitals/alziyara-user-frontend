@@ -44,7 +44,7 @@ const Footer = () => {
                 {
                   quickLinksTagsSection.map((details) => (
                     <Link to={details.path}>
-                      <p className="text-black font-medium text-sm text-left">{details.title}</p>
+                      <p className={`text-black hover:text-primary-color  font-medium text-sm text-left ${details.path ? "hover:underline decoration-primary-color" : ""}`}>{details.title}</p>
                     </Link>
                   ))
                 }
@@ -56,7 +56,7 @@ const Footer = () => {
                 {
                   servicesTagSection.map((details) => (
                     <Link to={details.path} className={`${details.path ? "cursor-pointer" : "cursor-default"}`}>
-                      <p className="text-black font-medium text-sm text-left">{details.title}</p>
+                      <p className={`text-black hover:text-primary-color  font-medium text-sm text-left ${details.path ? "hover:underline decoration-primary-color" : ""}`}>{details.title}</p>
                     </Link>
                   ))
                 }
@@ -67,8 +67,8 @@ const Footer = () => {
               <div className="flex flex-col gap-3">
                 {
                   legalTags.map((details) => (
-                    <Link to={details.path}>
-                      <p className="text-black font-medium text-sm text-left">{details.title}</p>
+                    <Link to={details.path} className={`${details.path ? "cursor-pointer" : "cursor-default"}`} >
+                      <p className={`text-black hover:text-primary-color  font-medium text-sm text-left ${details.path ? "hover:underline decoration-primary-color" : ""}`}>{details.title}</p>
                     </Link>
                   ))
                 }
