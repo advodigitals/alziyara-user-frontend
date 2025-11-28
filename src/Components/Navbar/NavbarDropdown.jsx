@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { NavbarList } from '../../constants/NavBarItems'
-const NavbarDropdown = (props) => {
+const NavbarDropdown = () => {
  
 
   return (

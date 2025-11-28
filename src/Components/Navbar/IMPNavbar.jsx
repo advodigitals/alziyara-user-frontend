@@ -5,23 +5,22 @@ import { Link } from "react-router";
 const IMPNavbar = () => {
   const buttonIcon = [
     {
-      icons: <Icon icon="guidance:passports" width="22" height="22" />,
+      icons: "guidance:passports",
       title: "Visa",
       urls: "/globla-visa",
     },
     {
-      icons: 
-      <Icon icon="mdi:flight" width="24" height="24" />,
+      icons: "mdi:flight",
       title: "Flights",
       urls: "/flights",
     },
     {
-      icons: <Icon icon="la:kaaba" width="24" height="24" />,
+      icons: "la:kaaba",
       title: "Umrah",
       urls: "/hajj-umrah",
     },
     {
-      icons: <Icon icon="fontisto:holiday-village" width="24" height="24" />,
+      icons: "fontisto:holiday-village" ,
       title: "Packages",
       urls: "/packages",
     },
@@ -32,14 +31,12 @@ const IMPNavbar = () => {
         <div className=" w-full max-w-[400px] bg-gray-200  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 rounded-[10px] px-[20px] py-[5px] border border-white border-solid">
           <ul className="flex flex-row items-center justify-between">
             {buttonIcon.map((details) => (
-              <div className="flex flex-col items-center">
-                <Link to={details.urls} className="text-black">
-                  {details.icons}
-                </Link>
-                <p className="text-black cursor-pointer text-xs">
-                  {details.title}
-                </p>
-              </div>
+              <Link to={details.urls} className="">
+                <div className="flex flex-col items-center text-black ">
+                  <span className=""><Icon icon={details.icons} width="24" height="24" /></span>
+                  <p className=" cursor-pointer text-xs">{details.title}</p>
+                </div>
+              </Link>
             ))}
           </ul>
         </div>

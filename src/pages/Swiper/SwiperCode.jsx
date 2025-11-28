@@ -59,7 +59,7 @@ const SwiperCode = () => {
                     disabledClass: 'disabled_swiper_button'
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper max-w-[1400px] w-[98vw] rounded-[10px]">
+                className="mySwiper max-w-[1400px] w-[98vw] rounded-[10px] h-[50vh] sm:h-auto">
                 {
                     swiperImageCollection.map((images) => (
                         <SwiperSlide className='flex items-center justify-center overflow-hidden rounded-3xl hover:cursor-grab' ><img src={images.name} alt="" className='object-cover w-full h-full' /></SwiperSlide>

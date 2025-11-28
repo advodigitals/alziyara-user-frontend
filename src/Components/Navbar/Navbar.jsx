@@ -1,19 +1,17 @@
-import { Icon } from '@iconify/react/dist/iconify.js'
+// import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useEffect, useState } from 'react'
 import NavbarButtons from './NavbarButtons'
-import NavbarDropdown from './NavbarDropdown'
+// import NavbarDropdown from './NavbarDropdown'
 import ContactButton from '../../constants/ContactButton'
 import img from '../../Assets/images/logo.png'
 import { Link } from 'react-router'
 
 
 
-// import $ from 'jquery';
-
 
 const Navbar = ({ page }) => {
 
-  const [menuOpen, setMenuOpen] = useState(false)
+  // const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -40,19 +38,19 @@ const Navbar = ({ page }) => {
           </div>
           <div className="content-center items-center hidden lg:flex">
             <ul className=" flex items-center gap-1">
-              <NavbarButtons status={scrolled} page={page} />
+              <NavbarButtons s page={page} />
             
             </ul> 
           </div>
           <ContactButton />
-          <div className="flex justify-center items-center bg-transparent p-[5px] cursor-pointer lg:hidden"> 
+          {/* <div className="flex justify-center items-center bg-transparent p-[5px] cursor-pointer lg:hidden"> 
             <i className="block text-black transition ease-in duration-[5s]" onClick={() => setMenuOpen(!menuOpen)}  >
               {menuOpen ? <Icon icon="uiw:close" width="20" height="20" /> : <Icon icon="material-symbols:menu-rounded" width="34" height="34" />}
             </i>
-          </div>
+          </div> */}
         </nav>
       </header>
-      {menuOpen && <NavbarDropdown status={scrolled} />}
+      {/* {menuOpen && <NavbarDropdown  />} */}
     </>
   )
 }
