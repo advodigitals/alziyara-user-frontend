@@ -87,8 +87,9 @@ const VisaIndvidualPage = () => {
                                             <div className={`flex  rounded-[10px] justify-center items-center   text-white hover:text-primary-color bg-primary-color hover:bg-white overflow-hidden transition-all duration-[.5s] shadow-lg shadow-slate-600/50 border border-primary-color  ${isOpen === index ?  `w-0 h-0 opacity-0` : `h-[150px] w-[280px] opacity-100 px-2`  }`}>
                                                 <p className=" text-3xl font-medium capitalize text-center ">{visa.name}</p>
                                             </div>
-                                            <div className={`overflow-hidden transition-all duration-[0.5s] rounded-[10px]   text-primary-color bg-white shadow-lg shadow-slate-600/50 border border-primary-color ${isOpen === index ? "min-h-[150px] w-[280px] opacity-100 px-2  " : "h-0 w-0 opacity-0"}`}>
+                                            <div className={`overflow-y-auto no-scrollbar transition-all duration-[0.5s] rounded-[10px]   text-primary-color bg-white shadow-lg shadow-slate-600/50 border border-primary-color ${isOpen === index ? "h-[150px] w-[280px] opacity-100 px-2  " : "h-0 w-0 opacity-0"}`}>
                                                 <ul className=" flex flex-col ">
+                                                    <span className="capitalize text-center text-primary-color text-xl mb-4 font-medium ">required documents <span className="text-black text-xl font-medium">.</span></span>
                                                     {visa.documets && visa.documets.map((points) => (
                                                         <li className="flex flex-row items-center  capitalize text-black font-medium ">
                                                             <span className=""><Icon className='' icon="bi:dot" width="40" height="40" /></span>
