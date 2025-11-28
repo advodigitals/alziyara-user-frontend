@@ -5,14 +5,14 @@ import { Link } from "react-router";
 const IMPNavbar = () => {
   const buttonIcon = [
     {
-      icons: "guidance:passports",
-      title: "Visa",
-      urls: "/globla-visa",
+      icons: "ion:home-outline",
+      title: "Home",
+      urls: "/",
     },
     {
-      icons: "mdi:flight",
-      title: "Flights",
-      urls: "/flights",
+      icons: "mdi:passport-check",
+      title: "Visa",
+      urls: "/visas/gcc",
     },
     {
       icons: "la:kaaba",
@@ -22,7 +22,7 @@ const IMPNavbar = () => {
     {
       icons: "fontisto:holiday-village" ,
       title: "Packages",
-      urls: "/packages",
+      urls: "/packages/international-packages",
     },
   ];
   return (
@@ -34,7 +34,7 @@ const IMPNavbar = () => {
               <Link to={details.urls} className="">
                 <div className="flex flex-col items-center text-black ">
                   <span className=""><Icon icon={details.icons} width="24" height="24" /></span>
-                  <p className=" cursor-pointer text-xs">{details.title}</p>
+                  <p className=" cursor-pointer text-xs font-medium">{details.title}</p>
                 </div>
               </Link>
             ))}
