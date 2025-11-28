@@ -28,9 +28,9 @@ const Footer = () => {
             <div className="flex flex-row w-full h-fit justify-center md:justify-start py-2 gap-2" id="social-media pl-4">
               {
                 socialMediaDetails.map((details) => (
-                  <Link to={details.Link} className={`w-fit h-fit bg-transparent  rounded-[50%] transition-all ease-in duration-[.5s]  ${details.hoverColor}`}>
+                  <Link to={details.Link} className={`w-fit h-fit bg-transparent  rounded-[50%] transition-all ease-in duration-300 text-third-color ${details.hoverColor}`}>
                     <div className="w-fit h-fit p-1 flex justify-center items-center rounded-[50%] " >
-                      <Icon icon={details.icon} className='w-10 h-10 text-third-color' />
+                      <Icon icon={details.icon} className='w-[40px] h-[40px] ' />
                     </div>
                   </Link>
                 ))
