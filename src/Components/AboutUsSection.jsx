@@ -6,7 +6,7 @@ const AboutUsSection = () => {
             <div id="aboutUs" className="flex flex-col items-center w-full container mx-auto gap-8 pt-6 px-3 ">
                 <h1 className="text-4xl font-bold text-black">About Us<span className="text-primary-color">.</span></h1>
                 <div className="flex gap-4 md:flex-row flex-col items-center justify-center gap">
-                    <div id="video" className="flex-1">
+                    <div data-aos="fade-right" id="video" className="flex-1">
                         <iframe className="rounded-[10px] h-[315px]  w-full" src="https://www.youtube.com/embed/nIPmt1ye6HU?si=owXw7is7PyNd7qUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div id="text" className=" text-third-color py-4 xl:flex-wrap flex-1">

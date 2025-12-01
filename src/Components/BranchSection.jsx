@@ -4,13 +4,13 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 
 const BranchSection = () => {
     return (
-        <div className="w-full h-fit container mx-auto flex flex-col  items-center gap-8 bg-hash-color-bg p-3">
+        <div className="w-full h-fit container mx-auto flex flex-col  items-center gap-8 bg-hash-color-bg p-3 mb-4">
             <h1 className="text-4xl font-bold text-black text-center capitalize">our locations<span className="text-primary-color">.</span></h1>
             <div className="w-full h-full flex flex-col lg:flex-row lg:justify-center items-center flex-wrap  xl:gap-8 gap-6">
 
                 {
                     branchDetails.map((details, index) => (
-                        <div key={index} className={`w-fit h-fit flex flex-col ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"} justify-between items-center  bg-white shadow-lg shadow-slate-600/50 rounded-[10px] gap-3 py-3 px-3`}>
+                        <div key={index} data-aos={( index % 2 === 0 ) ? "fade-right" : "fade-left" } className={`w-fit h-fit flex flex-col ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"} justify-between items-center  bg-white shadow-lg shadow-slate-600/50 rounded-[10px] gap-3 py-3 px-3`}>
                             <div className="h-fit  flex-1 flex flex-col w-fit justify-center items-center gap-3">
                                 <div className="flex flex-row justify-center items-center gap-2 max-w-[290px] w-full ">
                                     <Icon icon="ion:location-sharp" className="text-primary-color font-semibold text-xl" />

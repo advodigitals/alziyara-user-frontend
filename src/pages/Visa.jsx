@@ -5,6 +5,7 @@ import GlobalVisaText from '../Components/GlobalVisaText'
 import GccVisaText from '../Components/GccVisaText'
 import { useParams } from 'react-router'
 import { handleVisaCountry, handleVisaSearchCountry } from '../api/visa/visa'
+import { ThreeDot } from "react-loading-indicators";
 // import { glblVisaCountryDetails } from '../constants/GlobalVisaData'
 // import VisaCountryMap from '../Components/VisaCountryMap'
 const VisaCountryMap = React.lazy(() => import("../Components/VisaCountryMap"))
@@ -47,9 +48,9 @@ const Visa = () => {
                         <div id="text" className="px-4 justify-center text-center sm:mt-5 text-base w-full container mx-auto">
                             {type === "global" ? <GlobalVisaText /> : <GccVisaText />}
                         </div>
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<div className="flex w-full h-[100vh] justify-center items-center capitalize gap-5 "  ><ThreeDot variant="bounce" color="#00b372" size="medium" text="Loading" textColor="#000000" /></div>}>
                             <div className="h-full w-full container mx-auto sm:px-5 px-2 grid ">
-                                <div id="visa-section" className=" h-full w-full  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  sm:gap-6 gap-4 justify-center">
+                                <div  id="visa-section" className={` h-full w-full ${visaCountryData.length === 0 ? "" : "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5" }   sm:gap-6 gap-4 justify-center`}>
                                     <VisaCountryMap visaCountryDataArray={visaCountryData}  />
                                 </div>
                             </div>

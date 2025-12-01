@@ -64,7 +64,7 @@ const FAQ = () => {
                     <div className="flex flex-col w-full max-w-[800px] mx-auto h-full gap-6">
                         {
                             FAQArray.map((details, index) => (
-                                <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50 gap-3 py-1 cursor-pointer`} onClick={() => handleIsOpen(index)}>
+                                <div data-aos="fade-up" className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50 gap-3 py-1 cursor-pointer`} onClick={() => handleIsOpen(index)}>
                                     <div className="flex flex-col flex-1 items-start justify-center py-3 px-10">
                                         <div className="flex flex-row justify-between  w-full">
                                             <p className="capitalize text-black font-normal text-lg md:text-xl">{details.question}</p>

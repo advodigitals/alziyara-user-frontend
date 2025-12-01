@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 const ConstctUsFormSection = () => {
     return (
         <>
-            <div className="h-full flex flex-1 flex-col items-center justify-start px-4 py-2 gap-6">
+            <div data-aos="fade-left" className="h-full flex flex-1 flex-col items-center justify-start px-4 py-2 gap-6">
                 <div className="w-full h-fit flex flex-col gap-3  ">
                     <h5 className="text-black text-3xl font-normal uppercase text-center md:text-left">have questions? ask away<span className="text-primary-color font-normal text-2xl">.</span></h5>
                     <p className="text-third-color text-xl font-normal uppercase text-center md:text-left">We’re here to answer all your travel queries<span className="text-primary-color font-normal text-xl">.</span></p>

@@ -11,11 +11,11 @@ const Services = () => {
 
   return (
     <>
-      <div className=" bg-hash-color-bg max-w-[2000px] mx-atuo w-full h-full flex flex-col gap-8 pt-6 pb-5 md:pb-10 px-3">
+      <div   className=" bg-hash-color-bg max-w-[2000px] mx-atuo w-full h-full flex flex-col gap-8 pt-6 pb-5 md:pb-10 px-3">
         <div className=" flex justify-center items-center ">
           <h1 className="text-4xl font-bold text-black text-center">Services We Offer<span className="text-primary-color">.</span></h1>
         </div>
-        <div className="w-full container mx-auto h-fit  flex flex-row flex-wrap gap-y-9 gap-x-3  justify-evenly ">
+        <div data-aos="fade-up" className="w-full container mx-auto h-fit  flex flex-row flex-wrap gap-y-9 gap-x-3  justify-evenly ">
           {
             ServiceCardDetails.map((details) => (
               <Link to={details.path} className={`${details.path ? "cursor-pointer" : "cursor-default"}`}>

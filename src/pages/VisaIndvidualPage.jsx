@@ -83,7 +83,7 @@ const VisaIndvidualPage = () => {
                                 </Link> */}
                                 {
                                     VisaDetails.map((visa, index) => (
-                                        <div className='h-fit w-fit flex flex-row rounded-[10px] cursor-pointer  ' onClick={() => handleIsOpen(index)}>
+                                        <div data-aos="fade-down" className='h-fit w-fit flex flex-row rounded-[10px] cursor-pointer  ' onClick={() => handleIsOpen(index)}>
                                             <div className={`flex  rounded-[10px] justify-center items-center   text-white hover:text-primary-color bg-primary-color hover:bg-white overflow-hidden transition-all duration-[.5s] shadow-lg shadow-slate-600/50 border border-primary-color  ${isOpen === index ?  `w-0 h-0 opacity-0` : `h-[150px] w-[280px] opacity-100 px-2`  }`}>
                                                 <p className=" text-3xl font-medium capitalize text-center ">{visa.name}</p>
                                             </div>

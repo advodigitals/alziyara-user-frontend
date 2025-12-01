@@ -15,7 +15,7 @@ const Footer = () => {
   }, [])
   return (
     <>
-      <div className="bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 w-full max-w-[2000px] mx-auto h-fit lg:pb-0 pb-[80px] ">
+      <div  className="bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 w-full max-w-[2000px] mx-auto h-fit lg:pb-0 pb-[80px] mt-auto ">
         <div className="w-full container mx-auto h-full flex flex-col  md:flex-row px-3 py-16 gap-8 md:gap-4">
           <div className="  flex-1 flex flex-col  justify-center">
             <div id="logo-and-social-media" className="flex flex-row h-fit w-full  items-center justify-center md:justify-start">

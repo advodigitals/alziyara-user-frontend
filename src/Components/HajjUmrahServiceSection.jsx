@@ -13,7 +13,7 @@ const HajjUmrahServiceSection = () => {
                     <div className="flex  basis-1/4 items-center lg:justify-start justify-center">
                         <h1 className="text-5xl  font-medium text-primary-color leading-[68px] md:text-left text-center"><span className="text-5xl  font-bold text-black leading-[58px]">Explore </span>World with <span className="text-5xl  font-bold text-black leading-[58px]">Expertise</span>.</h1>
                     </div>
-                    <div className="flex h-full basis-3/4 flex-wrap  justify-center gap-x-4 p-2 gap-y-5">
+                    <div data-aos="fade-left" className="flex h-full basis-3/4 flex-wrap  justify-center gap-x-4 p-2 gap-y-5">
                         {
                             serviceArray.map((service) => (
                                 <div className="flex w-[360px] shadow-lg shadow-slate-600/50 rounded-[10px] px-2 py-6  bg-white flex-row items-start justify-center gap-3">
