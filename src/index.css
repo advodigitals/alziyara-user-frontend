@@ -33,12 +33,43 @@ body{
       
 }
 
-/* Hide scrollbar for all browsers but allow scroll */
-.no-scrollbar {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+/* ================================
+   VISA DOCUMENTS SCROLLBAR FIX
+   Linux + Chrome SAFE VERSION
+   ================================ */
+
+.visa-documents-scroll {
+  padding-right: 6px;              /* prevent border overlap */
+  scrollbar-width: thin;           /* Firefox */
+  scrollbar-color: #16a34a transparent;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;              /* Chrome, Safari, Edge */
+/* WebKit browsers (Chrome, Edge, Brave) */
+.visa-documents-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track fully invisible */
+.visa-documents-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb (the only visible part you care about) */
+.visa-documents-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(22, 163, 74, 0.75);
+  border-radius: 999px;
+  min-height: 24px;
+  min-width: 15px;
+}
+
+/* Visually neutralize arrows (Linux-safe)
+.visa-documents-scroll::-webkit-scrollbar-button {
+  background: transparent;
+  height: 0;
+  width: 0;
+} */
+
+/* Prevent extra spacing caused by arrows */
+.visa-documents-scroll::-webkit-scrollbar-corner {
+  background: transparent;
 }

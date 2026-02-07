@@ -30,64 +30,26 @@ const VisaIndvidualPage = () => {
                             <div className='h-full w-full flex items-center mx-auto py-8'>
                                 <div className='container mx-auto flex flex-col justify-center md:items-start items-center'>
                                     <h1 className="text-4xl font-bold text-white text-left">{name} VISA</h1>
-                                    {/* <div className="w-fit bg-white  p-2 rounded-[10px] shadow-lg shadow-slate-800/100">
-                                        <p className="w-fit text-lg font-medium text-black text-left ">Price Starting at <span className='capitalize text-2xl font-medium text-primary-color text-center'>INR 14515*</span></p>
-                                    </div> */}
+               
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex h-full w-full flex-col gap-3 container  mx-auto items-center md:items-start  ">
-                        {/* <h1 className='text-2xl font-semibold '>available visas </h1> */}
                         <h3 className="text-2xl font-medium text-third-color text-left capitalize">available visa options <span className="text-primary-color text-2xl font-medium ">:</span></h3>
                         <div className="  w-full h-full grid  md:justify-normal justify-center  mx-auto">
                             <div className="w-full h-full grid justify-center  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 ">
 
 
-                                {/* <div id='card' className="flex flex-col h-fit w-fit border">
-                                    <div className="flex bg-blue-500 pl-4">
-                                        <p className='text-white text-xl py-3 font-bold'>TOURIST</p>
-                                    </div>
-                                    <div className="flex flex-col px-4 py-5 gap-3">
-                                        <div className="flex flex-row justify-between gap-10">
-                                            <span className="text-left font-normal text-base">Processing time:</span>
-                                            <span className="text-right font-normal text-base">Upto 15 days</span>
-                                        </div>
-                                        <div className="flex flex-row justify-between">
-                                            <span className="text-left font-normal text-base">Stay period:</span>
-                                            <span className="text-right font-normal text-base">90 DAYS </span>
-                                        </div>
-                                        <div className="flex flex-row justify-between">
-                                            <span className="text-left font-normal text-base">Validity:</span>
-                                            <span className="text-right font-normal text-base">  6 MONTHS</span>
-                                        </div>
-                                        <div className="flex flex-row justify-between">
-                                            <span className="text-left font-normal text-base">Entry:</span>
-                                            <span className="text-right font-normal text-base">SINGLE</span>
-                                        </div>
-                                        <div className="flex flex-row justify-between">
-                                            <span className="text-left font-normal text-base">Fees:</span>
-                                            <span className="text-right font-normal text-base">INR 12770/-</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex w-full bg-red-500 justify-center">
-                                        <p className='text-white text-base py-3 font-normal '>Required Documents</p>
-                                    </div>
-                                </div> */}
-
-                                {/* <Link className='h-fit w-fit'>
-                                    <div className="flex w-[300px] h-[250px] rounded-[10px] ">
-                                    <img src={notAvailableImage} alt="" />
-                                    </div>
-                                </Link> */}
+                               
                                 {
                                     VisaDetails.map((visa, index) => (
                                         <div data-aos="fade-down" className='h-fit w-fit flex flex-row rounded-[10px] cursor-pointer  ' onClick={() => handleIsOpen(index)}>
                                             <div className={`flex  rounded-[10px] justify-center items-center   text-white hover:text-primary-color bg-primary-color hover:bg-white overflow-hidden transition-all duration-[.5s] shadow-lg shadow-slate-600/50 border border-primary-color  ${isOpen === index ?  `w-0 h-0 opacity-0` : `h-[150px] w-[280px] opacity-100 px-2`  }`}>
                                                 <p className=" text-3xl font-medium capitalize text-center ">{visa.name}</p>
                                             </div>
-                                            <div className={`overflow-y-auto no-scrollbar transition-all duration-[0.5s] rounded-[10px]   text-primary-color bg-white shadow-lg shadow-slate-600/50 border border-primary-color ${isOpen === index ? "h-[150px] w-[280px] opacity-100 px-2  " : "h-0 w-0 opacity-0"}`}>
+                                            <div className={`visa-documents-scroll overflow-y-auto  transition-all duration-[0.5s] rounded-[10px]   text-primary-color bg-white shadow-lg shadow-slate-600/50 border border-primary-color ${isOpen === index ? "h-[150px] w-[280px] opacity-100 px-2  " : "h-0 w-0 opacity-0"}`}>
                                                 <ul className=" flex flex-col gap-2">
                                                     <span className="capitalize text-center text-primary-color text-xl mb-2 font-medium ">required documents <span className="text-black text-xl font-medium">.</span></span>
                                                     {visa.documets && visa.documets.map((points) => (

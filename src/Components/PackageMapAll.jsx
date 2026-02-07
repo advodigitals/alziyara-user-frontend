@@ -27,7 +27,7 @@ const PackageMapAll = ({ packageDataArray }) => {
                                 </div>
                                 <div id="places" className="w-full h-full flex flex-col items-start gap-3">
                                     <h1 className="capitalize text-xl font-semibold text-primary-color">top attractions</h1>
-                                    <div className="flex flex-col items-start sm:flex-row gap-x-6 gap-y-2 flex-wrap">
+                                    <div className="flex  items-start flex-row gap-x-6 gap-y-2 flex-wrap">
                                         {
                                             details.topAttraction && details?.topAttraction.map((points) => (
                                                 <div className="flex flex-row justify-center gap-2 items-center">

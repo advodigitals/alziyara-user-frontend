@@ -10,6 +10,14 @@ export const VisaDetails = [
             "pan card",
             "adhar card",
             "pan card",
+            "adhar card",
+            "pan card",
+            "adhar card",
+            "pan card",
+            "adhar card",
+            "pan card",
+            "adhar card",
+            "pan card",
 
         ]
     },{

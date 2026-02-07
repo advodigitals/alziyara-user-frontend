@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 
 const BranchSection = () => {
     return (
-        <div className="w-full h-fit container mx-auto flex flex-col  items-center gap-8 bg-hash-color-bg p-3 mb-4">
+        <div className="w-full h-fit container mx-auto flex flex-col  items-center gap-8 bg-hash-color-bg p-3 pb-10 mb-4">
             <h1 className="text-4xl font-bold text-black text-center capitalize">our locations<span className="text-primary-color">.</span></h1>
             <div className="w-full h-full flex flex-col lg:flex-row lg:justify-center items-center flex-wrap  xl:gap-8 gap-6 px-2">
 
