@@ -6,7 +6,11 @@ const HajjUmrahPageExplanation = () => {
     return (
         <>
             <div className="flex lg:flex-row flex-col w-full h-fit container mx-auto px-4">
-                <div data-aos="fade-right" id="image-section" className="flex  flex-1 p-3 items-center justify-center lg:justify-normal">
+                <div data-aos="fade-right" id="image-section" className=" hidden md:flex  flex-1 p-3 items-center justify-center lg:justify-normal">
+                    <img className="  w-[80%] rounded-[10px]  " src={hajjUmrahExplainImage} alt="" />
+                </div>
+
+                <div data-aos="fade-up" id="image-section" className="flex md:hidden  flex-1 p-3 items-center justify-center lg:justify-normal">
                     <img className="  w-[80%] rounded-[10px]  " src={hajjUmrahExplainImage} alt="" />
                 </div>
                 <div id="text" className="flex h-full flex-1 justify-center  items-end pt-6">

@@ -15,10 +15,10 @@ const Services = () => {
         <div className=" flex justify-center items-center ">
           <h1 className="text-4xl font-bold text-black text-center">Services We Offer<span className="text-primary-color">.</span></h1>
         </div>
-        <div data-aos="fade-up" className="w-full container mx-auto h-fit  flex flex-row flex-wrap gap-y-9 gap-x-3  justify-evenly ">
+        <div  className="w-full container mx-auto h-fit  flex flex-row flex-wrap gap-y-9 gap-x-3  justify-evenly ">
           {
             ServiceCardDetails.map((details) => (
-              <Link to={details.path} className={`${details.path ? "cursor-pointer" : "cursor-default"}`}>
+              <Link data-aos="fade-up" to={details.path} className={`${details.path ? "cursor-pointer" : "cursor-default"}`}>
                 <div id="Services-cards" className="flex w-[17rem] sm:w-[20rem] h-[15rem] rounded-[10px] bg-white flex-col shadow-lg shadow-slate-600/50 ">
                   <div id="heading" className="flex flex-row gap-8 justify-start items-center pt-4 pl-2">
                     <span className='text-black h-fit'><Icon icon={details.icon} width="40" height="40" /></span>
