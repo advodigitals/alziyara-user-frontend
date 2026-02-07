@@ -22,7 +22,7 @@ export const testimonialsDataArray = [
         img : sajeerKurunnankandi,
         name : "SAJEER KURUNNANKANDI",
         rating : 5,
-        comment : "I have very good experience our Umrah knowledgeable Usthad, Room service was amazing, Grate food...",
+        comment : "I have very good experience our Umrah knowledgeable Usthad, Room service was amazing...",
         commentStatus : true,
         commentUrl : "https://maps.app.goo.gl/1VxSpNS7mZKbFEiTA"
     },
