@@ -12,6 +12,7 @@ const AboutCards = React.lazy(() => import("../Components/AboutCards"))
 const SwiperSection = React.lazy (() => import("../Components/SwiperSection"))
 const HeadingSection = React.lazy(() => import("../Components/HeadingSection"))
 const AboutUsSection = React.lazy (() => import("../Components/AboutUsSection"))
+const AboutUsReadmore = React.lazy(() => import("../Components/AboutUsReadmore"))
 const TestimonialsSection =  React.lazy (() => import("../Components/TestimonialsSection")) 
 // const YoutubeSlider = React.lazy (() => import("../Components/YoutubeSlider"))
 
@@ -33,6 +34,7 @@ const Home = () => {
           <AboutCards />
           <Services />
           <AboutUsSection />
+          <AboutUsReadmore />
           {/* <YoutubeSlider /> */}
           {/* <InstagramSlider/> */}
           <FAQ />
