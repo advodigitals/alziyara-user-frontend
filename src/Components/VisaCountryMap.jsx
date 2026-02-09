@@ -3,6 +3,10 @@ import { Link } from 'react-router'
 
 const VisaCountryMap = ({ visaCountryDataArray }) => {
 
+    setTimeout(function(){
+        document.getElementById("no-data").classList.remove("hide");
+    }, 5000)
+
     return (
         <>
             {
@@ -22,7 +26,7 @@ const VisaCountryMap = ({ visaCountryDataArray }) => {
                     ))
                     :
                     
-                    <div className=" w-full h-full flex justify-center items-center  ">
+                    <div id='no-data' className="hide w-full h-full flex justify-center items-center  ">
                         <p className="text-third-color text-lg font-medium capitalize ">Not available</p>
                     </div>
 

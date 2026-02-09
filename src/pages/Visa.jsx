@@ -38,6 +38,8 @@ const Visa = () => {
         setVisaCountryData(visaSearchCountryDataArray?.data)
     }
 
+    
+
 
     return (
         <>

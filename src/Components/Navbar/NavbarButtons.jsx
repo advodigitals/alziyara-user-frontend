@@ -13,9 +13,9 @@ const NavbarButtons = (props) => {
 
   const handleButtonActive = (buttonName) => {
     setActiveButton(buttonName)
-    console.log(buttonName,"button name ")
+    
   }
-  console.log(activeButton,"active button after athe fuctio")
+
   const handleMouseEnter = (dropbutton) => {
 
       setDropdownOption(dropbutton)   

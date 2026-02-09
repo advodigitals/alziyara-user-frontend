@@ -5,12 +5,20 @@ import { Link } from 'react-router'
 
 const PackageMapAll = ({ packageDataArray }) => {
 
-
+    console.log(packageDataArray.length, "Array")
+    console.log(packageDataArray)
     return (
         <>
             {
-                packageDataArray.length > 0
+                packageDataArray.length >= 0
                     ?
+
+                    <div className=" w-full h-full flex justify-center items-center  ">
+                        <p className="text-third-color text-lg font-medium capitalize ">Not available</p>
+                    </div>
+                    :
+
+
                     packageDataArray.map((details) => (
                         <div data-aos="fade-up" className="w-full max-w-[900px] mx-auto h-fit flex sm:flex-row flex-col bg-white shadow-lg shadow-slate-600/50 rounded-[10px]">
                             <div id="image" alt="" className=" basis-2/5 max-h-[25rem] ">
@@ -48,11 +56,6 @@ const PackageMapAll = ({ packageDataArray }) => {
                             </div>
                         </div>
                     ))
-
-                    :
-                    <div className=" w-full h-full flex justify-center items-center  ">
-                        <p className="text-third-color text-lg font-medium capitalize ">Not available</p>
-                    </div>
             }
         </>
     )

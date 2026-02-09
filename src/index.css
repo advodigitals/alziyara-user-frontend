@@ -73,3 +73,7 @@ body{
 .visa-documents-scroll::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+.hide{
+  display: none;
+}

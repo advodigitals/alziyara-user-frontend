@@ -3,11 +3,14 @@ import api from "../axios";
 
 export const handleAllPackageDisplay = async (type) => {
     try {
+        console.log("step 1")
         const { data } = await api.get(`/packages/get?type=${type}`)
+        console.log("step 2")
         return data
     } catch (error) {
-        console.log(error.response.data);
-        return error.response.data;
+        console.log("hellow")
+        console.log(error);
+        return error;
     }
 }
 
