@@ -26,7 +26,7 @@ const Home = () => {
     <>
       <Layouts page={"Home"}>
         <div className="w-full max-w-[1400px]  bg-white flex items-center flex-col mx-auto ">
-          <HeadingSection />
+          {/* <HeadingSection /> */}
           <SwiperSection />
         </div>
         <div id="aboutUs" className="flex w-full max-w-[1400px] items-center gap-5 justify-center py-5 flex-wrap  mx-auto">
