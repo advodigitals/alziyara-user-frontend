@@ -15,6 +15,7 @@ const PackageMapAll = ({ packageDataArray }) => {
 
                     <div className=" w-full h-full flex justify-center items-center  ">
                         <p className="text-third-color text-lg font-medium capitalize ">Not available</p>
+                        {/* {just checkingk} */}
                     </div>
                     :
 
