@@ -5,8 +5,8 @@ import { Link } from 'react-router'
 
 const PackageMapAll = ({ packageDataArray }) => {
 
-    console.log(packageDataArray.length, "Array")
-    console.log(packageDataArray)
+    // console.log(packageDataArray.length, "Array")
+    // console.log(packageDataArray)
     return (
         <>
             {

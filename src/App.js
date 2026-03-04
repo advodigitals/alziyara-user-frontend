@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { Routes, Route } from "react-router";
 import PackageIndividualPage from "./pages/PackageIndividualPage";
 import { ThreeDot } from "react-loading-indicators";
+import UmrahPackageIndividualPage from "./pages/UmrahPackageIndividualPage";
 const Blog = React.lazy(() => import("./pages/Blog"))
 // const Flights = React.lazy(() => import("./pages/Flights"))
 const HajjUmrah = React.lazy(() => import("./pages/HajjUmrah"))
@@ -56,6 +57,7 @@ function App() {
           <Route path="/packages/:type" element={<Packages />} />
           {/* <Route path="/packages/:type" element={<PackageIndividualPage />} /> */}
           <Route path="/package/:name" element={<PackageIndividualPage />} />
+          <Route path="/hajj-umrah/umrah/:slug" element={<UmrahPackageIndividualPage />} />
         </Routes>
       </Suspense>
     </>

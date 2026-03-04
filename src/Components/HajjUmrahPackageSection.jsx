@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 
-const HajjUmrahPackageSection = () => {
+const HajjUmrahPackageSection = ({ packageData }) => {
   return (
     <>
       <div className="flex w-full h-fit max-w-[2000px] mx-auto flex-col items-center bg-hash-color-bg py-6 gap-8">
@@ -10,7 +10,16 @@ const HajjUmrahPackageSection = () => {
         <div className="flex w-full h-fit flex-col container mx-auto items-start gap-4">
           <h3 className="text-2xl font-medium text-black text-left capitalize">umrah packages<span className="text-primary-color text-2xl font-medium ">:</span></h3>
           <div  className=" w-full h-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-5  mx-auto  ">
-            <Link data-aos="fade-up" className='h-fit w-full max-w-[300px]'>
+            {
+              packageData.map((details) => (
+                <Link to={`/hajj-umrah/umrah/${details.slug}`} data-aos="fade-up" className='h-fit w-full max-w-[300px]'>
+              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
+
+              </div>
+            </Link>
+              ))
+            }
+            {/* <Link to={`/hajj-umrah/umrah/${packageData.slug}`} data-aos="fade-up" className='h-fit w-full max-w-[300px]'>
               <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
 
               </div>
@@ -39,7 +48,7 @@ const HajjUmrahPackageSection = () => {
               <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
 
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

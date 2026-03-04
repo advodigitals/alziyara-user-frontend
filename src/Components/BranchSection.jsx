@@ -19,22 +19,29 @@ const BranchSection = () => {
                                         <h5 className="text-black text-lg font-medium uppercase ">{details.name}</h5>
                                     </div>
                                     <p className="text-third-color text-lg font-normal capitalize text-center max-w-[290px] w-full ">{details.address}</p>
-                                    <div className="flex flex-row justify-center items-center gap-2">
-                                        <Icon icon="si:phone-fill" className="text-primary-color font-semibold text-xl" />
-                                        <a href={details.href}><p className="font-medium text-lg text-third-color hover:text-black ">{details.number}</p></a>
+                                    <div className="flex flex-col ">
+
+                                        <div className="flex flex-row justify-center items-center gap-2">
+                                            <Icon icon="si:phone-fill" className="text-primary-color font-semibold text-xl" />
+                                            <a href={details.href1}><p className="font-medium text-lg text-third-color hover:text-black ">{details.number1}</p></a>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-2">
+                                            <Icon icon="si:phone-fill" className="text-primary-color font-semibold text-xl" />
+                                            <a href={details.href2}><p className="font-medium text-lg text-third-color hover:text-black ">{details.number2}</p></a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div data-aos={(index % 2 === 0) ? "fade-left" : "fade-right"} className="h-fit w-fit hidden md:block ">
                                     <iframe title='map' src={details.map} className='w-[270px]  h-[200px] border-none rounded-[10px]' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
 
-                                <div  data-aos="fade-up" className="h-fit w-fit block md:hidden">
+                                <div data-aos="fade-up" className="h-fit w-fit block md:hidden">
                                     <iframe title='map' src={details.map} className='w-[270px]  h-[200px] border-none rounded-[10px]' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
 
                             </div>
 
-                            
+
                         </div>
 
 

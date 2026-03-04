@@ -23,6 +23,7 @@ const PackageIndividualPage = () => {
         const allPackageData = async () => {
             const allPackageDataArray = await handleSinglePackage(name)
             setPackageData(allPackageDataArray?.data)
+            console.log(packageData,"data")
         }
         allPackageData()
     }, [name])
