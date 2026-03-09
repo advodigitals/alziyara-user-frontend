@@ -26,7 +26,8 @@ const PackageIndividualPage = () => {
             console.log(packageData,"data")
         }
         allPackageData()
-    }, [name])
+         // eslint-disable-next-line 
+    },[name])
 
     // const allPackageData = async () => {
     //     const allPackageDataArray = await handleSinglePackage(name)
@@ -56,3 +57,9 @@ const PackageIndividualPage = () => {
 }
 
 export default PackageIndividualPage
+
+
+
+
+
+
