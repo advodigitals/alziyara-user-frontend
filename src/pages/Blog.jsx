@@ -6,7 +6,7 @@ const Blog = () => {
     <>
       <Layouts page={"Blog"}>
         <div className="absolute top-[95px] left-0 w-full">
-          <h1>This is Blog removed the backend url in cloudflare for checking the deployment works</h1>
+          <h1>This is Blog</h1>
         </div>
       </Layouts>
     </>
