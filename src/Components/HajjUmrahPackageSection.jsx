@@ -13,7 +13,7 @@ const HajjUmrahPackageSection = ({ packageData }) => {
             {
               packageData.map((details) => (
                 <Link to={`/hajj-umrah/umrah/${details.slug}`} data-aos="fade-up" className='h-fit w-full max-w-[300px]'>
-              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
+              <div className="flex w-full h-[230px] rounded-[10px] bg-primary-color">
 
               </div>
             </Link>
@@ -56,35 +56,11 @@ const HajjUmrahPackageSection = ({ packageData }) => {
           <h3 className="text-2xl font-medium text-black text-left capitalize">hajj packages<span className="text-primary-color text-2xl font-medium ">:</span></h3>
           <div  className=" w-full h-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-5">
             <Link data-aos="fade-up" className='h-fit w-full max-w-[300px]'>
-              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
-
+              <div className="flex w-full h-[230px] justify-center items-center rounded-[10px]  text-white hover:text-primary-color bg-primary-color hover:bg-white overflow-hidden transition-all duration-[.5s] shadow-lg shadow-slate-600/50 border border-primary-color">
+                <h3 className="  text-2xl font-semibold  capitalize text-center ">currently unavailable</h3>
               </div>
             </Link>
-            <Link className='h-fit w-full max-w-[300px]'>
-              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
-
-              </div>
-            </Link>
-             <Link className='h-fit w-full max-w-[300px]'>
-              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
-
-              </div>
-            </Link>
-             <Link className='h-fit w-full max-w-[300px]'>
-              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
-
-              </div>
-            </Link>
-             <Link className='h-fit w-full max-w-[300px]'>
-              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
-
-              </div>
-            </Link>
-             <Link className='h-fit w-full max-w-[300px]'>
-              <div className="flex w-full h-[250px] rounded-[10px] bg-primary-color">
-
-              </div>
-            </Link>
+            
           </div>
         </div>
 
