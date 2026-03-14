@@ -4,7 +4,9 @@ import api from "../axios";
 export const handleAllPackageDisplay = async (type) => {
     try {
         // console.log("step 1")
+        console.log(type,"type")
         const { data } = await api.get(`/packages/get?type=${type}`)
+        console.log(data,"data")
         // console.log("step 2")
         return data
     } catch (error) {
