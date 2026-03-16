@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 import { HajjPillers } from '../constants/HajjPillers'
 import { UmrahPillers } from '../constants/UmrahPillers'
 import { UmrahTopAttraction } from '../constants/UmrahTopAttraction'
+import { HajjTopAttractions } from '../constants/HajjTopAttraction'
 
 const HajjUmrahDescriptionSection = () => {
     const [pillarUmrahIsOpen, setPillarUmrahIsOpen] = useState(null)
@@ -149,18 +150,20 @@ const HajjUmrahDescriptionSection = () => {
                                 <h3 className="text-black text-2xl font-semibold capitalize">top attractions <span className='text-primary-color text-2xl font-semibold'>:</span></h3>
                             </div>
                             <div className="flex flex-col h-full w-full gap-5">
-                                <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-2  " onClick={() => handleHajjMainSpotsIsOpen(1)}>
-                                    <p className=" min-w-[100px] "></p>
-                                    <div className="flex flex-col  flex-1 items-start  gap-2 ">
-                                        <p className="capitalize text-black text-lg font-semibold ">Ihram</p>
-                                        <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${hajjMainSpotsIsOpen === 1 ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                                            <p className="text-primary-color font-light text-base">
-                                                Starting from one of the Miqat or when aligning with them on the plane, Ihram for Umrah or Hajj commences. For individuals who wish to take Ihram in order to perform Umrah or Hajj, the
-                                                Prophet, peace and blessings be upon him, designated certain locations as Miqat.
-                                            </p>
+                                {
+                                    HajjTopAttractions.map((point, index) => (
+                                        <div className="flex flex-row  h-fit bg-white  rounded-[10px] cursor-pointer shadow-lg shadow-slate-800/100  py-2  " onClick={() => handleHajjMainSpotsIsOpen(index)}>
+                                            <p className=" min-w-[100px] "></p>
+                                            <div className="flex flex-col  flex-1 items-start  gap-2 ">
+                                                <p className="capitalize text-black text-lg font-semibold ">{point.name}</p>
+                                                <div className={`overflow-hidden transition-all duration-[0.5s] px-3 ${hajjMainSpotsIsOpen === index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                                    <p className="text-primary-color font-light text-base">{point.explanation}</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    ))
+                                }
+
                             </div>
                         </div>
                     </div>
