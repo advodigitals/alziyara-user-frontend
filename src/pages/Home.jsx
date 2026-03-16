@@ -9,7 +9,7 @@ import Layouts from '../Layouts/Layouts'
 const FAQ = React.lazy (() => import("../Components/FAQ"))
 const Services = React.lazy (() => import("../Components/Services"))
 const AboutCards = React.lazy(() => import("../Components/AboutCards"))
-const SwiperSection = React.lazy (() => import("../Components/SwiperSection"))
+// const SwiperSection = React.lazy (() => import("../Components/SwiperSection"))
 const HeadingSection = React.lazy(() => import("../Components/HeadingSection"))
 const AboutUsSection = React.lazy (() => import("../Components/AboutUsSection"))
 const AboutUsReadmore = React.lazy(() => import("../Components/AboutUsReadmore"))
@@ -26,9 +26,9 @@ const Home = () => {
   return (
     <>
       <Layouts page={"Home"}>
-        <div className="w-full max-w-[1400px]  bg-black flex items-center flex-col mx-auto ">
+        <div className="w-full max-w-[1400px]  bg-white flex items-center flex-col mx-auto ">
           <HeadingSection />
-          <SwiperSection />
+          {/* <SwiperSection /> */}
         </div>
         <div id="aboutUs" className="flex w-full max-w-[1400px] items-center gap-5 justify-center py-5 flex-wrap  mx-auto">
           <AboutCards />
