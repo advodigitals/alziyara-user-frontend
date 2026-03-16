@@ -3,6 +3,7 @@ import api from "../axios";
 export const handleVisaCountry = async (type) => {
     try {
         const { data } = await api.get(`/visa/get?type=${type}`)
+        console.log(data , "data ")
         return data
     } catch (error) {
         console.log(error.response.data);
