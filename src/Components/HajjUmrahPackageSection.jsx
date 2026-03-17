@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 
 
 const HajjUmrahPackageSection = ({ packageData }) => {
+  console.log("package data on the page",packageData,packageData.length)
 
 
   return (

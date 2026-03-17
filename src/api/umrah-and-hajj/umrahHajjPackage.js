@@ -4,6 +4,7 @@ import api from "../axios"
 export const handleAllPackageDisplay = async () => {
     try {
         const data = await api.get(`/umrah-hajj/get`)
+        console.log("umrah-data on api",data)
         return data
     } catch (error) {
         console.log(error)

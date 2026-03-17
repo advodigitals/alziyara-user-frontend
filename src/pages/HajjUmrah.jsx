@@ -26,7 +26,7 @@ const HajjUmrah = () => {
    
      const allPackageData = async () => {
        const allPackageDataArray = await handleAllPackageDisplay()
-      //  console.log(allPackageDataArray.data.packagesData,"difiehhihiii")
+       console.log(allPackageDataArray.data.packagesData,"difiehhihiii")
        setPackageData(allPackageDataArray.data.packagesData)
      }
    
