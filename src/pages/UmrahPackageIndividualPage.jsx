@@ -7,17 +7,27 @@ import { handleAllUmrahHajjPackageDisplay } from '../api/umrah-and-hajj/umrahHaj
 
 const UmrahPackageIndividualPage = () => {
     const [packageData , setPackageData ] = useState([])
+    const [isOpen, setIsOpen] = useState(null)
     const { slug } = useParams()
 
     useEffect(() => {
         const PackageData = async () =>{
             const PackageDataArray = await handleAllUmrahHajjPackageDisplay(slug)
-            console.log(PackageDataArray.data.packageData,"datkkkkkkkkkkkkkka")
+            // console.log(PackageDataArray.data.packageData,"datkkkkkkkkkkkkkka")
             setPackageData(PackageDataArray?.data?.packageData)
         }
         PackageData()
         
     },[slug])
+
+        const handleIsOpen = (index) => {
+            if (index === isOpen) {
+                setIsOpen(null)
+            } else {
+    
+                setIsOpen(index)
+            }
+        }
     return (
         <>
             <Layouts>
@@ -61,49 +71,45 @@ const UmrahPackageIndividualPage = () => {
                                         <div className="flex flex-col text-left gap-4">
                                             <p className="text-base font-medium">{packageData.amountPerPerson}</p>
                                             <p className="text-base font-medium capitalize">{packageData.availableSeats}</p>
-                                            <p className="text-base font-medium capitalize">Not decided </p>
-                                            <p className="text-base font-medium flex flex-wrap gap-2">5/march <Icon className='text-primary-color' icon="solar:arrow-right-bold" width="22" height="22" /> 24/march</p>
+                                            <p className="text-base font-medium capitalize">{packageData.ameer} </p>
+                                            <p className="text-base font-medium flex flex-wrap gap-2">{packageData.dateOfdeparture} <Icon className='text-primary-color' icon="solar:arrow-right-bold" width="22" height="22" /> {packageData.dateOfArival}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div >
                             <hr className='border-[3px_solid_#9d9d9d] mx-6 my-8' />
                             <div className="text-third-color px-2 font-normal text-base">
-                                <p className="">This Umrah in Ramadan package is designed for pilgrims seeking a peaceful and spiritually uplifting
-                                    journey. Experience the serenity of Makkah and Madinah during the blessed month, with time for prayer, reflection,
-                                    and worship near the holy mosques. Perform Umrah, break fast in a sacred atmosphere, and feel the unity of believers
-                                    from around the world. Ideal for individuals, families, and groups who wish to deepen their faith and return with a
-                                    calm and renewed heart.</p>
+                                <p className="">{packageData.longDescription}.</p>
                             </div>
                             <div className="w-full flex flex-col p-2 gap-3">
                                 <h1 className="text-black text-3xl font-semibold capitalize">includes <span className='text-primary-color text-3xl font-semibold'>:</span></h1>
-                                {/* {
-                                    packageDataDetails && packageDataDetails.map((points) => (
+                                {
+                                    packageData.inclusion && packageData.inclusion.map((points) => (
                                         <div className=" flex flex-row justify-start items-center gap-3">
                                             <Icon className='text-primary-color' icon="simple-icons:ticktick" width="16" height="16" />
                                             <p className="text-base font-normal text-third-color">{points}</p>
                                         </div>
                                     ))
-                                } */}
+                                }
 
                             </div>
                             <div className="w-full flex flex-col p-2 gap-3">
                                 <h1 className="text-black text-3xl font-semibold capitalize">excludes <span className='text-primary-color text-3xl font-semibold'>:</span></h1>
-                                {/* {
-                                    packageDataDetails && packageDataDetails.map((points) => (
+                                {
+                                    packageData.exclusion && packageData.exclusion.map((points) => (
                                         <div className=" flex flex-row justify-start items-center gap-3">
                                             <Icon className='text-primary-color' icon="simple-icons:ticktick" width="16" height="16" />
                                             <p className="text-base font-normal text-third-color">{points}</p>
                                         </div>
                                     ))
-                                } */}
+                                }
 
                             </div>
                         </div>
                         <div id="itinerary" className="flex h-full w-full basis-1/2 p-2 flex-col gap-3">
                             <h1 className="text-black text-3xl font-semibold capitalize">travel schedule <span className='text-primary-color text-3xl font-semibold'>:</span></h1>
                             <div className="flex flex-col h-full w-full gap-5 ">
-                                {/* {
+                                {
                                     packageData.itinerary && packageData.itinerary.map((details, index) => (
                                         <div className={`flex flex-row  h-fit bg-white  rounded-[10px] items-start shadow-lg shadow-slate-600/50  py-4  cursor-pointer`} onClick={() => handleIsOpen(index)}>
                                             <p className={`capitalize text-black font-medium justify-center  flex  min-w-[100px] `}>{details.day}</p>
@@ -126,7 +132,7 @@ const UmrahPackageIndividualPage = () => {
                                             </div>
                                         </div>
                                     ))
-                                } */}
+                                }
                             </div>
                         </div>
                     </div>

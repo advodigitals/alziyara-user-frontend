@@ -58,6 +58,8 @@ function App() {
           {/* <Route path="/packages/:type" element={<PackageIndividualPage />} /> */}
           <Route path="/package/:name" element={<PackageIndividualPage />} />
           <Route path="/hajj-umrah/umrah/:slug" element={<UmrahPackageIndividualPage />} />
+          <Route path="/hajj-umrah/hajj/:slug" element={<UmrahPackageIndividualPage />} />
+
         </Routes>
       </Suspense>
     </>
