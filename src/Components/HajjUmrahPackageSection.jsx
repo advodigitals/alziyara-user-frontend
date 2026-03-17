@@ -14,7 +14,7 @@ const HajjUmrahPackageSection = ({ packageData }) => {
           <h3 className="text-2xl font-medium text-black text-left capitalize">umrah packages<span className="text-primary-color text-2xl font-medium ">:</span></h3>
           <div className=" w-full h-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-5  mx-auto  ">
             {
-              packageData.length > 0 ? packageData.map((details) => (
+             packageData && packageData.length > 0 ? packageData.map((details) => (
                 details.type === "umrah-packages" ?
                   <Link to={`/hajj-umrah/umrah/${details.slug}`} data-aos="fade-up" className='h-fit w-full max-w-[300px]'>
                     <div className="flex w-full h-[230px] rounded-[10px]  object-cover transition delay-50 duration-200 ease-in-out hover:-translate-y-[3px] hover:scale-105 shadow-lg shadow-slate-600/50  hover:shadow-slate-700/90">
@@ -39,7 +39,7 @@ const HajjUmrahPackageSection = ({ packageData }) => {
           <h3 className="text-2xl font-medium text-black text-left capitalize">hajj packages<span className="text-primary-color text-2xl font-medium ">:</span></h3>
           <div className=" w-full h-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-5">
             {
-              packageData.length > 0 ? packageData.map((details) => (
+             packageData && packageData.length > 0 ? packageData.map((details) => (
                 details.type === "hajj-packages" ?
                   <Link to={`/hajj-umrah/hajj/${details.slug}`} data-aos="fade-up" className='h-fit w-full max-w-[300px] rounded-[10px]   '>
                     <div className="flex w-full h-[230px] rounded-[10px]  object-cover transition delay-50 duration-200 ease-in-out hover:-translate-y-[3px] hover:scale-105 shadow-lg shadow-slate-600/50  hover:shadow-slate-700/90">
