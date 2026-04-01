@@ -26,21 +26,28 @@ const PackageMultiImageSwiper = ({ packageData }) => {
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="mySwiper2 w-full h-[85%]"
                 >
-                    <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
-                        <img src={packageData.coverImg} className="block w-full h-full rounded-[10px]" alt='' />
+                    {
+                        packageData.photos && packageData.photos.map((photo) => (
+                             <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
+                        <img src={photo} className="block w-full h-full rounded-[10px]" alt='' />
+                    </SwiperSlide>
+                        ))
+                    }
+                    {/* <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
+                        <img src={packageData.photos} className="block w-full h-full rounded-[10px]" alt='' />
+                    </SwiperSlide> */}
+                    {/* <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
+                        <img src={packageData.photos} className="block w-full h-full rounded-[10px]" alt='' />
                     </SwiperSlide>
                     <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
-                        <img src={packageData.coverImg} className="block w-full h-full rounded-[10px]" alt='' />
+                        <img src={packageData.photos} className="block w-full h-full rounded-[10px]" alt='' />
                     </SwiperSlide>
                     <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
-                        <img src={packageData.coverImg} className="block w-full h-full rounded-[10px]" alt='' />
+                        <img src={packageData.photos} className="block w-full h-full rounded-[10px]" alt='' />
                     </SwiperSlide>
                     <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
-                        <img src={packageData.coverImg} className="block w-full h-full rounded-[10px]" alt='' />
-                    </SwiperSlide>
-                    <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
-                        <img src={packageData.coverImg} className="block w-full h-full rounded-[10px]" alt='' />
-                    </SwiperSlide>
+                        <img src={packageData.photos} className="block w-full h-full rounded-[10px]" alt='' />
+                    </SwiperSlide> */}
                     {/* <SwiperSlide className='bg-cover bg-center w-full h-full cursor-grab '>
                                 <img src={packageData.coverImg} className="block w-full h-full rounded-[10px]" alt='' />
                             </SwiperSlide>
@@ -79,7 +86,15 @@ const PackageMultiImageSwiper = ({ packageData }) => {
                     // }}
                     className="mySwiper  max-w-[900px] mx-auto h-[10%] box-border flex items-center justify-center"
                 >
-                    <SwiperSlide className='bg-cover bg-center w-[35px] md:w-[50px] h-[80%] md:h-full opacity-[0.7] cursor-pointer'>
+                    {
+                        packageData.photos && packageData.photos.map((photo) => (
+                            <SwiperSlide className='bg-cover bg-center w-[35px] md:w-[50px] h-[80%] md:h-full opacity-[0.7] cursor-pointer'>
+                        <img src={photo} className="block w-full h-full object-cover rounded-[5px]" alt='' />
+                    </SwiperSlide>
+                    
+                        ))
+                    }
+                    {/* <SwiperSlide className='bg-cover bg-center w-[35px] md:w-[50px] h-[80%] md:h-full opacity-[0.7] cursor-pointer'>
                         <img src={packageData.coverImg} className="block w-full h-full object-cover rounded-[5px]" alt='' />
                     </SwiperSlide>
                     <SwiperSlide className='bg-cover bg-center w-[35px] md:w-[50px] h-[80%] md:h-full opacity-[0.7] cursor-pointer'>
@@ -93,7 +108,7 @@ const PackageMultiImageSwiper = ({ packageData }) => {
                     </SwiperSlide>
                     <SwiperSlide className='bg-cover bg-center w-[35px] md:w-[50px] h-[80%] md:h-full opacity-[0.7] cursor-pointer'>
                         <img src={packageData.coverImg} className="block w-full h-full object-cover rounded-[5px]" alt='' />
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                     {/* <SwiperSlide className='bg-cover bg-center w-[35px] md:w-[50px] h-[80%] md:h-full opacity-[0.7] cursor-pointer'>
                                 <img src={packageData.coverImg} className="block w-full h-full object-cover rounded-[5px]" alt='' />
                             </SwiperSlide>
